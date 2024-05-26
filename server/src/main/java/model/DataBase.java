@@ -8,6 +8,7 @@ public class DataBase
     private ArrayList<Account> accounts;
     private ArrayList<Message> messages;
     private Map<String,ArrayList<String>> pvMessages;
+
     private DataBase() {
         this.accounts = new ArrayList<>();
         this.messages = new ArrayList<>();
