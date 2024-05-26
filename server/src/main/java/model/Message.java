@@ -1,17 +1,18 @@
 package model;
 import java.io.Serializable;
+import java.time.LocalTime;
 import java.util.Date;
 
 public class Message implements Serializable
 {
     private String text;
-    private Date time;
+    private LocalTime time;
     private String sender;
     private String receiver;
 
-    public Message(String text, String time, String sender, String receiver) {
+    public Message(String text, String sender, String receiver) {
         this.text = text;
-//        this.time = time;
+        time = LocalTime.now();
         this.sender = sender;
         this.receiver = receiver;
     }
@@ -24,11 +25,11 @@ public class Message implements Serializable
         this.text = text;
     }
 
-    public Date getTime() {
+    public LocalTime getTime() {
         return time;
     }
 
-    public void setTime(Date time) {
+    public void setTime(LocalTime time) {
         this.time = time;
     }
 
@@ -46,5 +47,11 @@ public class Message implements Serializable
 
     public void setReceiver(String receiver) {
         this.receiver = receiver;
+    }
+    @Override
+    public String toString()
+    {
+        String[] str = time.toString().split("\\.");
+        return sender +"\n" + text + "\n" + str[0];
     }
 }
