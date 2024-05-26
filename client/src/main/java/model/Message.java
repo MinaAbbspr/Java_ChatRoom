@@ -17,6 +17,7 @@ public class Message implements Serializable
         this.receiver = receiver;
     }
 
+
     public String getText() {
         return text;
     }
