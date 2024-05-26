@@ -12,6 +12,14 @@ public class Account implements Serializable {
     private ArrayList<String> blockList;
     private ArrayList<Message> unseenMsg;
 
+    public ArrayList<Message> getUnseenMsg() {
+        return unseenMsg;
+    }
+
+    public void setUnseenMsg(ArrayList<Message> unseenMsg) {
+        this.unseenMsg = unseenMsg;
+    }
+
     public Account(String name, String ID, String password) {
         this.name = name;
         this.ID = ID;
