@@ -5,6 +5,7 @@ import java.util.*;
 public class DataBase
 {
     private static DataBase dataBase;
+
     private ArrayList<Account> accounts;
     private ArrayList<Message> messages;
     private Map<String,ArrayList<String>> pvMessages;
