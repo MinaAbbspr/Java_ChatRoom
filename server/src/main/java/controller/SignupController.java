@@ -37,7 +37,7 @@ public class SignupController
         ResultSet resultSet = SQLConnection.getSqlConnection().executeSelect(sqlCmd);
         if(resultSet != null)
         {
-            throw new RepeatedID("This id is not available");
+            throw new RepeatedID("This id already exist");
         }
         String innerCmd = String.format("INSERT INTO accounts (name,ID,password,isOnline,isPV) VALUES ('%s','%s','%s',%s,%s)",name,id,password,true,false);
         SQLConnection.getSqlConnection().execute(innerCmd);

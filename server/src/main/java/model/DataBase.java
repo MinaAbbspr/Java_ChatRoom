@@ -1,19 +1,17 @@
 package model;
 
+import controller.CommunicationHandlerSender;
+
 import java.util.*;
 
 public class DataBase
 {
     private static DataBase dataBase;
 
-    private ArrayList<Account> accounts;
-    private ArrayList<Message> messages;
-    private Map<String,ArrayList<String>> pvMessages;
+    private Map<String, CommunicationHandlerSender> threadMap;
 
     private DataBase() {
-        this.accounts = new ArrayList<>();
-        this.messages = new ArrayList<>();
-        this.pvMessages = new HashMap<>();
+        this.threadMap = new HashMap<>();
     }
     public static DataBase getDataBase()
     {
@@ -22,4 +20,7 @@ public class DataBase
         return dataBase;
     }
 
+    public Map<String, CommunicationHandlerSender> getThreadMap() {
+        return threadMap;
+    }
 }
