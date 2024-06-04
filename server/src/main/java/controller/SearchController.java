@@ -17,22 +17,27 @@ public class SearchController
     }
     public void baseOnName(String name,String ID) throws SQLException
     {
-        StringBuilder unseenMessages = new StringBuilder();
+        StringBuilder users = new StringBuilder();
         String sqlCmd = String.format("SELECT ID FROM accounts WHERE name = '%s'",name);
         ResultSet resultSet = SQLConnection.getSqlConnection().executeSelect(sqlCmd);
+        if(resultSet == null)
+        {
+            users.append("There is no such name");
+        }
         while(resultSet.next())
         {
             String innerCmd = String.format("SELECT * FROM massage WHERE senderID = '%s'", name);
             ResultSet rs = SQLConnection.getSqlConnection().executeSelect(innerCmd);
             while (rs.next()) {
-                unseenMessages.append(rs.getString("senderID")).append("\n").append(rs.getString("massage")).append("\n").append(rs.getString("time"));
+                users.append(rs.getString("senderID")).append("\n").append(rs.getString("massage")).append("\n").append(rs.getString("time"));
             }
         }
-        DataBase.getDataBase().getThreadMap().get(ID).setMessage(String.valueOf(unseenMessages));
+        if(users.isEmpty())
+            users.append("This user has no message");
+        DataBase.getDataBase().getThreadMap().get(ID).setMessage(String.valueOf(users.capacity()));
     }
     public void baseOnTime()
     {
-
     }
 
 }
