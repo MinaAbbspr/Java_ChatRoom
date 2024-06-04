@@ -15,7 +15,8 @@ public class CommandHandler {
     public void scanner(CommunicationHandlerSender sender){
         Scanner sc = new Scanner(System.in);
         String command;
-        while (true){
+        boolean con = true;
+        while (con){
             command = sc.nextLine();
             String[] commands = command.split("-");
 
@@ -33,9 +34,12 @@ public class CommandHandler {
                         startTime = System.nanoTime();
                     }
                 }
+                case "exit" ->
+                {
+                    con = false;
+                }
             }
             sender.setMessage(new Message(command,senderID));
-
         }
     }
 }

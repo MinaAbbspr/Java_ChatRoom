@@ -23,7 +23,7 @@ public class CommunicationHandlerReceiver extends Thread
             String message;
 
             while ((message = in.readLine()) != null) {
-                if (message.equals("END")) {
+                if (message.equals("exit")) {
                     System.out.println("Good bye");
                     break;
                 }else if(message.equals("ping")){

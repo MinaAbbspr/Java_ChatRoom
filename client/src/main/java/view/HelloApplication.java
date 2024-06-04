@@ -28,6 +28,7 @@ public class HelloApplication extends Application {
         receiver.start();
         CommandHandler commandHandler = new CommandHandler();
         commandHandler.scanner(sender);
+
         //launch();
     }
 
