@@ -1,11 +1,16 @@
 package controller;
 
+import model.Message;
+import view.CommandHandler;
+
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.Socket;
+import java.sql.SQLException;
 
 public class CommunicationHandlerReceiver extends Thread{
     private Socket socket;
+
 
     public CommunicationHandlerReceiver(Socket socket) {
         this.socket = socket;
@@ -15,20 +20,22 @@ public class CommunicationHandlerReceiver extends Thread{
     public void run() {
         try {
             ObjectInputStream reader = new ObjectInputStream(socket.getInputStream());
-            String message;
-            while (!(message = reader.readUTF()).isEmpty()) {
-                if (message.equals("exit")) {
+            Message message;
+            while (true) {
+                message = (Message) reader.readObject();
+                if (message.getText().equals("exit")) {
                     System.out.println("Good bye");
                     break;
                 } else {
-                    ///controllers
+                    CommandHandler.getCommandHandler().scanner(message);
                 }
             }
-            //---------------
             reader.close();
             socket.close();
         }
-        catch (IOException ex) { }
+        catch (IOException ignored) { } catch (ClassNotFoundException | SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }
