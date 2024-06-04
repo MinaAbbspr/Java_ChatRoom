@@ -1,15 +1,19 @@
 package model;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class DataBase
 {
     private static DataBase dataBase;
-    private Map <String,Thread> threadMap;
+
+    private ArrayList<Account> accounts;
+    private ArrayList<Message> messages;
+    private Map<String,ArrayList<String>> pvMessages;
 
     private DataBase() {
-        this.threadMap = new HashMap<>();
+        this.accounts = new ArrayList<>();
+        this.messages = new ArrayList<>();
+        this.pvMessages = new HashMap<>();
     }
     public static DataBase getDataBase()
     {
@@ -18,7 +22,4 @@ public class DataBase
         return dataBase;
     }
 
-    public Map<String, Thread> getThreadMap() {
-        return threadMap;
-    }
 }

@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba7f0ccf-aa3d-4de9-a219-194814455c34" name="Changes" comment="&#10;account model">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/model/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/model/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/view/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/view/HelloApplication.java" afterDir="false" />
-    </list>
+    <list default="true" id="ba7f0ccf-aa3d-4de9-a219-194814455c34" name="Changes" comment="&#10;main" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +33,7 @@
     "Application.HelloApplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "parinaz",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/parinaz/IdeaProjects/secondproject-chatroom-parinaz_mina2/client",
     "nodejs_package_manager_path": "npm",
@@ -72,7 +67,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176" />
       </set>
     </attachedChunks>
   </component>
