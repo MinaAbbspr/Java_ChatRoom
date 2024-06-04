@@ -40,12 +40,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.HelloApplication.executor": "Debug",
+    "Application.HelloApplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "parinaz",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/parinaz/IdeaProjects/secondproject-chatroom-parinaz_mina2/client",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
@@ -92,6 +95,7 @@
       <workItem from="1716721686986" duration="40000" />
       <workItem from="1716721910726" duration="3000" />
       <workItem from="1716721998496" duration="260000" />
+      <workItem from="1717490611675" duration="929000" />
     </task>
     <task id="LOCAL-00001" summary="&#10;main">
       <option name="closed" value="true" />
@@ -127,6 +131,9 @@
     </task>
     <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

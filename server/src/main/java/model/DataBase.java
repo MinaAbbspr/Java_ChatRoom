@@ -7,11 +7,9 @@ import java.util.*;
 public class DataBase
 {
     private static DataBase dataBase;
-
     private Map<String, CommunicationHandlerSender> threadMap;
-
     private DataBase() {
-        this.threadMap = new HashMap<>();
+        threadMap = new HashMap<>();
     }
     public static DataBase getDataBase()
     {

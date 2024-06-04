@@ -27,6 +27,6 @@ public class LoginController {
         if(!resultSet.getString("password").equals(password))
             throw new WrongPassword("Your password is not correct");
 
-        UnseenMessagesController.getUnseenMessagesController().showUnseenMessages(ID);
+        UnseenMessagesController.getUnseenMessagesController().loginShowUnseenMessages(ID);
     }
 }

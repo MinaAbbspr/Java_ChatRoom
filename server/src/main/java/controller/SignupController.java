@@ -5,6 +5,8 @@ import model.Account;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Date;
+import java.util.Objects;
 
 
 public class SignupController
@@ -32,15 +34,17 @@ public class SignupController
     public static void setSignupController(SignupController signupController) {
         SignupController.signupController = signupController;
     }
-    public String signup(String name,String id,String password) throws RepeatedID {
-        String sqlCmd = String.format("SELECT name FROM accounts WHERE ID = '%s'",id);
+    public String signup(String name,String ID,String password) throws RepeatedID, SQLException
+    {
+        String sqlCmd = String.format("SELECT name FROM accounts WHERE ID = '%s'",ID);
         ResultSet resultSet = SQLConnection.getSqlConnection().executeSelect(sqlCmd);
-        if(resultSet != null)
+        if(resultSet != null || ID.equals("group"))
         {
             throw new RepeatedID("This id already exist");
         }
-        String innerCmd = String.format("INSERT INTO accounts (name,ID,password,isOnline,isPV) VALUES ('%s','%s','%s',%s,%s)",name,id,password,true,false);
+        String innerCmd = String.format("INSERT INTO accounts (name,ID,password,isOnline,isPV) VALUES ('%s','%s','%s',%s,%s)",name,ID,password,true,false);
         SQLConnection.getSqlConnection().execute(innerCmd);
+        UnseenMessagesController.getUnseenMessagesController().signupShowUnseenMessages(ID);
         return "You signed up successfully";
     }
 }
