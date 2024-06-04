@@ -27,7 +27,8 @@ public class SearchController
         while ( resultSet != null && resultSet.next()) {
             String innerCmd = String.format("SELECT * FROM massage WHERE senderID = '%s'", name);
             ResultSet rs = SQLConnection.getSqlConnection().executeSelect(innerCmd);
-            while (rs != null && rs.next() ) {
+            while (rs != null && rs.next() )
+            {
                 users.append(rs.getString("senderID")).append("\n").append(rs.getString("massage")).append("\n").append(rs.getString("time"));
             }
         }
