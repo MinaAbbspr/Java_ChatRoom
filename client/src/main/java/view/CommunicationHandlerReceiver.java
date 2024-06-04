@@ -1,11 +1,9 @@
 package view;
 
-import model.Message;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.ObjectInputStream;
 import java.net.Socket;
 
 public class CommunicationHandlerReceiver extends Thread
@@ -23,7 +21,7 @@ public class CommunicationHandlerReceiver extends Thread
             String message;
 
             while ((message = in.readLine()) != null) {
-                if (message.equals("END")) {
+                if (message.equals("exit")) {
                     System.out.println("Good bye");
                     break;
                 } else {
@@ -33,7 +31,7 @@ public class CommunicationHandlerReceiver extends Thread
             in.close();
             clientSocket.close();
         }
-        catch (IOException ex) { }
+        catch (IOException ignored) { }
     }
 
 }

@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import model.Account;
+import model.Message;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -27,7 +28,10 @@ public class HelloApplication extends Application {
         sender.start();
         receiver.start();
         Scanner sc = new Scanner(System.in);
-
+//        while (true){
+//            if(sc.hasNext())
+//                sender.setMessage(new Message(sc.nextLine(),));
+//        }
         //launch();
     }
 }
