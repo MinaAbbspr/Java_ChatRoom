@@ -26,7 +26,11 @@ public class CommunicationHandlerReceiver extends Thread
                 if (message.equals("END")) {
                     System.out.println("Good bye");
                     break;
-                } else {
+                }else if(message.equals("ping")){
+                    long endTime = System.nanoTime();
+                    System.out.println("ping: " + (endTime-CommandHandler.getStartTime())/1000000 + "ms");
+                }
+                else {
                     System.out.println(message);
                 }
             }

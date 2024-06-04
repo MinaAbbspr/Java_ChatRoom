@@ -11,8 +11,8 @@ public class CommunicationHandlerSender extends Thread{
     private Socket clientSocket;
     private Message message;
 
-    public void setMessage(String message) {
-        this.message = new Message(message,"");
+    public void setMessage(Message message) {
+        this.message = message;
     }
 
     public CommunicationHandlerSender() throws IOException {

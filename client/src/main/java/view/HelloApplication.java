@@ -5,6 +5,8 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import model.Message;
+
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -24,11 +26,10 @@ public class HelloApplication extends Application {
         CommunicationHandlerReceiver receiver = new CommunicationHandlerReceiver();
         sender.start();
         receiver.start();
-        Scanner sc = new Scanner(System.in);
-//        while (true){
-//            if(sc.hasNext())
-//                sender.setMessage(new Message(sc.nextLine(),));
-//        }
+        CommandHandler commandHandler = new CommandHandler();
+        commandHandler.scanner(sender);
         //launch();
     }
+
+
 }
