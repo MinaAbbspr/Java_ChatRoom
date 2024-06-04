@@ -40,7 +40,7 @@ public class CommunicationHandlerSender extends Thread
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
             while (true) {
                 synchronized (this) {
-                    wait();
+                    this.wait();
                 }
                 out.println(message);
             }

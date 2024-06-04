@@ -6,7 +6,6 @@ import controller.CommunicationHandlerSender;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.sql.*;
 
 public class HelloApplication{
 
@@ -25,7 +24,7 @@ public class HelloApplication{
             sender.start();
 
             sender.setMessage("ping: " + (end-start)/1000000 + "ms");
-            synchronized (sender) {
+            synchronized (sender){
                 sender.notify();
             }
         }
