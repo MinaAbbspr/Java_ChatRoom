@@ -16,7 +16,6 @@ public class CommunicationHandlerReceiver extends Thread{
         try {
             ObjectInputStream reader = new ObjectInputStream(socket.getInputStream());
             String message;
-            //---------------
             while (!(message = reader.readUTF()).isEmpty()) {
                 if (message.equals("exit")) {
                     System.out.println("Good bye");

@@ -28,10 +28,10 @@ public class HelloApplication extends Application {
         sender.start();
         receiver.start();
         Scanner sc = new Scanner(System.in);
-        while (true){
-            if(sc.hasNext())
-                sender.setMessage(sc.nextLine());
-        }
+//        while (true){
+//            if(sc.hasNext())
+//                sender.setMessage(new Message(sc.nextLine(),));
+//        }
         //launch();
     }
 }
