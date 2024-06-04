@@ -21,9 +21,13 @@ public class HelloApplication extends Application {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        CommunicationHandlerSender sender = new CommunicationHandlerSender();
+        CommunicationHandlerReceiver receiver = new CommunicationHandlerReceiver();
+        sender.start();
+        receiver.start();
         Scanner sc = new Scanner(System.in);
-        while ()
+
         //launch();
     }
 }

@@ -4,11 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba7f0ccf-aa3d-4de9-a219-194814455c34" name="Changes" comment="&#10;main" />
+    <list default="true" id="ba7f0ccf-aa3d-4de9-a219-194814455c34" name="Changes" comment="&#10;CommunicationHandlerSender">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/CommunicationHandlerReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/CommunicationHandlerReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/CommunicationHandlerSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/CommunicationHandlerSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/controller/CommunicationHandlerSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/controller/CommunicationHandlerSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/view/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/view/HelloApplication.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -30,7 +44,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.HelloApplication.executor": "Run",
+    "Application.HelloApplication.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "parinaz",
@@ -99,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716721223606</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="&#10;CommunicationHandlerSender">
+      <option name="closed" value="true" />
+      <created>1717483452874</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717483452874</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -115,6 +137,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&#10;main" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;main" />
+    <MESSAGE value="&#10;CommunicationHandlerSender" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;CommunicationHandlerSender" />
   </component>
 </project>

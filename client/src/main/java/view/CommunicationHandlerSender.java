@@ -25,7 +25,9 @@ public class CommunicationHandlerSender extends Thread{
             ObjectOutputStream writer = new ObjectOutputStream(clientSocket.getOutputStream());
             while(true)
             {
-                wait();
+                synchronized (this) {
+                    wait();
+                }
                 if(Objects.equals(message, "exit"))
                     break;
                 writer.writeObject(message);

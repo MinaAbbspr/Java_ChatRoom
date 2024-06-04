@@ -2,7 +2,9 @@ package view;
 
 import model.Message;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.net.Socket;
 
@@ -16,17 +18,19 @@ public class CommunicationHandlerReceiver extends Thread
     @Override
     public void run() {
         try {
-            ObjectInputStream reader = new ObjectInputStream(clientSocket.getInputStream());
+            InputStreamReader reader = new InputStreamReader(clientSocket.getInputStream());
+            BufferedReader in = new BufferedReader(reader);
             String message;
-            while (!(message = reader.readUTF()).isEmpty()) {
-                if (message.equals("exit")) {
+
+            while ((message = in.readLine()) != null) {
+                if (message.equals("END")) {
                     System.out.println("Good bye");
                     break;
                 } else {
                     System.out.println(message);
                 }
             }
-            reader.close();
+            in.close();
             clientSocket.close();
         }
         catch (IOException ex) { }
