@@ -17,6 +17,12 @@ public class Message implements Serializable
         this.receiver = receiver;
     }
 
+    public Message(String text, String sender) {
+        this.text = text;
+        time = LocalTime.now();
+        this.sender = sender;
+    }
+
 
     public String getText() {
         return text;

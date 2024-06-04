@@ -9,11 +9,9 @@ import java.net.Socket;
 public class CommunicationHandlerReceiver extends Thread
 {
     private Socket clientSocket;
-    private Message message;
 
-    public CommunicationHandlerReceiver(Message message) throws IOException {
+    public CommunicationHandlerReceiver() throws IOException {
         clientSocket = new Socket("localhost",6666);
-        this.message = message;
     }
     @Override
     public void run() {
