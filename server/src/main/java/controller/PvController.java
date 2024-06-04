@@ -1,7 +1,6 @@
 package controller;
 
 import model.Account;
-import model.DataBase;
 
 public class PvController
 {
