@@ -2,6 +2,7 @@ package controller;
 
 import controller.exceptions.RepeatedID;
 import model.Account;
+import model.DataBase;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
