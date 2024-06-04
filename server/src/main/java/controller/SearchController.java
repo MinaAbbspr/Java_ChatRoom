@@ -24,15 +24,14 @@ public class SearchController
         {
             users.append("There is no such name");
         }
-        while(resultSet.next())
-        {
+        while ( resultSet != null && resultSet.next()) {
             String innerCmd = String.format("SELECT * FROM massage WHERE senderID = '%s'", name);
             ResultSet rs = SQLConnection.getSqlConnection().executeSelect(innerCmd);
-            while (rs.next()) {
+            while (rs != null && rs.next() ) {
                 users.append(rs.getString("senderID")).append("\n").append(rs.getString("massage")).append("\n").append(rs.getString("time"));
             }
         }
-        if(users.isEmpty())
+        if (users.isEmpty())
             users.append("This user has no message");
         DataBase.getDataBase().getThreadMap().get(ID).setMessage(String.valueOf(users.capacity()));
     }
