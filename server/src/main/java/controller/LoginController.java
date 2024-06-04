@@ -2,6 +2,7 @@ package controller;
 
 import controller.exceptions.IDNotFound;
 import controller.exceptions.WrongPassword;
+import model.DataBase;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

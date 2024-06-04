@@ -34,10 +34,21 @@ public class SearchController
         }
         if (users.isEmpty())
             users.append("This user has no message");
-        DataBase.getDataBase().getThreadMap().get(ID).setMessage(String.valueOf(users.capacity()));
+        DataBase.getDataBase().getThreadMap().get(ID).setMessage(String.valueOf(users));
     }
-    public void baseOnTime()
-    {
+    public void baseOnTime(String time1, String time2, String ID) throws SQLException {
+        StringBuilder messages = new StringBuilder();
+        String innerCmd = String.format("SELECT * FROM massage WHERE time >= '%s' AND time <= '%s'",time1,time2);
+        ResultSet rs = SQLConnection.getSqlConnection().executeSelect(innerCmd);
+        while (rs != null && rs.next())
+        {
+            messages.append(rs.getString("senderID")).append("\n").append(rs.getString("massage"))
+                    .append("\n").append(rs.getString("time"));
+        }
+
+        if (messages.isEmpty())
+            messages.append("There is no message in this period");
+        DataBase.getDataBase().getThreadMap().get(ID).setMessage(String.valueOf(messages));
     }
 
 }

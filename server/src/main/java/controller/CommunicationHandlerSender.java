@@ -43,6 +43,7 @@ public class CommunicationHandlerSender extends Thread
                     this.wait();
                 }
                 out.println(message);
+                out.flush();
             }
 
         }

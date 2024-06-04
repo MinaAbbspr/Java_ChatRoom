@@ -4,15 +4,14 @@ import controller.CommunicationHandlerSender;
 
 import java.util.*;
 
-public class DataBase
-{
+public class DataBase {
     private static DataBase dataBase;
     private Map<String, CommunicationHandlerSender> threadMap;
     private DataBase() {
         threadMap = new HashMap<>();
     }
-    public static DataBase getDataBase()
-    {
+
+    public static DataBase getDataBase() {
         if (dataBase == null)
             dataBase = new DataBase();
         return dataBase;
