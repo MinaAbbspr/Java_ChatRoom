@@ -21,10 +21,12 @@ public class HelloApplication{
 
             CommunicationHandlerSender sender = new CommunicationHandlerSender(clientSocket);
             CommunicationHandlerReceiver receiver = new CommunicationHandlerReceiver(clientSocket);
-            DataBase.getDataBase().getThreadMap().put(sender.getName(), sender);
+            if(Integer.parseInt(sender.getName()) %2 == 1) {
+                sender.setName(String.valueOf(Integer.parseInt(sender.getName())-1));
+                DataBase.getDataBase().getThreadList().add(sender);
+            }
             receiver.start();
             sender.start();
-            DataBase.getDataBase().getThreadMap().put("mina",sender);
 
             sender.setMessage("ping: " + (end-start)/1000000 + "ms");
         }

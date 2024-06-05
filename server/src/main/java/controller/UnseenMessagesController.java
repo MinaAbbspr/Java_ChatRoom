@@ -32,7 +32,8 @@ public class UnseenMessagesController {
         }
         if(stringBuilder.isEmpty())
             stringBuilder.append("there is no message");
-        DataBase.getDataBase().getThreadMap().get(ID).setMessage(String.valueOf(stringBuilder));
+        DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(String.valueOf(stringBuilder));
+
     }
     public void signupShowUnseenMessages(String ID) throws SQLException {
         StringBuilder unseenMessages = new StringBuilder();
@@ -48,6 +49,6 @@ public class UnseenMessagesController {
         }
         if(unseenMessages.isEmpty())
             unseenMessages.append("there is no message");
-        DataBase.getDataBase().getThreadMap().get(ID).setMessage(String.valueOf(unseenMessages));
+        DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(String.valueOf(unseenMessages));
     }
 }

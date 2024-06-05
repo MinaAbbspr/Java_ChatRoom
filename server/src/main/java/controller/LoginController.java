@@ -28,8 +28,8 @@ public class LoginController {
         if(!resultSet.getString("password").equals(password))
             throw new WrongPassword("Your password is not correct");
 
-        DataBase.getDataBase().getThreadMap().put(ID,DataBase.getDataBase().getThreadMap().get(Thread.currentThread().getName()));
-        DataBase.getDataBase().getThreadMap().remove(Thread.currentThread().getName());
+        DataBase.getDataBase().getThread(Thread.currentThread().getName()).setName(ID);
+        Thread.currentThread().setName(ID);
         UnseenMessagesController.getUnseenMessagesController().loginShowUnseenMessages(ID);
     }
 }

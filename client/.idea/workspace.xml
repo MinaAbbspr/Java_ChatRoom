@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba7f0ccf-aa3d-4de9-a219-194814455c34" name="Changes" comment="sender edite">
+    <list default="true" id="ba7f0ccf-aa3d-4de9-a219-194814455c34" name="Changes" comment="MapThread">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/CommunicationHandlerReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/CommunicationHandlerReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/CommunicationHandlerSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/CommunicationHandlerSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/controller/CommunicationHandlerReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/controller/CommunicationHandlerReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/controller/CommunicationHandlerSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/controller/CommunicationHandlerSender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/controller/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/controller/ShowMsgController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/controller/ShowMsgController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/src/main/java/controller/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/controller/SignupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/model/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/controller/UnseenMessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/controller/UnseenMessagesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/model/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/model/DataBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/src/main/java/view/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/view/CommandHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/src/main/java/view/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/view/HelloApplication.java" afterDir="false" />
     </list>
@@ -49,7 +47,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.HelloApplication.executor": "Debug",
+    "Application.HelloApplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "parinaz",
@@ -162,14 +160,15 @@
     <MESSAGE value="&#10;sender wait error" />
     <MESSAGE value="CommandHandler method" />
     <MESSAGE value="sender edite" />
-    <option name="LAST_COMMIT_MESSAGE" value="sender edite" />
+    <MESSAGE value="MapThread" />
+    <option name="LAST_COMMIT_MESSAGE" value="MapThread" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/view/CommunicationHandlerReceiver.java</url>
-          <line>26</line>
+          <line>25</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>

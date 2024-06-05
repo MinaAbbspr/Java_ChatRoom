@@ -45,8 +45,9 @@ public class SignupController
         }
         String innerCmd = String.format("INSERT INTO accounts (name,ID,password,isOnline,isPV) VALUES ('%s','%s','%s',%s,%s)",name,ID,password,true,false);
         SQLConnection.getSqlConnection().execute(innerCmd);
-        DataBase.getDataBase().getThreadMap().put(ID,DataBase.getDataBase().getThreadMap().get(Thread.currentThread().getName()));
-        DataBase.getDataBase().getThreadMap().remove(Thread.currentThread().getName());
+
+        DataBase.getDataBase().getThread(Thread.currentThread().getName()).setName(ID);
+        Thread.currentThread().setName(ID);
         UnseenMessagesController.getUnseenMessagesController().signupShowUnseenMessages(ID);
         return "You signed up successfully";
     }

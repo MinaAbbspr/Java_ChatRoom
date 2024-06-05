@@ -6,9 +6,12 @@ import java.util.*;
 
 public class DataBase {
     private static DataBase dataBase;
-    private Map<String, CommunicationHandlerSender> threadMap;
+    //private HashMap<String, CommunicationHandlerSender> threadMap;
+    private ArrayList<CommunicationHandlerSender> threadList;
+
     private DataBase() {
-        threadMap = new HashMap<>();
+        //threadMap = new HashMap<>();
+        threadList = new ArrayList<>();
     }
 
     public static DataBase getDataBase() {
@@ -17,7 +20,20 @@ public class DataBase {
         return dataBase;
     }
 
-    public Map<String, CommunicationHandlerSender> getThreadMap() {
-        return threadMap;
+//    public HashMap<String, CommunicationHandlerSender> getThreadMap() {
+//        return threadMap;
+//    }
+//
+//    public void setThreadMap(String ID, CommunicationHandlerSender sender) {
+//        threadMap.put(ID,sender);
+//    }
+
+
+    public ArrayList<CommunicationHandlerSender> getThreadList() {
+        return threadList;
+    }
+    public CommunicationHandlerSender getThread(String name){
+        List<CommunicationHandlerSender> list= threadList.stream().filter(s -> s.getName().equals(name)).toList();
+        return list.getFirst();
     }
 }

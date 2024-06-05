@@ -22,7 +22,7 @@ public class ShowMsgController
     public void showMessage(Message message) throws SQLException, ClassNotFoundException {
         String sqlCmd = String.format("SELECT isPV FROM accounts WHERE ID = '%s'", message.getSender());
         ResultSet rs1 = SQLConnection.getSqlConnection().executeSelect(sqlCmd);
-        if (rs1.getBoolean("isPV"))
+        if (rs1 != null && rs1.getBoolean("isPV"))
         {
             if (message.getReceiver() != null) {
                 String sqlCmd2 = String.format("SELECT  FROM accounts WHERE ID = '%s'", message.getSender());
@@ -35,7 +35,7 @@ public class ShowMsgController
             if (rs2 != null) {
                 while (rs2.next())
                 {
-                    DataBase.getDataBase().getThreadMap().get(rs2.getString("ID")).setMessage(message.toString());
+                    DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(message.toString());
                 }
             }
             cmd2 = String.format("SELECT ID FROM accounts WHERE isOnline =%s OR isPV = %s", false,true);

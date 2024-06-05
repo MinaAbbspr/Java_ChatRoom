@@ -34,7 +34,7 @@ public class SearchController
         }
         if (users.isEmpty())
             users.append("This user has no message");
-        DataBase.getDataBase().getThreadMap().get(ID).setMessage(String.valueOf(users));
+        DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(String.valueOf(users));
     }
     public void baseOnTime(String time1, String time2, String ID) throws SQLException {
         StringBuilder messages = new StringBuilder();
@@ -48,7 +48,7 @@ public class SearchController
 
         if (messages.isEmpty())
             messages.append("There is no message in this period");
-        DataBase.getDataBase().getThreadMap().get(ID).setMessage(String.valueOf(messages));
+        DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(String.valueOf(messages));
     }
 
 }

@@ -36,7 +36,7 @@ public class CommandHandler
                     try {
                         LoginController.getLoginController().login(commands[1],commands[2]);
                     } catch (IDNotFound | SQLException | WrongPassword e) {
-                        DataBase.getDataBase().getThreadMap().get(Thread.currentThread().getName()).setMessage(e.getMessage());
+                        DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(e.getMessage());
                     }
                 }
             }
@@ -45,13 +45,13 @@ public class CommandHandler
                     try {
                         SignupController.getSignupController().signup(commands[1],commands[2],commands[3]);
                     } catch (RepeatedID | SQLException e) {
-                        DataBase.getDataBase().getThreadMap().get(Thread.currentThread().getName()).setMessage(e.getMessage());
+                        DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(e.getMessage());
                     }
                 }
             }
-            case "Ping" -> {
+            case "ping" -> {
                 if (commands.length == 1) {
-                    DataBase.getDataBase().getThreadMap().get(message.getSender());
+                    DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("ping");
                 }
             }
 
