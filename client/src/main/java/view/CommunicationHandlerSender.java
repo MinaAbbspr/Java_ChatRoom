@@ -36,6 +36,7 @@ public class CommunicationHandlerSender extends Thread{
                 if(Objects.equals(message, "exit"))
                     break;
                 writer.writeObject(message);
+                writer.flush();
                 message = null;
             }
             writer.close();

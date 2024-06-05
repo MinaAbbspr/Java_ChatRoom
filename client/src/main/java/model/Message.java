@@ -58,7 +58,6 @@ public class Message implements Serializable
     @Override
     public String toString()
     {
-        String[] str = time.toString().split("\\.");
-        return sender +"\n" + text + "\n" + str[0];
+        return sender +"\n" + text + "\n" + time.getHour() + ":" + time.getMinute() + ":" + time.getSecond();
     }
 }

@@ -2,6 +2,7 @@ package view;
 
 import controller.CommunicationHandlerReceiver;
 import controller.CommunicationHandlerSender;
+import model.DataBase;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -20,8 +21,10 @@ public class HelloApplication{
 
             CommunicationHandlerSender sender = new CommunicationHandlerSender(clientSocket);
             CommunicationHandlerReceiver receiver = new CommunicationHandlerReceiver(clientSocket);
+            DataBase.getDataBase().getThreadMap().put(sender.getName(), sender);
             receiver.start();
             sender.start();
+            DataBase.getDataBase().getThreadMap().put("mina",sender);
 
             sender.setMessage("ping: " + (end-start)/1000000 + "ms");
         }

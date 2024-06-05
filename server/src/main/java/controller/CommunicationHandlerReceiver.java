@@ -10,10 +10,11 @@ import java.sql.SQLException;
 
 public class CommunicationHandlerReceiver extends Thread{
     private Socket socket;
-
+    private static int code = 0;
 
     public CommunicationHandlerReceiver(Socket socket) {
         this.socket = socket;
+        this.setName(String.valueOf(code++));
     }
 
     @Override
@@ -34,7 +35,7 @@ public class CommunicationHandlerReceiver extends Thread{
             socket.close();
         }
         catch (IOException ignored) { } catch (ClassNotFoundException | SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 

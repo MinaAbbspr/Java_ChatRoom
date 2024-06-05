@@ -29,40 +29,34 @@ public class CommandHandler
 
 
     public void scanner(Message message) throws SQLException, ClassNotFoundException {
-
-        boolean con = true;
-        while (con){
-            String[] commands = message.getText().split("-");
-            switch (commands[0]) {
-                case "Login" -> {
-                    if (commands.length == 3) {
-                        try {
-                            LoginController.getLoginController().login(commands[1],commands[2]);
-                        } catch (IDNotFound | SQLException | WrongPassword e) {
-
-                        }
+        String[] commands = message.getText().split("-");
+        switch (commands[0]) {
+            case "Login" -> {
+                if (commands.length == 3) {
+                    try {
+                        LoginController.getLoginController().login(commands[1],commands[2]);
+                    } catch (IDNotFound | SQLException | WrongPassword e) {
+                        DataBase.getDataBase().getThreadMap().get(Thread.currentThread().getName()).setMessage(e.getMessage());
                     }
                 }
-                case "Signup" -> {
-                    if (commands.length == 4) {
-                        try {
-                            SignupController.getSignupController().signup(commands[1],commands[2],commands[3]);
-                        } catch (RepeatedID | SQLException e) {
-                            throw new RuntimeException(e);
-                        }
-                    }
-                }
-                case "Ping" -> {
-                    if (commands.length == 1) {
-                        DataBase.getDataBase().getThreadMap().get(message.getSender());
-                    }
-                }
-                case "exit" ->
-                {
-                    con = false;
-                }
-                default -> ShowMsgController.getShowMsgController().showMessage(message);
             }
+            case "Signup" -> {
+                if (commands.length == 4) {
+                    try {
+                        SignupController.getSignupController().signup(commands[1],commands[2],commands[3]);
+                    } catch (RepeatedID | SQLException e) {
+                        DataBase.getDataBase().getThreadMap().get(Thread.currentThread().getName()).setMessage(e.getMessage());
+                    }
+                }
+            }
+            case "Ping" -> {
+                if (commands.length == 1) {
+                    DataBase.getDataBase().getThreadMap().get(message.getSender());
+                }
+            }
+
+            default -> ShowMsgController.getShowMsgController().showMessage(message);
+
         }
     }
 }

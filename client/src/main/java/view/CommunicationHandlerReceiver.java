@@ -22,7 +22,8 @@ public class CommunicationHandlerReceiver extends Thread
             BufferedReader in = new BufferedReader(reader);
             String message;
 
-            while ((message = in.readLine()) != null) {
+            while (true) {
+                message = in.readLine();
                 if (message.equals("exit")) {
                     System.out.println("Good bye");
                     break;

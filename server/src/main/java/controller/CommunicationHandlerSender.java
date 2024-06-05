@@ -8,10 +8,12 @@ public class CommunicationHandlerSender extends Thread
 {
     private Socket socket;
     private String message;
+    private static int code = 0;
 
     public CommunicationHandlerSender(Socket socket) {
         this.socket = socket;
         this.message = null;
+        this.setName(String.valueOf(code++));
     }
 
     public void setMessage(String message) {

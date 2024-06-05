@@ -35,7 +35,7 @@ public class SignupController
     public static void setSignupController(SignupController signupController) {
         SignupController.signupController = signupController;
     }
-    public String signup(String name,String ID,String password) throws RepeatedID, SQLException
+    public synchronized String signup(String ID,String name,String password) throws RepeatedID, SQLException
     {
         String sqlCmd = String.format("SELECT name FROM accounts WHERE ID = '%s'",ID);
         ResultSet resultSet = SQLConnection.getSqlConnection().executeSelect(sqlCmd);
@@ -45,6 +45,8 @@ public class SignupController
         }
         String innerCmd = String.format("INSERT INTO accounts (name,ID,password,isOnline,isPV) VALUES ('%s','%s','%s',%s,%s)",name,ID,password,true,false);
         SQLConnection.getSqlConnection().execute(innerCmd);
+        DataBase.getDataBase().getThreadMap().put(ID,DataBase.getDataBase().getThreadMap().get(Thread.currentThread().getName()));
+        DataBase.getDataBase().getThreadMap().remove(Thread.currentThread().getName());
         UnseenMessagesController.getUnseenMessagesController().signupShowUnseenMessages(ID);
         return "You signed up successfully";
     }
