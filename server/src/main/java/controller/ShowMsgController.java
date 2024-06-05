@@ -22,13 +22,13 @@ public class ShowMsgController
     public void showMessage(Message message) throws SQLException, ClassNotFoundException {
         String sqlCmd = String.format("SELECT isPV FROM accounts WHERE ID = '%s'", message.getSender());
         ResultSet rs1 = SQLConnection.getSqlConnection().executeSelect(sqlCmd);
-        if (rs1 != null && rs1.getBoolean("isPV"))
+        if (rs1 != null && rs1.next() && rs1.getBoolean("isPV"))
         {
             if (message.getReceiver() != null) {
                 String sqlCmd2 = String.format("SELECT  FROM accounts WHERE ID = '%s'", message.getSender());
             }
         } else {
-            String cmd2 = String.format("INSERT INTO massage (ID,massage,time,senderID,receiverID) VALUES (%s,'%s','%s','%s','%s'", getMaxId() + 1, message.getText(), message.getTime(), message.getSender(), "group");
+            String cmd2 = String.format("INSERT INTO massage (ID,massage,time,senderID,receiverID) VALUES (%s,'%s','%s','%s','%s')", getMaxId() + 1, message.getText(), message.getTime(), message.getSender(), "group");
             SQLConnection.getSqlConnection().execute(cmd2);
             cmd2 = String.format("SELECT ID FROM accounts WHERE isOnline =%s AND isPV = %s", true, false);
             ResultSet rs2 = SQLConnection.getSqlConnection().executeSelect(cmd2);
@@ -43,7 +43,7 @@ public class ShowMsgController
             if (rs2 != null) {
                 while (rs2.next())
                 {
-                    cmd2 = String.format("INSERT INTO unseen massage (massageID,accountID) Values (%s,'%s')",getMaxId(),rs2.getString("ID"));
+                    cmd2 = String.format("INSERT INTO unseenMessage (massageID,accountID) Values (%s,'%s')",getMaxId(),rs2.getString("ID"));
                     SQLConnection.getSqlConnection().execute(cmd2);
                 }
             }

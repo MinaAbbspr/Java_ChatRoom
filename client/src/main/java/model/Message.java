@@ -32,8 +32,8 @@ public class Message implements Serializable
         this.text = text;
     }
 
-    public LocalTime getTime() {
-        return time;
+    public String getTime() {
+        return  time.getHour() + ":" + time.getMinute() + ":" + time.getSecond();
     }
 
     public void setTime(LocalTime time) {
@@ -58,6 +58,6 @@ public class Message implements Serializable
     @Override
     public String toString()
     {
-        return sender +"\n" + text + "\n" + time.getHour() + ":" + time.getMinute() + ":" + time.getSecond();
+        return sender +"\n" + text + "\n" + getTime();
     }
 }
