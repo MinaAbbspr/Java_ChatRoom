@@ -8,41 +8,31 @@ public class CommunicationHandlerSender extends Thread
 {
     private Socket socket;
     private String message;
-    private Object lock;
 
     public CommunicationHandlerSender(Socket socket) {
-        lock = new Object();
         this.socket = socket;
+        this.message = null;
     }
 
     public void setMessage(String message) {
         this.message = message;
-    }
-
-    public Object getLock() {
-        return lock;
+        synchronized (this){
+            this.notify();
+        }
     }
 
     @Override
     public void run() {
         try
         {
-//            ObjectOutputStream writer = new ObjectOutputStream(socket.getOutputStream());
-//            while(true)
-//            {
-//                synchronized (this){
-//                this.wait();
-//                }
-//                if(Objects.equals(message, "exit"))
-//                    break;
-//                writer.writeUTF(message);
-//            }
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
             while (true) {
-                synchronized (this) {
-                    this.wait();
-                }
+                while (message == null)
+                    synchronized (this) {
+                        this.wait();
+                    }
                 out.println(message);
+                message = null;
                 out.flush();
             }
 

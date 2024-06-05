@@ -13,10 +13,14 @@ public class CommunicationHandlerSender extends Thread{
 
     public void setMessage(Message message) {
         this.message = message;
+        synchronized (this){
+            this.notify();
+        }
     }
 
     public CommunicationHandlerSender() throws IOException {
         clientSocket = new Socket("localhost",6666);
+        message = null;
     }
 
     @Override
@@ -25,12 +29,14 @@ public class CommunicationHandlerSender extends Thread{
             ObjectOutputStream writer = new ObjectOutputStream(clientSocket.getOutputStream());
             while(true)
             {
-                synchronized (this) {
-                    wait();
-                }
+                while (message == null)
+                    synchronized (this) {
+                        this.wait();
+                    }
                 if(Objects.equals(message, "exit"))
                     break;
                 writer.writeObject(message);
+                message = null;
             }
             writer.close();
             clientSocket.close();

@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba7f0ccf-aa3d-4de9-a219-194814455c34" name="Changes" comment="&#10;sender wait error">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_4_24__10_14AM.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_4_24__11_20AM.xml" beforeDir="false" />
+    <list default="true" id="ba7f0ccf-aa3d-4de9-a219-194814455c34" name="Changes" comment="CommandHandler method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/CommunicationHandlerSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/CommunicationHandlerSender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/src/main/java/controller/CommunicationHandlerSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/controller/CommunicationHandlerSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/model/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/model/DataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/view/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/view/HelloApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,17 +153,7 @@
     <MESSAGE value="&#10;main" />
     <MESSAGE value="&#10;CommunicationHandlerSender" />
     <MESSAGE value="&#10;sender wait error" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;sender wait error" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/view/CommunicationHandlerReceiver.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="CommandHandler method" />
+    <option name="LAST_COMMIT_MESSAGE" value="CommandHandler method" />
   </component>
 </project>

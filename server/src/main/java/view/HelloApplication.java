@@ -24,9 +24,6 @@ public class HelloApplication{
             sender.start();
 
             sender.setMessage("ping: " + (end-start)/1000000 + "ms");
-            synchronized (sender){
-                sender.notify();
-            }
         }
     }
 }
