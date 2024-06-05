@@ -15,7 +15,7 @@ public class SearchController
             searchController = new SearchController();
         return searchController;
     }
-    public void baseOnName(String name,String ID) throws SQLException
+    public void baseOnName(String name) throws SQLException
     {
         StringBuilder users = new StringBuilder();
         String sqlCmd = String.format("SELECT ID FROM accounts WHERE name = '%s'",name);
@@ -36,7 +36,7 @@ public class SearchController
             users.append("This user has no message");
         DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(String.valueOf(users));
     }
-    public void baseOnTime(String time1, String time2, String ID) throws SQLException {
+    public void baseOnTime(String time1, String time2) throws SQLException {
         StringBuilder messages = new StringBuilder();
         String innerCmd = String.format("SELECT * FROM massage WHERE time >= '%s' AND time <= '%s'",time1,time2);
         ResultSet rs = SQLConnection.getSqlConnection().executeSelect(innerCmd);

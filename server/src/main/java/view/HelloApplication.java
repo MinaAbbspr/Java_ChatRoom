@@ -17,11 +17,12 @@ public class HelloApplication{
         {
             long start = System.nanoTime();
 
+            Socket clientSocketReceiver = serverSocket.accept();
+            CommunicationHandlerReceiver receiver = new CommunicationHandlerReceiver(clientSocketReceiver);
+
             Socket clientSocketSender = serverSocket.accept();
             CommunicationHandlerSender sender = new CommunicationHandlerSender(clientSocketSender);
 
-            Socket clientSocketReceiver = serverSocket.accept();
-            CommunicationHandlerReceiver receiver = new CommunicationHandlerReceiver(clientSocketReceiver);
 
             DataBase.getDataBase().getThreadList().add(sender);
             receiver.start();

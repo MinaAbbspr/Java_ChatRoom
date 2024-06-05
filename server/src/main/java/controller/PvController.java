@@ -4,23 +4,23 @@ import model.Account;
 
 public class PvController
 {
-    private static PvController pvController;
-    private Account sender;
-    private Account receiver;
+    private String senderID;
+    private String receiverID;
 
-    public Account getSender() {
-        return sender;
+    public String getSenderID() {
+        return senderID;
     }
 
-    public void setSender(Account sender) {
-        this.sender = sender;
+    public void setSenderID(String senderID) {
+        this.senderID = senderID;
     }
 
-    public Account getReceiver() {
-        return receiver;
+    public String getReceiverID() {
+        return receiverID;
     }
 
-    public void setReceiver(Account receiver) {
-        this.receiver = receiver;
+    public void setReceiverID(String receiverID) {
+        this.receiverID = receiverID;
     }
+
 }

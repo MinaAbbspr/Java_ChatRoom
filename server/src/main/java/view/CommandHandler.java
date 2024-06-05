@@ -1,8 +1,6 @@
 package view;
 
-import controller.LoginController;
-import controller.ShowMsgController;
-import controller.SignupController;
+import controller.*;
 import controller.exceptions.IDNotFound;
 import controller.exceptions.RepeatedAccount;
 import controller.exceptions.RepeatedID;
@@ -35,6 +33,8 @@ public class CommandHandler
                             DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(e.getMessage());
                         }
                     }
+                    else
+                        DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("incorrect command format");
                 }
                 case "Signup" -> {
                     if (commands.length == 4) {
@@ -45,6 +45,8 @@ public class CommandHandler
                             DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(e.getMessage());
                         }
                     }
+                    else
+                        DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("incorrect command format");
                 }
                 default -> DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("You are not a member yet");
             }
@@ -57,8 +59,24 @@ public class CommandHandler
                     if (commands.length == 1) {
                         DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("ping");
                     }
+                    else
+                        DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("incorrect command format");
                 }
-
+                case "search" ->
+                {
+                    if(commands.length == 2)
+                        SearchController.getSearchController().baseOnName(commands[1]);
+                    else if (commands.length == 3) {
+                        SearchController.getSearchController().baseOnTime(commands[1],commands[2]);
+                    }
+                    else
+                        DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("incorrect command format");
+                }
+                case "exit" ->
+                {
+                    ExitController.getExitController().exitFromAccount();
+                    DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("exit");
+                }
                 default -> ShowMsgController.getShowMsgController().showMessage(message);
             }
         }

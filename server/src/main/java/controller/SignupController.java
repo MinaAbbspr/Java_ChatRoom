@@ -39,7 +39,7 @@ public class SignupController
     {
         String sqlCmd = String.format("SELECT name FROM accounts WHERE ID = '%s'",ID);
         ResultSet resultSet = SQLConnection.getSqlConnection().executeSelect(sqlCmd);
-        if(resultSet.next() || ID.equals("group"))
+        if(resultSet != null && resultSet.next() || ID.equals("group"))
         {
             throw new RepeatedID("This id already exist");
         }
