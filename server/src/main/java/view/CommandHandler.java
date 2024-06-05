@@ -76,6 +76,7 @@ public class CommandHandler
                 {
                     ExitController.getExitController().exitFromAccount();
                     DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("exit");
+                    DataBase.getDataBase().getThreadList().remove(DataBase.getDataBase().getThread(Thread.currentThread().getName()));
                 }
                 default -> ShowMsgController.getShowMsgController().showMessage(message);
             }

@@ -2,7 +2,6 @@ package controller;
 
 import model.DataBase;
 
-import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -26,13 +25,14 @@ public class UnseenMessagesController {
             while (resultSet.next()) {
                 sqlCmd = String.format("SELECT * FROM massage WHERE ID = %s", resultSet.getInt("messageID"));
                 ResultSet messages = SQLConnection.getSqlConnection().executeSelect(sqlCmd);
-                stringBuilder.append(resultSet.getString("senderID")).append("\n")
-                        .append(resultSet.getString("massage")).append("\n").append(resultSet.getString("time")).append("\n");
+                messages.next();
+                stringBuilder.append(messages.getString("senderID")).append("\n")
+                        .append(messages.getString("massage")).append("\n").append(messages.getString("time")).append("\n");
             }
         }
 
         if(stringBuilder.isEmpty())
-            stringBuilder.append("there is no message");
+            stringBuilder.append("there is no unseen message");
         DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(String.valueOf(stringBuilder));
 
     }

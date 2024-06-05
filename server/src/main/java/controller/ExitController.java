@@ -1,5 +1,7 @@
 package controller;
 
+import model.DataBase;
+
 public class ExitController
 {
     private static ExitController exitController;
