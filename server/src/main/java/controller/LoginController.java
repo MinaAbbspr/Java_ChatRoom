@@ -19,7 +19,7 @@ public class LoginController {
         return loginController;
     }
 
-    public void login(String ID, String password) throws IDNotFound, SQLException, WrongPassword {
+    public boolean login(String ID, String password) throws IDNotFound, SQLException, WrongPassword {
         String sqlCmd = String.format("SELECT password FROM accounts WHERE ID = '%s'",ID);
         ResultSet resultSet = SQLConnection.getSqlConnection().executeSelect(sqlCmd);
         if(resultSet == null)
@@ -31,5 +31,6 @@ public class LoginController {
         DataBase.getDataBase().getThread(Thread.currentThread().getName()).setName(ID);
         Thread.currentThread().setName(ID);
         UnseenMessagesController.getUnseenMessagesController().loginShowUnseenMessages(ID);
+        return true;
     }
 }

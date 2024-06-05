@@ -51,7 +51,7 @@ public class ShowMsgController
     }
     public int getMaxId() throws SQLException, ClassNotFoundException {
         ResultSet rs = SQLConnection.getSqlConnection().executeSelect("Select max(ID) from massage");
-        if (rs.next()) {
+        if (rs != null && rs.next()) {
             return rs.getInt(1);
         }
         return 0;
