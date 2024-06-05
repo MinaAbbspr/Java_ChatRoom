@@ -34,6 +34,9 @@ public class LoginController {
             throw new RepeatedAccount("some one login with this account");
         }
 
+        String innerCmd = String.format("UPDATE accounts SET isOnline = %s WHERE ID = '%s'",true,ID);
+        SQLConnection.getSqlConnection().execute(innerCmd);
+
         DataBase.getDataBase().getThread(Thread.currentThread().getName()).setName(ID);
         Thread.currentThread().setName(ID);
         UnseenMessagesController.getUnseenMessagesController().loginShowUnseenMessages(ID);
