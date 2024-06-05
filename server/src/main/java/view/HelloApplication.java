@@ -16,17 +16,18 @@ public class HelloApplication{
         while(true)
         {
             long start = System.nanoTime();
-            Socket clientSocket = serverSocket.accept();
-            long end = System.nanoTime();
 
-            CommunicationHandlerSender sender = new CommunicationHandlerSender(clientSocket);
-            CommunicationHandlerReceiver receiver = new CommunicationHandlerReceiver(clientSocket);
-            if(Integer.parseInt(sender.getName()) %2 == 1) {
-                sender.setName(String.valueOf(Integer.parseInt(sender.getName())-1));
-                DataBase.getDataBase().getThreadList().add(sender);
-            }
+            Socket clientSocketSender = serverSocket.accept();
+            CommunicationHandlerSender sender = new CommunicationHandlerSender(clientSocketSender);
+
+            Socket clientSocketReceiver = serverSocket.accept();
+            CommunicationHandlerReceiver receiver = new CommunicationHandlerReceiver(clientSocketReceiver);
+
+            DataBase.getDataBase().getThreadList().add(sender);
             receiver.start();
             sender.start();
+
+            long end = System.nanoTime();
 
             sender.setMessage("ping: " + (end-start)/1000000 + "ms");
         }
