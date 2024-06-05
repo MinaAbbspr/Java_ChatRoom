@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class SQLConnection {
     private static SQLConnection sqlConnection;
-    private final String url = "jdbc:mysql://localhost/messenger";
+    private final String url = "jdbc:mysql://localhost/messenger";;
 
     private SQLConnection() {
     }

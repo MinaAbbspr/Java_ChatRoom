@@ -33,7 +33,7 @@ public class CommunicationHandlerSender extends Thread{
                     synchronized (this) {
                         this.wait();
                     }
-                if(Objects.equals(message, "exit"))
+                if(message.equals("exit"))
                     break;
                 writer.writeObject(message);
                 writer.flush();

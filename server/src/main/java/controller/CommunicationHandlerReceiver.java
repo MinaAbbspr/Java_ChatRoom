@@ -27,7 +27,7 @@ public class CommunicationHandlerReceiver extends Thread{
             while (true) {
                 message = (Message) reader.readObject();
                 if (message.getText().equals("exit")) {
-                    System.out.println("Good bye");
+                    commandHandler.scanner(message);
                     break;
                 } else {
                     commandHandler.scanner(message);

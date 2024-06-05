@@ -22,12 +22,13 @@ public class ShowMsgController
     public void showMessage(Message message) throws SQLException, ClassNotFoundException {
         String sqlCmd = String.format("SELECT isPV FROM accounts WHERE ID = '%s'", message.getSender());
         ResultSet rs1 = SQLConnection.getSqlConnection().executeSelect(sqlCmd);
-        if (rs1 != null && rs1.next() && rs1.getBoolean("isPV"))
-        {
-            if (message.getReceiver() != null) {
-                String sqlCmd2 = String.format("SELECT  FROM accounts WHERE ID = '%s'", message.getSender());
-            }
-        } else {
+//        if (rs1 != null && rs1.next() && rs1.getBoolean("isPV"))
+//        {
+//            if (message.getReceiver() != null) {
+//                String sqlCmd2 = String.format("SELECT  FROM accounts WHERE ID = '%s'", message.getSender());
+//            }
+//        }
+        if (true){
             String cmd2 = String.format("INSERT INTO massage (ID,massage,time,senderID,receiverID) VALUES (%s,'%s','%s','%s','%s')", getMaxId() + 1, message.getText(), message.getTime(), message.getSender(), "group");
             SQLConnection.getSqlConnection().execute(cmd2);
             cmd2 = String.format("SELECT ID FROM accounts WHERE isOnline =%s AND isPV = %s", true, false);
@@ -35,7 +36,7 @@ public class ShowMsgController
             if (rs2 != null) {
                 while (rs2.next())
                 {
-                    DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(message.toString());
+                    DataBase.getDataBase().getThread(rs2.getString("ID")).setMessage(message.toString());
                 }
             }
             cmd2 = String.format("SELECT ID FROM accounts WHERE isOnline =%s OR isPV = %s", false,true);

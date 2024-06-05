@@ -58,6 +58,6 @@ public class Message implements Serializable
     @Override
     public String toString()
     {
-        return sender +"\n" + text + "\n" + getTime();
+        return sender +"\n" + text + "\n" + getTime() + "\n";
     }
 }

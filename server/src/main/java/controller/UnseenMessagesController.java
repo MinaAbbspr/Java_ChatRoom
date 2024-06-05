@@ -20,14 +20,14 @@ public class UnseenMessagesController {
 
     public void loginShowUnseenMessages(String ID) throws SQLException {
         StringBuilder stringBuilder = new StringBuilder();
-        String sqlCmd = String.format("SELECT messageID FROM unseen massage WHERE accountID = '%s'",ID);
+        String sqlCmd = String.format("SELECT messageID FROM unseenMessage WHERE accountID = '%s'",ID);
         ResultSet resultSet = SQLConnection.getSqlConnection().executeSelect(sqlCmd);
         if(resultSet != null){
             while (resultSet.next()) {
-                sqlCmd = String.format("SELECT * FROM massages WHERE ID = %s", resultSet.getInt("messageID"));
+                sqlCmd = String.format("SELECT * FROM massage WHERE ID = %s", resultSet.getInt("messageID"));
                 ResultSet messages = SQLConnection.getSqlConnection().executeSelect(sqlCmd);
                 stringBuilder.append(resultSet.getString("senderID")).append("\n")
-                        .append(resultSet.getString("massage")).append("\n").append(resultSet.getString("time"));
+                        .append(resultSet.getString("massage")).append("\n").append(resultSet.getString("time")).append("\n");
             }
         }
 
@@ -38,14 +38,14 @@ public class UnseenMessagesController {
     }
     public void signupShowUnseenMessages(String ID) throws SQLException {
         StringBuilder unseenMessages = new StringBuilder();
-        String sqlCmd = String.format("SELECT * FROM massages WHERE receiverID = '%s'", "group");
+        String sqlCmd = String.format("SELECT * FROM massage WHERE receiverID = '%s'", "group");
         ResultSet messages = SQLConnection.getSqlConnection().executeSelect(sqlCmd);
         if(messages != null)
         {
             while (messages.next())
             {
                 unseenMessages.append(messages.getString("senderID")).append("\n")
-                        .append(messages.getString("massage")).append("\n").append(messages.getString("time"));
+                        .append(messages.getString("massage")).append("\n").append(messages.getString("time")).append("\n");
             }
         }
         if(unseenMessages.isEmpty())
