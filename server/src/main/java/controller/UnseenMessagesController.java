@@ -30,6 +30,7 @@ public class UnseenMessagesController {
                         .append(resultSet.getString("massage")).append("\n").append(resultSet.getString("time"));
             }
         }
+
         if(stringBuilder.isEmpty())
             stringBuilder.append("there is no message");
         DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(String.valueOf(stringBuilder));

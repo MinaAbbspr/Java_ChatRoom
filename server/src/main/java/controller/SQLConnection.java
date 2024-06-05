@@ -26,7 +26,7 @@ public class SQLConnection {
             return true;
 
         } catch (SQLException | ClassNotFoundException e) {
-            e.getStackTrace();
+            e.printStackTrace();
             return false;
         }
     }

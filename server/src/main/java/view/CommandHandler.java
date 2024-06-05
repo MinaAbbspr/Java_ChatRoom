@@ -1,32 +1,24 @@
 package view;
 
-import controller.CommunicationHandlerSender;
 import controller.LoginController;
 import controller.ShowMsgController;
 import controller.SignupController;
 import controller.exceptions.IDNotFound;
+import controller.exceptions.RepeatedAccount;
 import controller.exceptions.RepeatedID;
 import controller.exceptions.WrongPassword;
 import model.DataBase;
 import model.Message;
 
 import java.sql.SQLException;
-import java.util.Map;
-import java.util.Scanner;
 
 public class CommandHandler
 {
     private static CommandHandler commandHandler;
     private boolean enter;
 
-    private CommandHandler() {
+    public CommandHandler() {
         enter = false;
-    }
-    public static CommandHandler getCommandHandler()
-    {
-        if (commandHandler == null)
-            commandHandler = new CommandHandler();
-        return commandHandler;
     }
 
 
@@ -39,7 +31,7 @@ public class CommandHandler
                         try {
                             enter = LoginController.getLoginController().login(commands[1], commands[2]);
 
-                        } catch (IDNotFound | SQLException | WrongPassword e) {
+                        } catch (IDNotFound | SQLException | WrongPassword |RepeatedAccount e) {
                             DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(e.getMessage());
                         }
                     }
@@ -57,7 +49,7 @@ public class CommandHandler
                 default -> DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("You are not a member yet");
             }
         }
-        if(enter) {
+        else  {
             switch (commands[0])
             {
                 case "Login", "Signup" -> DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("This account exists");

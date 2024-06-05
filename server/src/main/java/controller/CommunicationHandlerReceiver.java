@@ -10,11 +10,13 @@ import java.sql.SQLException;
 
 public class CommunicationHandlerReceiver extends Thread{
     private Socket socket;
+    private CommandHandler commandHandler;
     private static int code = 0;
 
     public CommunicationHandlerReceiver(Socket socket) {
         this.socket = socket;
         this.setName(String.valueOf(code++));
+        this.commandHandler = new CommandHandler();
     }
 
     @Override
@@ -28,7 +30,7 @@ public class CommunicationHandlerReceiver extends Thread{
                     System.out.println("Good bye");
                     break;
                 } else {
-                    CommandHandler.getCommandHandler().scanner(message);
+                    commandHandler.scanner(message);
                 }
             }
             reader.close();
