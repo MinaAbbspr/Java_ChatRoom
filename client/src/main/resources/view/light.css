@@ -46,3 +46,11 @@
 .error{
     -fx-text-fill: #a22525;
 }
+.m-b{
+    -fx-background-color: #1a1919;
+}
+.search{
+    -fx-background-color: #150101;
+    -fx-border-radius: 30;
+    -fx-border-color:  white;
+}
