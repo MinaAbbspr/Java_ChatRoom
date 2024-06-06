@@ -158,7 +158,8 @@ public class HelloController implements Initializable {
     }
 
     @FXML
-    void visible(MouseEvent event) {
+    void visible(MouseEvent event)
+    {
 
     }
 
