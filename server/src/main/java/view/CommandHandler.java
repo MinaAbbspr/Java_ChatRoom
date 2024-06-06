@@ -18,7 +18,7 @@ public class CommandHandler
     }
 
 
-    public void scanner(Message message) throws SQLException, ClassNotFoundException {
+    public void scanner(Message message) throws SQLException {
         String[] commands = message.getText().split("-");
         if(!enter) {
             switch (commands[0]) {
