@@ -24,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -145,7 +146,7 @@
       <workItem from="1717687732345" duration="1089000" />
       <workItem from="1717702288515" duration="2057000" />
       <workItem from="1717705203477" duration="80000" />
-      <workItem from="1717705289102" duration="1188000" />
+      <workItem from="1717705289102" duration="3061000" />
     </task>
     <task id="LOCAL-00001" summary="&#10;main">
       <option name="closed" value="true" />
@@ -243,7 +244,31 @@
       <option name="project" value="LOCAL" />
       <updated>1717681764108</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="g-options added">
+      <option name="closed" value="true" />
+      <created>1717708585318</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1717708585318</updated>
+    </task>
+    <task id="LOCAL-00014" summary="g-options added">
+      <option name="closed" value="true" />
+      <created>1717708593234</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1717708593234</updated>
+    </task>
+    <task id="LOCAL-00015" summary="g-options added">
+      <option name="closed" value="true" />
+      <created>1717708613739</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1717708613739</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +297,8 @@
     <MESSAGE value="FinishController added" />
     <MESSAGE value="g-login page added" />
     <MESSAGE value="g-animation added" />
-    <option name="LAST_COMMIT_MESSAGE" value="g-animation added" />
+    <MESSAGE value="g-options added" />
+    <option name="LAST_COMMIT_MESSAGE" value="g-options added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/client$HelloApplication.ic" NAME="HelloApplication Coverage Results" MODIFIED="1717658814219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
