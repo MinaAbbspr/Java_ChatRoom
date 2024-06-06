@@ -54,9 +54,7 @@ public class CommandHandler
                 case "Login", "Signup", "ping", "search", "PV", "ShowOnline", "exit" ->
                     DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("You are in pv room");
 
-                case "clearHistory" ->{
-
-                }
+                case "clearHistory" ->{}
                 case "finish" ->
                     isPV = false;
 
