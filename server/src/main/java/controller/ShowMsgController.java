@@ -2,7 +2,6 @@ package controller;
 
 import model.DataBase;
 import model.Message;
-import view.CommandHandler;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -22,13 +21,19 @@ public class ShowMsgController
     public void showMessage(Message message) throws SQLException, ClassNotFoundException {
         String sqlCmd = String.format("SELECT isPV FROM accounts WHERE ID = '%s'", message.getSender());
         ResultSet rs1 = SQLConnection.getSqlConnection().executeSelect(sqlCmd);
-//        if (rs1 != null && rs1.next() && rs1.getBoolean("isPV"))
-//        {
-//            if (message.getReceiver() != null) {
-//                String sqlCmd2 = String.format("SELECT  FROM accounts WHERE ID = '%s'", message.getSender());
-//            }
-//        }
-        if (true){
+
+        if (rs1 != null && rs1.next() && rs1.getBoolean("isPV"))
+        {
+            String cmd2 = String.format("INSERT INTO massage (ID,massage,time,senderID,receiverID) VALUES (%s,'%s','%s','%s','%s')", getMaxId() + 1, message.getText(), message.getTime(), message.getSender(), message.getReceiver());
+            SQLConnection.getSqlConnection().execute(cmd2);
+            sqlCmd = String.format("SELECT isOnline,isPV,PVID FROM accounts WHERE ID = '%s'", message.getReceiver());
+            rs1 = SQLConnection.getSqlConnection().executeSelect(sqlCmd);
+            rs1.next();
+            if(rs1.getBoolean("isOnline") && rs1.getBoolean("isPV") && message.getSender().equals(rs1.getString("PVID"))){
+                DataBase.getDataBase().getThread(message.getReceiver()).setMessage(message.toString());
+            }
+        }
+        else{
             String cmd2 = String.format("INSERT INTO massage (ID,massage,time,senderID,receiverID) VALUES (%s,'%s','%s','%s','%s')", getMaxId() + 1, message.getText(), message.getTime(), message.getSender(), "group");
             SQLConnection.getSqlConnection().execute(cmd2);
             cmd2 = String.format("SELECT ID FROM accounts WHERE isOnline =%s AND isPV = %s", true, false);

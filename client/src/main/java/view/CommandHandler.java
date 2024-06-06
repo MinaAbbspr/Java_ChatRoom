@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class CommandHandler {
     private String senderID;
+    private String receiverID;
     private static long startTime;
 
     public static long getStartTime() {
@@ -34,12 +35,13 @@ public class CommandHandler {
                         startTime = System.nanoTime();
                     }
                 }
-                case "exit" ->
-                {
-                    con = false;
+                case "PV" ->{
+                    if(commands.length == 2)
+                        receiverID = commands[1];
                 }
+                case "exit" -> con = false;
             }
-            sender.setMessage(new Message(command,senderID));
+            sender.setMessage(new Message(command,senderID,receiverID));
         }
     }
 }

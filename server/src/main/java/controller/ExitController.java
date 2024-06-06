@@ -16,7 +16,7 @@ public class ExitController
     }
     public void exitFromAccount()
     {
-        String innerCmd = String.format("UPDATE accounts SET isOnline = %s WHERE ID = '%s'",0,Thread.currentThread().getName());
+        String innerCmd = String.format("UPDATE accounts SET isOnline = %s, isPV = %s WHERE ID = '%s'",0,0,Thread.currentThread().getName());
         SQLConnection.getSqlConnection().execute(innerCmd);
     }
 }
