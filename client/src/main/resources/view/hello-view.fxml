@@ -17,9 +17,9 @@
    <center>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="950.0" prefWidth="1369.0">
          <children>
-            <AnchorPane layoutX="345.0" layoutY="-1.0" prefHeight="953.0" prefWidth="986.0" styleClass="mainAnc" stylesheets="@light.css">
+            <AnchorPane fx:id="signupV" layoutX="345.0" layoutY="-1.0" prefHeight="953.0" prefWidth="994.0" styleClass="mainAnc" stylesheets="@light.css">
                <children>
-                  <VBox layoutX="326.0" layoutY="165.0" prefHeight="457.0" prefWidth="322.0" styleClass="vbox">
+                  <VBox layoutX="326.0" layoutY="165.0" prefHeight="457.0" prefWidth="322.0" styleClass="vbox" visible="false">
                      <children>
                         <ImageView fitHeight="35.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -41,30 +41,30 @@
                         </Label>
                         <HBox prefHeight="28.0" prefWidth="275.0" spacing="5.0" styleClass="HBox" stylesheets="@light.css">
                            <children>
-                              <TextField fx:id="log" prefHeight="26.0" prefWidth="304.0" promptText="Email or Username" styleClass="mainAnc" />
+                              <TextField fx:id="login" prefHeight="26.0" prefWidth="304.0" promptText="Email or Username" styleClass="mainAnc" />
                            </children>
                            <VBox.margin>
                               <Insets />
                            </VBox.margin>
                         </HBox>
-                        <Label fx:id="usernameInE" prefHeight="8.0" prefWidth="203.0" text="incorrect username" textFill="#b51d1d" visible="false">
-                           <font>
-                              <Font name="Arial" size="13.0" />
-                           </font>
-                        </Label>
                         <Label layoutX="10.0" layoutY="112.0" prefHeight="5.0" prefWidth="180.0" text="Choose a username">
                            <font>
                               <Font name="Arial Bold" size="12.0" />
                            </font>
                            <VBox.margin>
-                              <Insets bottom="5.0" />
+                              <Insets bottom="5.0" top="20.0" />
                            </VBox.margin>
                         </Label>
-                        <HBox layoutX="10.0" layoutY="132.0" prefHeight="27.0" prefWidth="322.0" spacing="5.0" styleClass="HBox" stylesheets="@light.css">
+                        <HBox fx:id="signup" layoutX="10.0" layoutY="132.0" prefHeight="27.0" prefWidth="322.0" spacing="5.0" styleClass="HBox" stylesheets="@light.css">
                            <children>
                               <TextField fx:id="log1" prefHeight="26.0" prefWidth="314.0" promptText=" Username" styleClass="mainAnc" />
                            </children>
                         </HBox>
+                        <Label fx:id="usernameES" prefHeight="5.0" prefWidth="203.0" styleClass="error" text="this username exits" textFill="#ab1d1d" visible="false">
+                           <font>
+                              <Font name="Arial" size="11.0" />
+                           </font>
+                        </Label>
                         <Label layoutX="16.0" layoutY="177.0" prefHeight="5.0" prefWidth="180.0" text="Choose a password">
                            <font>
                               <Font name="Arial Bold" size="12.0" />
@@ -73,9 +73,9 @@
                               <Insets bottom="5.0" top="20.0" />
                            </VBox.margin>
                         </Label>
-                        <HBox fx:id="vpas" maxHeight="27.0" prefHeight="0.0" prefWidth="310.0" spacing="83.0" styleClass="HBox" stylesheets="@light.css">
+                        <HBox maxHeight="27.0" prefHeight="0.0" prefWidth="310.0" spacing="83.0" styleClass="HBox" stylesheets="@light.css">
                            <children>
-                              <TextField fx:id="pass" prefHeight="26.0" prefWidth="199.0" promptText="Password" styleClass="mainAnc" />
+                              <TextField fx:id="svpass" prefHeight="26.0" prefWidth="199.0" promptText="Password" styleClass="mainAnc" />
                               <ImageView fx:id="invisible" fitHeight="29.0" fitWidth="25.0" onMouseClicked="#visible" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../../../../../../Downloads/images-2-transformed-transformed.png" />
@@ -86,9 +86,9 @@
                               </ImageView>
                            </children>
                         </HBox>
-                        <HBox fx:id="pas" prefHeight="27.0" prefWidth="336.0" spacing="83.0" styleClass="HBox" stylesheets="@light.css">
+                        <HBox prefHeight="27.0" prefWidth="336.0" spacing="83.0" styleClass="HBox" stylesheets="@light.css">
                            <children>
-                              <PasswordField fx:id="pas1" prefHeight="26.0" prefWidth="260.0" promptText="Password" styleClass="mainAnc" />
+                              <PasswordField fx:id="spas" prefHeight="26.0" prefWidth="260.0" promptText="Password" styleClass="mainAnc" />
                               <ImageView fx:id="visible" fitHeight="15.0" fitWidth="43.0" onMouseClicked="#invisible" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../../../../../../Downloads/images-3-transformed.png" />
@@ -99,12 +99,7 @@
                               </ImageView>
                            </children>
                         </HBox>
-                        <Label fx:id="passInE" prefHeight="8.0" prefWidth="203.0" text="incorrect password" textFill="#b51d1d" visible="false">
-                           <font>
-                              <Font name="Arial" size="13.0" />
-                           </font>
-                        </Label>
-                        <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="310.0" style="-fx-background-radius: 20;" styleClass="signup-btn" text="Complete">
+                        <Button mnemonicParsing="false" onMouseClicked="#complete" prefHeight="43.0" prefWidth="310.0" style="-fx-background-radius: 20;" styleClass="signup-btn" text="Complete">
                            <VBox.margin>
                               <Insets top="30.0" />
                            </VBox.margin>
@@ -119,21 +114,26 @@
                   </VBox>
                   <VBox layoutX="326.0" layoutY="165.0" prefHeight="457.0" prefWidth="322.0" styleClass="vbox">
                      <children>
+                        <ImageView fitHeight="45.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../firstproject-musicplayer-phase2-ParinazMehrabi11/Graphic/src/main/resources/org/example/graphic/IMG_9612.jpg" />
+                           </image>
+                        </ImageView>
                         <Label alignment="CENTER" prefHeight="102.0" prefWidth="337.0" stylesheets="@light.css" text="Login to continue ...">
                            <font>
                               <Font size="26.0" />
                            </font>
                         </Label>
+                        <HBox layoutX="10.0" layoutY="132.0" prefHeight="27.0" prefWidth="322.0" spacing="5.0" styleClass="HBox" stylesheets="@light.css">
+                           <children>
+                              <TextField fx:id="login" prefHeight="26.0" prefWidth="314.0" promptText="Enter your username" styleClass="mainAnc" />
+                           </children>
+                        </HBox>
                         <Label fx:id="usernameInE1" prefHeight="8.0" prefWidth="203.0" text="incorrect username" textFill="#b51d1d" visible="false">
                            <font>
                               <Font name="Arial" size="13.0" />
                            </font>
                         </Label>
-                        <HBox layoutX="10.0" layoutY="132.0" prefHeight="27.0" prefWidth="322.0" spacing="5.0" styleClass="HBox" stylesheets="@light.css">
-                           <children>
-                              <TextField fx:id="log11" prefHeight="26.0" prefWidth="314.0" promptText="Enter your username" styleClass="mainAnc" />
-                           </children>
-                        </HBox>
                         <Label layoutX="16.0" layoutY="177.0" prefHeight="5.0" prefWidth="180.0" text="Choose a password">
                            <font>
                               <Font name="Arial Bold" size="12.0" />
@@ -144,7 +144,7 @@
                         </Label>
                         <HBox fx:id="vpas1" maxHeight="27.0" prefHeight="0.0" prefWidth="310.0" spacing="83.0" styleClass="HBox" stylesheets="@light.css">
                            <children>
-                              <TextField fx:id="pass1" prefHeight="26.0" prefWidth="199.0" promptText="Password" styleClass="mainAnc" />
+                              <TextField fx:id="vlpass1" prefHeight="26.0" prefWidth="199.0" promptText="Password" styleClass="mainAnc" />
                               <ImageView fx:id="invisible1" fitHeight="29.0" fitWidth="25.0" onMouseClicked="#visible" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../../../../../../Downloads/images-2-transformed-transformed.png" />
@@ -157,7 +157,7 @@
                         </HBox>
                         <HBox fx:id="pas1" prefHeight="27.0" prefWidth="336.0" spacing="83.0" styleClass="HBox" stylesheets="@light.css">
                            <children>
-                              <PasswordField fx:id="pas11" prefHeight="26.0" prefWidth="260.0" promptText="Password" styleClass="mainAnc" />
+                              <PasswordField fx:id="invlpass" prefHeight="26.0" prefWidth="260.0" promptText="Password" styleClass="mainAnc" />
                               <ImageView fx:id="visible1" fitHeight="15.0" fitWidth="43.0" onMouseClicked="#invisible" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../../../../../../Downloads/images-3-transformed.png" />
@@ -168,12 +168,12 @@
                               </ImageView>
                            </children>
                         </HBox>
-                        <Label fx:id="passInE1" prefHeight="8.0" prefWidth="203.0" text="incorrect password" textFill="#b51d1d" visible="false">
+                        <Label fx:id="passInE1" prefHeight="8.0" prefWidth="203.0" styleClass="error" text="incorrect password" textFill="#b51d1d" visible="false">
                            <font>
                               <Font name="Arial" size="13.0" />
                            </font>
                         </Label>
-                        <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="310.0" style="-fx-background-radius: 20;" styleClass="signup-btn" text="Login">
+                        <Button mnemonicParsing="false" onMouseClicked="#login" prefHeight="43.0" prefWidth="310.0" style="-fx-background-radius: 20;" styleClass="signup-btn" text="Login">
                            <VBox.margin>
                               <Insets top="30.0" />
                            </VBox.margin>
@@ -186,34 +186,6 @@
                         <Insets left="5.0" right="5.0" />
                      </padding>
                   </VBox>
-                  <HBox fx:id="logo2" layoutX="9.0" layoutY="18.0" prefHeight="169.0" prefWidth="1003.0" style="-fx-background-radius: 50;" styleClass="logo">
-                     <children>
-                        <Label prefHeight="101.0" prefWidth="192.0" text="Listening to " textFill="#250404">
-                           <HBox.margin>
-                              <Insets left="300.0" top="40.0" />
-                           </HBox.margin>
-                           <font>
-                              <Font name="Apple Chancery" size="36.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="67.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../../../firstproject-musicplayer-phase2-ParinazMehrabi11/Graphic/src/main/resources/org/example/graphic/IMG_9612.jpg" />
-                           </image>
-                           <HBox.margin>
-                              <Insets top="20.0" />
-                           </HBox.margin>
-                        </ImageView>
-                        <Label prefHeight="59.0" prefWidth="168.0" text="Cherry" textFill="#250404">
-                           <font>
-                              <Font name="Apple Chancery" size="24.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets top="40.0" />
-                           </HBox.margin>
-                        </Label>
-                     </children>
-                  </HBox>
                </children></AnchorPane>
             <AnchorPane layoutX="-2.0" layoutY="-2.0" prefHeight="956.0" prefWidth="343.0" styleClass="l_s_animation" stylesheets="@light.css">
                <children>

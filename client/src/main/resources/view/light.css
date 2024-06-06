@@ -43,3 +43,6 @@
     -fx-border-radius: 30;
     -fx-border-color: #1e0202;
 }
+.error{
+    -fx-text-fill: #a22525;
+}
