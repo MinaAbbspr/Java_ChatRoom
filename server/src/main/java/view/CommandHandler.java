@@ -57,9 +57,9 @@ public class CommandHandler
                 case "clearHistory" ->{
 
                 }
-                case "finish" ->{
+                case "finish" ->
                     isPV = false;
-                }
+
             }
         }
         else  {
