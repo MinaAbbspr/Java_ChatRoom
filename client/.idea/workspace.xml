@@ -68,6 +68,11 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/view/images" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Unnamed">
     <configuration name="HelloApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="view.HelloApplication" />
@@ -125,7 +130,7 @@
       <workItem from="1717598625769" duration="2142000" />
       <workItem from="1717652760416" duration="603000" />
       <workItem from="1717654562720" duration="8245000" />
-      <workItem from="1717665878063" duration="2796000" />
+      <workItem from="1717665878063" duration="11853000" />
     </task>
     <task id="LOCAL-00001" summary="&#10;main">
       <option name="closed" value="true" />
@@ -183,7 +188,31 @@
       <option name="project" value="LOCAL" />
       <updated>1717670217168</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="g-login page added">
+      <option name="closed" value="true" />
+      <created>1717676817150</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717676817150</updated>
+    </task>
+    <task id="LOCAL-00009" summary="g-login page added">
+      <option name="closed" value="true" />
+      <created>1717678986835</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717678986835</updated>
+    </task>
+    <task id="LOCAL-00010" summary="g-login page added">
+      <option name="closed" value="true" />
+      <created>1717679131954</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717679131954</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,7 +239,8 @@
     <MESSAGE value="login debug" />
     <MESSAGE value="g-signup page added" />
     <MESSAGE value="FinishController added" />
-    <option name="LAST_COMMIT_MESSAGE" value="FinishController added" />
+    <MESSAGE value="g-login page added" />
+    <option name="LAST_COMMIT_MESSAGE" value="g-login page added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

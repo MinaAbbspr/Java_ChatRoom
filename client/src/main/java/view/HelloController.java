@@ -1,6 +1,8 @@
 package view;
 
+import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -10,9 +12,14 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.util.Duration;
 
-public class HelloController {
+import java.net.URL;
+import java.util.ResourceBundle;
 
+public class HelloController implements Initializable {
+
+    public TextField login1;
     @FXML
     private AnchorPane blackPane;
 
@@ -81,10 +88,42 @@ public class HelloController {
 
     @FXML
     private AnchorPane whitePane;
+    private boolean animationS;
 
     @FXML
-    void animation(MouseEvent event) {
-
+    void animation(MouseEvent event)
+    {
+        if(!animationS) {
+            TranslateTransition slide1 = new TranslateTransition();
+            slide1.setDuration(Duration.seconds(1.5));
+            slide1.setNode(blackPane);
+            slide1.setToX(950);
+            slide1.play();
+            signupV.setVisible(false);
+            loginV.setVisible(true);
+            TranslateTransition slide2 = new TranslateTransition();
+            slide2.setDuration(Duration.seconds(1.5));
+            slide2.setNode(whitePane);
+            slide2.setToX(-343);
+            slide2.play();
+            animationS = true;
+        }
+        else
+        {
+            TranslateTransition slide1 = new TranslateTransition();
+            slide1.setDuration(Duration.seconds(1.5));
+            slide1.setNode(blackPane);
+            slide1.setToX(0);
+            slide1.play();
+            signupV.setVisible(true);
+            loginV.setVisible(false);
+            TranslateTransition slide2 = new TranslateTransition();
+            slide2.setDuration(Duration.seconds(1.5));
+            slide2.setNode(whitePane);
+            slide2.setToX(0);
+            slide2.play();
+            animationS = false;
+        }
     }
 
     @FXML
@@ -107,4 +146,11 @@ public class HelloController {
 
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources)
+    {
+        animationS = false;
+        loginV.setVisible(false);
+        signupV.setVisible(true);
+    }
 }

@@ -23,7 +23,7 @@
                      <children>
                         <ImageView fitHeight="35.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../firstproject-musicplayer-phase2-ParinazMehrabi11/Graphic/src/main/resources/org/example/graphic/IMG_9612.jpg" />
+                              <Image url="@images/IMG_9612%202.jpg" />
                            </image>
                         </ImageView>
                         <Label alignment="CENTER" prefHeight="102.0" prefWidth="337.0" stylesheets="@light.css" text="Create Account ...">
@@ -78,7 +78,7 @@
                               <TextField fx:id="svpass" prefHeight="26.0" prefWidth="199.0" promptText="Password" styleClass="mainAnc" />
                               <ImageView fx:id="invisible" fitHeight="29.0" fitWidth="25.0" onMouseClicked="#visible" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../../../../../Downloads/images-2-transformed-transformed.png" />
+                                    <Image url="@images/images-2-transformed-transformed.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets left="15.0" right="1.0" />
@@ -91,7 +91,7 @@
                               <PasswordField fx:id="spas" prefHeight="26.0" prefWidth="260.0" promptText="Password" styleClass="mainAnc" />
                               <ImageView fx:id="visible" fitHeight="15.0" fitWidth="43.0" onMouseClicked="#invisible" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../../../../../Downloads/images-3-transformed.png" />
+                                    <Image url="@images/images-3-transformed.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets right="3.0" top="5.0" />
@@ -112,11 +112,11 @@
                         <Insets left="5.0" right="5.0" />
                      </padding>
                   </VBox>
-                  <VBox fx:id="loginV" layoutX="326.0" layoutY="165.0" prefHeight="457.0" prefWidth="322.0" styleClass="vbox" visible="false">
+                  <VBox fx:id="loginV" layoutX="326.0" layoutY="165.0" prefHeight="457.0" prefWidth="322.0" styleClass="vbox">
                      <children>
                         <ImageView fitHeight="45.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../firstproject-musicplayer-phase2-ParinazMehrabi11/Graphic/src/main/resources/org/example/graphic/IMG_9612.jpg" />
+                              <Image url="@images/IMG_9612%202.jpg" />
                            </image>
                         </ImageView>
                         <Label alignment="CENTER" prefHeight="102.0" prefWidth="337.0" stylesheets="@light.css" text="Login to continue ...">
@@ -147,7 +147,7 @@
                               <TextField fx:id="vlpass1" prefHeight="26.0" prefWidth="199.0" promptText="Password" styleClass="mainAnc" />
                               <ImageView fx:id="invisible1" fitHeight="29.0" fitWidth="25.0" onMouseClicked="#visible" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../../../../../Downloads/images-2-transformed-transformed.png" />
+                                    <Image url="@images/images-2-transformed-transformed.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets left="15.0" right="1.0" />
@@ -160,7 +160,7 @@
                               <PasswordField fx:id="invlpass" prefHeight="26.0" prefWidth="260.0" promptText="Password" styleClass="mainAnc" />
                               <ImageView fx:id="visible1" fitHeight="15.0" fitWidth="43.0" onMouseClicked="#invisible" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../../../../../Downloads/images-3-transformed.png" />
+                                    <Image url="@images/images-3-transformed.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets right="3.0" top="5.0" />
