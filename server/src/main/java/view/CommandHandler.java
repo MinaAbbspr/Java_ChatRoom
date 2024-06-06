@@ -54,7 +54,7 @@ public class CommandHandler
         else  {
             switch (commands[0])
             {
-                case "Login", "Signup" -> DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("This account exists");
+                case "Login", "Signup" -> DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("You're already logged in");
                 case "ping" -> {
                     if (commands.length == 1) {
                         DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("ping");

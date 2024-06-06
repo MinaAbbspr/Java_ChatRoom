@@ -31,7 +31,7 @@ public class LoginController {
             throw new WrongPassword("Your password is not correct");
 
         if(resultSet.getBoolean("isOnline")){
-            throw new RepeatedAccount("some one login with this account");
+            throw new RepeatedAccount("This user is already logged in");
         }
 
         String innerCmd = String.format("UPDATE accounts SET isOnline = %s WHERE ID = '%s'",true,ID);
@@ -39,7 +39,7 @@ public class LoginController {
 
         DataBase.getDataBase().getThread(Thread.currentThread().getName()).setName(ID);
         Thread.currentThread().setName(ID);
-        UnseenMessagesController.getUnseenMessagesController().loginShowUnseenMessages(ID);
+        UnseenMessagesController.getUnseenMessagesController().signupShowUnseenMessages(ID);
         return true;
     }
 }
