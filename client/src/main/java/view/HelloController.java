@@ -94,35 +94,41 @@ public class HelloController implements Initializable {
     void animation(MouseEvent event)
     {
         if(!animationS) {
+            animationS = true;
+            signupV.setVisible(false);
+            loginV.setVisible(true);
+            btn_login_signup.setText("Signup");
+            lbl_welcome.setText("Hello!");
+            lbl_inner.setText("enjoy happy chat...");
             TranslateTransition slide1 = new TranslateTransition();
             slide1.setDuration(Duration.seconds(1.5));
             slide1.setNode(blackPane);
             slide1.setToX(950);
             slide1.play();
-            signupV.setVisible(false);
-            loginV.setVisible(true);
             TranslateTransition slide2 = new TranslateTransition();
             slide2.setDuration(Duration.seconds(1.5));
             slide2.setNode(whitePane);
             slide2.setToX(-343);
             slide2.play();
-            animationS = true;
         }
         else
         {
+            animationS = false;
+            signupV.setVisible(true);
+            loginV.setVisible(false);
+            btn_login_signup.setText("Login");
+            lbl_welcome.setText("Welcome Back!");
+            lbl_inner.setText("contact your friends and send unlimited messages");
             TranslateTransition slide1 = new TranslateTransition();
             slide1.setDuration(Duration.seconds(1.5));
             slide1.setNode(blackPane);
             slide1.setToX(0);
             slide1.play();
-            signupV.setVisible(true);
-            loginV.setVisible(false);
             TranslateTransition slide2 = new TranslateTransition();
             slide2.setDuration(Duration.seconds(1.5));
             slide2.setNode(whitePane);
             slide2.setToX(0);
             slide2.play();
-            animationS = false;
         }
     }
 
