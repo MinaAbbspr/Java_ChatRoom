@@ -17,9 +17,9 @@
    <center>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="950.0" prefWidth="1369.0">
          <children>
-            <AnchorPane fx:id="signupV" layoutX="345.0" layoutY="-1.0" prefHeight="953.0" prefWidth="994.0" styleClass="mainAnc" stylesheets="@light.css">
+            <AnchorPane layoutX="345.0" layoutY="-1.0" prefHeight="953.0" prefWidth="994.0" styleClass="mainAnc" stylesheets="@light.css">
                <children>
-                  <VBox layoutX="326.0" layoutY="165.0" prefHeight="457.0" prefWidth="322.0" styleClass="vbox" visible="false">
+                  <VBox fx:id="signupV" layoutX="326.0" layoutY="165.0" prefHeight="457.0" prefWidth="322.0" styleClass="vbox">
                      <children>
                         <ImageView fitHeight="35.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -112,7 +112,7 @@
                         <Insets left="5.0" right="5.0" />
                      </padding>
                   </VBox>
-                  <VBox layoutX="326.0" layoutY="165.0" prefHeight="457.0" prefWidth="322.0" styleClass="vbox">
+                  <VBox fx:id="loginnV" layoutX="326.0" layoutY="165.0" prefHeight="457.0" prefWidth="322.0" styleClass="vbox" visible="false">
                      <children>
                         <ImageView fitHeight="45.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                            <image>
