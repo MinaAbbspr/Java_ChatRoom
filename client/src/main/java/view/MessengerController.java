@@ -24,8 +24,7 @@ public class MessengerController implements Initializable
     }
 
     public void chatE(MouseEvent event)
-    {
-        chats.setStyle("-fx-border-width: 0 0 0 0 ");
+    {chats.setStyle("-fx-border-width: 0 0 0 0 ");
     }
 
     public void groupF(MouseEvent event) {
