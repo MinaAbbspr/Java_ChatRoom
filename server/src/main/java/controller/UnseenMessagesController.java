@@ -66,14 +66,14 @@ public class UnseenMessagesController {
         ResultSet resultSet = SQLConnection.getSqlConnection().executeSelect(sqlCmd);
         while (resultSet.next()) {
             senderMessage.add(new Message(resultSet.getString("massage"),resultSet.getString("senderID"),resultSet.getString("receiverID")));
-            senderMessage.getLast().setTime(Time.valueOf(resultSet.getString("senderID")).toLocalTime());
+            senderMessage.getLast().setTime(Time.valueOf(resultSet.getString("time")).toLocalTime());
         }
 
         sqlCmd = String.format("SELECT * FROM massage WHERE senderID = '%s' AND receiverID = '%s'",receiverID, Thread.currentThread().getName());
         resultSet = SQLConnection.getSqlConnection().executeSelect(sqlCmd);
         while (resultSet.next()) {
             receiverMessage.add(new Message(resultSet.getString("massage"),resultSet.getString("senderID"),resultSet.getString("receiverID")));
-            receiverMessage.getLast().setTime(Time.valueOf(resultSet.getString("senderID")).toLocalTime());
+            receiverMessage.getLast().setTime(Time.valueOf(resultSet.getString("time")).toLocalTime());
         }
 
         ArrayList<Message> allMessage = new ArrayList<>(senderMessage);

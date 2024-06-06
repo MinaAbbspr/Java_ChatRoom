@@ -61,7 +61,7 @@ public class CommandHandler
                     FinishController.getFinishContrller().finish();
                     isPV = false;
                 }
-
+                default -> ShowMsgController.getShowMsgController().showMessage(message);
             }
         }
         else  {
