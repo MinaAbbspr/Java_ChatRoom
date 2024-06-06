@@ -11,9 +11,10 @@ public class CommandHandler
 {
     private static CommandHandler commandHandler;
     private boolean enter;
-
+    private boolean isPV;
     public CommandHandler() {
         enter = false;
+        isPV = false;
     }
 
 
@@ -48,6 +49,19 @@ public class CommandHandler
                 default -> DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("You are not a member yet");
             }
         }
+        else if(isPV){
+            switch (commands[0]){
+                case "Login", "Signup", "ping", "search", "PV", "ShowOnline", "exit" ->
+                    DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("You are in pv room");
+
+                case "clearHistory" ->{
+
+                }
+                case "finish" ->{
+                    isPV = false;
+                }
+            }
+        }
         else  {
             switch (commands[0])
             {
@@ -58,8 +72,7 @@ public class CommandHandler
                     else
                         DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("incorrect command format");
                 }
-                case "search" ->
-                {
+                case "search" -> {
                     if(commands.length == 2)
                         SearchController.getSearchController().baseOnName(commands[1]);
                     else if (commands.length == 3)
@@ -70,6 +83,7 @@ public class CommandHandler
                 case "PV" -> {
                     if(commands.length == 2) {
                         PvController.getPvController().goToPV(commands[1]);
+                        isPV = true;
                     }
                     else
                         DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("incorrect command format");
