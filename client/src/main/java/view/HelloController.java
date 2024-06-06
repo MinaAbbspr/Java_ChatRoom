@@ -110,6 +110,8 @@ public class HelloController implements Initializable {
     void animation(MouseEvent event)
     {
         if(!animationS) {
+            loginV.setVisible(false);
+            signupV.setVisible(true);
             logintext.setText(null);
             invlpass.setText(null);
             vlpass1.setText(null);
@@ -134,6 +136,8 @@ public class HelloController implements Initializable {
         }
         else
         {
+            loginV.setVisible(false);
+            signupV.setVisible(true);
             login1.setText(null);
             log1.setText(null);
             svpass.setText(null);
