@@ -19,16 +19,6 @@ import java.util.ResourceBundle;
 
 public class HelloController implements Initializable {
 
-    public HelloController() {
-    }
-
-    public void visibleUsernameES() {
-        this.usernameES.setVisible(true);
-        synchronized (this){
-            this.notify();
-        }
-    }
-
     public TextField login1;
     @FXML
     private AnchorPane blackPane;
