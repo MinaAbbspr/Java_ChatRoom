@@ -18,7 +18,7 @@ public class CommandHandler
     }
 
 
-    public void scanner(Message message) throws SQLException, ClassNotFoundException{
+    public void scanner(Message message) throws SQLException, ClassNotFoundException {
         String[] commands = message.getText().split("-");
         if(!enter) {
             switch (commands[0]) {
@@ -54,14 +54,20 @@ public class CommandHandler
                 case "Login", "Signup", "ping", "search", "PV", "ShowOnline", "exit" ->
                     DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("You are in pv room");
 
-                case "clearHistory" ->{
+                case "clearHistory" ->
                     DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(ClearHistoryController.getClearHistoryController().clearHistory(message));
-                }
                 case "finish" -> {
                     FinishController.getFinishContrller().finish();
                     isPV = false;
                 }
-                default -> ShowMsgController.getShowMsgController().showMessage(message);
+                case "Block" -> DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(BlockController.getBlockController().block(Thread.currentThread().getName()));
+                default -> {
+                    try {
+                        ShowMsgController.getShowMsgController().showMessage(message);
+                    } catch (BlockedUser e) {
+                        DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(e.getMessage());
+                    }
+                }
             }
         }
         else  {
@@ -98,6 +104,21 @@ public class CommandHandler
                             DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(e.getMessage());
                         }
                     }
+                    else
+                        DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("incorrect command format");
+                }
+                case "Block" ->{
+                    if(commands.length == 1) {
+                        try {
+                            DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(BlockController.getBlockController().showUsers());
+                        } catch (NoOnlineUser e) {
+                            DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(e.getMessage());
+                        }
+                    }
+                    else if(commands.length == 2)
+                        DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(BlockController.getBlockController().block(commands[1]));
+                    else
+                        DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("incorrect command format");
                 }
                 case "exit" ->
                 {
@@ -105,7 +126,13 @@ public class CommandHandler
                     DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("exit");
                     DataBase.getDataBase().getThreadList().remove(DataBase.getDataBase().getThread(Thread.currentThread().getName()));
                 }
-                default -> ShowMsgController.getShowMsgController().showMessage(message);
+                default -> {
+                    try {
+                        ShowMsgController.getShowMsgController().showMessage(message);
+                    } catch (BlockedUser e) {
+                        DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(e.getMessage());
+                    }
+                }
             }
         }
     }
