@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a159cde1-525c-4d08-9699-06706bc4629e" name="Changes" comment="isOnline Login updated">
+    <list default="true" id="a159cde1-525c-4d08-9699-06706bc4629e" name="Changes" comment="Login debug">
       <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/model/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/view/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/view/CommandHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ExitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ExitController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/PvController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/PvController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ShowMsgController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ShowMsgController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/UnseenMessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/UnseenMessagesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/CommandHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +46,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.HelloApplication.executor": "Run",
+    "Application.HelloApplication.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "parinaz",
@@ -110,16 +115,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/view/CommandHandler.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

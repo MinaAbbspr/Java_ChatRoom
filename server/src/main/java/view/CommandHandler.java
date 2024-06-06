@@ -1,10 +1,7 @@
 package view;
 
 import controller.*;
-import controller.exceptions.IDNotFound;
-import controller.exceptions.RepeatedAccount;
-import controller.exceptions.RepeatedID;
-import controller.exceptions.WrongPassword;
+import controller.exceptions.*;
 import model.DataBase;
 import model.Message;
 
@@ -20,7 +17,7 @@ public class CommandHandler
     }
 
 
-    public void scanner(Message message) throws SQLException, ClassNotFoundException {
+    public void scanner(Message message) throws SQLException, ClassNotFoundException{
         String[] commands = message.getText().split("-");
         if(!enter) {
             switch (commands[0]) {
@@ -56,9 +53,8 @@ public class CommandHandler
             {
                 case "Login", "Signup" -> DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("You're already logged in");
                 case "ping" -> {
-                    if (commands.length == 1) {
+                    if (commands.length == 1)
                         DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("ping");
-                    }
                     else
                         DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("incorrect command format");
                 }
@@ -66,11 +62,26 @@ public class CommandHandler
                 {
                     if(commands.length == 2)
                         SearchController.getSearchController().baseOnName(commands[1]);
-                    else if (commands.length == 3) {
+                    else if (commands.length == 3)
                         SearchController.getSearchController().baseOnTime(commands[1],commands[2]);
+                    else
+                        DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("incorrect command format");
+                }
+                case "PV" -> {
+                    if(commands.length == 2) {
+                        PvController.getPvController().goToPV(commands[1]);
                     }
                     else
                         DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("incorrect command format");
+                }
+                case "ShowOnline" ->{
+                    if(commands.length==1) {
+                        try {
+                            DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(String.valueOf(PvController.getPvController().showOnlineUsers()));
+                        } catch (NoOnlineUser e) {
+                            DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(e.getMessage());
+                        }
+                    }
                 }
                 case "exit" ->
                 {

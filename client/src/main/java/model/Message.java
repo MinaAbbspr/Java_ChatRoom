@@ -1,9 +1,8 @@
 package model;
 import java.io.Serializable;
 import java.time.LocalTime;
-import java.util.Date;
 
-public class Message implements Serializable
+public class Message implements Serializable,Comparable<Message>
 {
     private String text;
     private LocalTime time;
@@ -59,5 +58,10 @@ public class Message implements Serializable
     public String toString()
     {
         return sender +"\n" + text + "\n" + getTime() + "\n";
+    }
+
+    @Override
+    public int compareTo(Message o) {
+        return this.time.compareTo(o.time);
     }
 }

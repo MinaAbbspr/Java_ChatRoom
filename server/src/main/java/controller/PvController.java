@@ -9,24 +9,16 @@ import java.sql.SQLException;
 
 public class PvController
 {
-    private String senderID;
-    private String receiverID;
+    private static PvController pvController;
 
-    public String getSenderID() {
-        return senderID;
+    private PvController() {}
+
+    public static PvController getPvController() {
+        if(pvController == null)
+            pvController = new PvController();
+        return pvController;
     }
 
-    public void setSenderID(String senderID) {
-        this.senderID = senderID;
-    }
-
-    public String getReceiverID() {
-        return receiverID;
-    }
-
-    public void setReceiverID(String receiverID) {
-        this.receiverID = receiverID;
-    }
     public StringBuilder showOnlineUsers() throws NoOnlineUser, SQLException {
         StringBuilder users = new StringBuilder();
         String sqlCmd = String.format("SELECT * FROM accounts WHERE isOnline = %s",1);
@@ -36,9 +28,17 @@ public class PvController
 
         while (resultSet.next())
         {
-            users.append(resultSet.getString("ID")).append("\t").append(resultSet.getString("name"));
+            String ID = resultSet.getString("ID");
+            if(!ID.equals(Thread.currentThread().getName()))
+                users.append(ID).append("\t@").append(resultSet.getString("name")).append("\n");
         }
         return users;
+    }
+
+    public void goToPV(String receiverID) throws SQLException {
+        UnseenMessagesController.getUnseenMessagesController().pvShowUnseenMessages(receiverID);
+        String innerCmd = String.format("UPDATE accounts SET isPV = %s, PVID = '%s' WHERE ID = '%s'",1,receiverID,Thread.currentThread().getName());
+        SQLConnection.getSqlConnection().execute(innerCmd);
     }
 
 }
