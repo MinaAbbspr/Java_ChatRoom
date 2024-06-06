@@ -20,7 +20,7 @@
          <children>
             <AnchorPane fx:id="whitePane" layoutX="345.0" layoutY="-1.0" prefHeight="953.0" prefWidth="1024.0" styleClass="mainAnc" stylesheets="@light.css">
                <children>
-                  <VBox fx:id="signupV" layoutX="326.0" layoutY="165.0" prefHeight="661.0" prefWidth="322.0" styleClass="vbox" visible="false">
+                  <VBox fx:id="signupV" layoutX="326.0" layoutY="165.0" prefHeight="661.0" prefWidth="322.0" styleClass="vbox">
                      <children>
                         <ImageView fitHeight="35.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -34,7 +34,7 @@
                         </Label>
                         <HBox alignment="CENTER_LEFT" spacing="100.0">
                            <children>
-                              <Circle fx:id="image" fill="WHITE" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Circle fx:id="image" fill="WHITE" onMouseClicked="#profile" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
                            </children>
                            <VBox.margin>
                               <Insets />
@@ -121,7 +121,7 @@
                         <Insets left="5.0" right="5.0" />
                      </padding>
                   </VBox>
-                  <VBox fx:id="loginV" layoutX="326.0" layoutY="165.0" prefHeight="457.0" prefWidth="322.0" styleClass="vbox">
+                  <VBox fx:id="loginV" layoutX="326.0" layoutY="165.0" prefHeight="457.0" prefWidth="322.0" styleClass="vbox" visible="false">
                      <children>
                         <ImageView fitHeight="45.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                            <image>

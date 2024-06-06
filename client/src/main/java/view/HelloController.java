@@ -7,13 +7,19 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -92,7 +98,12 @@ public class HelloController implements Initializable {
     @FXML
     private Label lbl_loggedInError;
 
+    @FXML
+    private Circle image;
+
     private boolean animationS;
+
+    private File file;
 
     @FXML
     void animation(MouseEvent event)
@@ -179,6 +190,14 @@ public class HelloController implements Initializable {
     @FXML
     void visible(MouseEvent event) {
 
+    }
+
+    @FXML
+    void profile(MouseEvent event) {
+        Stage stage = new Stage();
+        FileChooser fileChooser = new FileChooser();
+        file = fileChooser.showOpenDialog(stage);
+        image.setFill(new ImagePattern(new Image(file.toURI().toString())));
     }
 
     @Override
