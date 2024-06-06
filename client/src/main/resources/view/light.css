@@ -1,0 +1,28 @@
+.mainAnc{
+    -fx-background-color: white;
+}
+.l_s_animation{
+    -fx-background-color: #1e0202;
+}
+.label
+{
+    -fx-text-fill: #280404;
+}
+.HBox{
+    -fx-border-radius: 5;
+    -fx-background-color: white;
+    -fx-border-color: #150101;
+}
+.vbox{
+    -fx-background-color: white;
+    -fx-border-radius: 10;
+    -fx-border-color: white;
+}
+.signup-btn{
+    -fx-background-color: #1e0202;
+    -fx-border-radius: 30;
+    -fx-text-fill: white;
+}
+.signup-btn:hover{
+    -fx-background-color: #282727;
+}
