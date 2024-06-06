@@ -21,16 +21,9 @@ public class CommunicationHandlerReceiver extends Thread
 
             while (true) {
                 message = in.readLine();
-                if (message.equals("exit")) {
-                    System.out.println("Good bye");
+                ReceiverHandlerG.getReceiverHandlerG().handler(message);
+                if(ReceiverHandler.getReceiverHandler().handler(message))
                     break;
-                }else if(message.equals("ping")){
-                    long endTime = System.nanoTime();
-                    System.out.println("ping: " + (endTime- SenderHandler.getStartTime())/1000000 + "ms");
-                }
-                else {
-                    System.out.println(message);
-                }
             }
             in.close();
             clientSocket.close();

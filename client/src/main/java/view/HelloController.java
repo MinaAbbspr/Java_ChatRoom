@@ -19,6 +19,16 @@ import java.util.ResourceBundle;
 
 public class HelloController implements Initializable {
 
+    public HelloController() {
+    }
+
+    public void visibleUsernameES() {
+        this.usernameES.setVisible(true);
+        synchronized (this){
+            this.notify();
+        }
+    }
+
     public TextField login1;
     @FXML
     private AnchorPane blackPane;
@@ -88,6 +98,10 @@ public class HelloController implements Initializable {
 
     @FXML
     private AnchorPane whitePane;
+
+    @FXML
+    private Label lbl_loggedInError;
+
     private boolean animationS;
 
     @FXML
@@ -133,13 +147,14 @@ public class HelloController implements Initializable {
     }
 
     @FXML
-    void complete(MouseEvent event) {
+    void complete(MouseEvent event) throws InterruptedException {
         if(svpass.getText().isEmpty())
             svpass.setText(spas.getText());
         if(login1.getText().isEmpty() || log1.getText().isEmpty() || svpass.getText().isEmpty()){
             return;
         }
-        SenderHandlerG.getCommandHandlerG().setCommand("Signup-" + log1.getText() + "-" + login1.getText() + "-" + svpass.getText());
+        GHandler.getgHandler().signup("Signup-" + log1.getText() + "-" + login1.getText() + "-" + svpass.getText());
+        usernameES.setVisible(true);
     }
 
     @FXML
@@ -148,13 +163,27 @@ public class HelloController implements Initializable {
     }
 
     @FXML
-    void login(MouseEvent event) {
+    void login(MouseEvent event) throws InterruptedException {
         if(vlpass1.getText().isEmpty())
             vlpass1.setText(invlpass.getText());
         if(login.getText().isEmpty() || vlpass1.getText().isEmpty()){
             return;
         }
-        SenderHandlerG.getCommandHandlerG().setCommand("Login-" + login.getText() + "-" + vlpass1.getText());
+
+        if(GHandler.getgHandler().login("Login-" + login.getText() + "-" + vlpass1.getText())) {
+            usernameInE1.setVisible(true);
+            passInE1.setVisible(false);
+        }else {
+            if(GHandler.getgHandler().isLoggedInException()){
+                usernameInE1.setVisible(false);
+                passInE1.setVisible(false);
+                lbl_loggedInError.setVisible(true);
+            }
+            else {
+                usernameInE1.setVisible(false);
+                passInE1.setVisible(true);
+            }
+        }
     }
 
     @FXML

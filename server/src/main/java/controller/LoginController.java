@@ -23,10 +23,9 @@ public class LoginController {
     public boolean login(String ID, String password) throws IDNotFound, SQLException, WrongPassword, RepeatedAccount {
         String sqlCmd = String.format("SELECT password,isOnline FROM accounts WHERE ID = '%s'",ID);
         ResultSet resultSet = SQLConnection.getSqlConnection().executeSelect(sqlCmd);
-        if(resultSet == null)
+        if(resultSet == null ||  !resultSet.next())
             throw new IDNotFound("This id is not available");
 
-        resultSet.next();
         if(!resultSet.getString("password").equals(password))
             throw new WrongPassword("Your password is not correct");
 

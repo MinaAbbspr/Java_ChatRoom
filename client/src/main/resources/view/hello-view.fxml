@@ -20,7 +20,7 @@
          <children>
             <AnchorPane fx:id="whitePane" layoutX="345.0" layoutY="-1.0" prefHeight="953.0" prefWidth="1024.0" styleClass="mainAnc" stylesheets="@light.css">
                <children>
-                  <VBox fx:id="signupV" layoutX="326.0" layoutY="165.0" prefHeight="661.0" prefWidth="322.0" styleClass="vbox">
+                  <VBox fx:id="signupV" layoutX="326.0" layoutY="165.0" prefHeight="661.0" prefWidth="322.0" styleClass="vbox" visible="false">
                      <children>
                         <ImageView fitHeight="35.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -121,7 +121,7 @@
                         <Insets left="5.0" right="5.0" />
                      </padding>
                   </VBox>
-                  <VBox fx:id="loginV" layoutX="326.0" layoutY="165.0" prefHeight="457.0" prefWidth="322.0" styleClass="vbox" visible="false">
+                  <VBox fx:id="loginV" layoutX="326.0" layoutY="165.0" prefHeight="457.0" prefWidth="322.0" styleClass="vbox">
                      <children>
                         <ImageView fitHeight="45.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -133,9 +133,9 @@
                               <Font size="26.0" />
                            </font>
                         </Label>
-                        <HBox layoutX="10.0" layoutY="132.0" prefHeight="27.0" prefWidth="322.0" spacing="5.0" styleClass="HBox" stylesheets="@light.css">
+                        <HBox layoutX="10.0" layoutY="132.0" prefHeight="27.0" prefWidth="310.0" spacing="5.0" styleClass="HBox" stylesheets="@light.css">
                            <children>
-                              <TextField fx:id="login" prefHeight="26.0" prefWidth="314.0" promptText="Enter your username" styleClass="mainAnc" />
+                              <TextField fx:id="login" prefHeight="26.0" prefWidth="310.0" promptText="Enter your username" styleClass="mainAnc" />
                            </children>
                         </HBox>
                         <Label fx:id="usernameInE1" prefHeight="8.0" prefWidth="203.0" text="incorrect username" textFill="#b51d1d" visible="false">
@@ -143,7 +143,7 @@
                               <Font name="Arial" size="13.0" />
                            </font>
                         </Label>
-                        <Label layoutX="16.0" layoutY="177.0" prefHeight="5.0" prefWidth="180.0" text="Choose a password">
+                        <Label layoutX="16.0" layoutY="177.0" prefHeight="5.0" prefWidth="180.0" text="password">
                            <font>
                               <Font name="Arial Bold" size="12.0" />
                            </font>
@@ -190,6 +190,14 @@
                               <Font name="Arial Bold" size="15.0" />
                            </font>
                         </Button>
+                        <Label fx:id="lbl_loggedInError" prefHeight="16.0" prefWidth="173.0" text="This user is already logged in" textFill="#b51d1d" visible="false">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="70.0" top="20.0" />
+                           </VBox.margin>
+                        </Label>
                      </children>
                      <padding>
                         <Insets left="5.0" right="5.0" />
