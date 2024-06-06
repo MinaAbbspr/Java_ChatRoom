@@ -33,6 +33,7 @@ public class PvController
         ResultSet resultSet = SQLConnection.getSqlConnection().executeSelect(sqlCmd);
         if(resultSet == null)
             throw new NoOnlineUser("There is no online user");
+
         while (resultSet.next())
         {
             users.append(resultSet.getString("ID")).append("\t").append(resultSet.getString("name"));
