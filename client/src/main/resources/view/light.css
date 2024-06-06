@@ -2,7 +2,7 @@
     -fx-background-color: white;
 }
 .l_s_animation{
-    -fx-background-color: #1e0202;
+    -fx-background-color: rgb(24, 1, 1);
 }
 .label
 {
@@ -24,5 +24,22 @@
     -fx-text-fill: white;
 }
 .signup-btn:hover{
-    -fx-background-color: #282727;
+    -fx-background-color: rgba(86, 61, 61, 0.59);
+}
+.label-animation
+{
+    -fx-text-fill: #ffffff;
+}
+.animation-btn{
+    -fx-background-color: #fffefe;
+    -fx-border-radius: 30;
+    -fx-text-fill: #1e0d0d;
+    -fx-border-color: white;
+}
+.animation-btn:hover{
+    -fx-background-color: rgba(86, 61, 61, 0.59);
+}
+.logo{
+    -fx-border-radius: 30;
+    -fx-border-color: #1e0202;
 }
