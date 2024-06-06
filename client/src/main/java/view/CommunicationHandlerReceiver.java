@@ -1,11 +1,8 @@
 package view;
 
-import model.Message;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.ObjectInputStream;
 import java.net.Socket;
 
 public class CommunicationHandlerReceiver extends Thread
@@ -29,7 +26,7 @@ public class CommunicationHandlerReceiver extends Thread
                     break;
                 }else if(message.equals("ping")){
                     long endTime = System.nanoTime();
-                    System.out.println("ping: " + (endTime-CommandHandler.getStartTime())/1000000 + "ms");
+                    System.out.println("ping: " + (endTime- SenderHandler.getStartTime())/1000000 + "ms");
                 }
                 else {
                     System.out.println(message);

@@ -2,23 +2,33 @@ package view;
 
 import model.Message;
 
-import java.util.Scanner;
 
-public class CommandHandler {
+public class SenderHandlerG {
     private String senderID;
     private String receiverID;
-    private static long startTime;
+    private String command;
+    private static CommunicationHandlerSender sender;
+    private static SenderHandlerG senderHandlerG;
 
-    public static long getStartTime() {
-        return startTime;
+    private SenderHandlerG() {
     }
 
-    public void scanner(CommunicationHandlerSender sender){
-        Scanner sc = new Scanner(System.in);
-        String command;
-        boolean con = true;
-        while (con){
-            command = sc.nextLine();
+    public static void setSender(CommunicationHandlerSender sender) {
+        SenderHandlerG.sender = sender;
+    }
+
+    public void setCommand(String command) {
+        this.command = command;
+        scanner();
+    }
+
+    public static SenderHandlerG getCommandHandlerG() {
+        if(senderHandlerG == null)
+            senderHandlerG = new SenderHandlerG();
+        return senderHandlerG;
+    }
+
+    private void scanner(){
             String[] commands = command.split("-");
 
             switch (commands[0]) {
@@ -30,18 +40,11 @@ public class CommandHandler {
                     if (commands.length == 4)
                         senderID = commands[1];
                 }
-                case "Ping" -> {
-                    if (commands.length == 1) {
-                        startTime = System.nanoTime();
-                    }
-                }
                 case "PV" ->{
                     if(commands.length == 2)
                         receiverID = commands[1];
                 }
-                case "exit" -> con = false;
             }
             sender.setMessage(new Message(command,senderID,receiverID));
-        }
     }
 }

@@ -134,7 +134,12 @@ public class HelloController implements Initializable {
 
     @FXML
     void complete(MouseEvent event) {
-
+        if(svpass.getText().isEmpty())
+            svpass.setText(spas.getText());
+        if(login1.getText().isEmpty() || log1.getText().isEmpty() || svpass.getText().isEmpty()){
+            return;
+        }
+        SenderHandlerG.getCommandHandlerG().setCommand("Signup-" + log1.getText() + "-" + login1.getText() + "-" + svpass.getText());
     }
 
     @FXML
@@ -144,7 +149,12 @@ public class HelloController implements Initializable {
 
     @FXML
     void login(MouseEvent event) {
-
+        if(vlpass1.getText().isEmpty())
+            vlpass1.setText(invlpass.getText());
+        if(login.getText().isEmpty() || vlpass1.getText().isEmpty()){
+            return;
+        }
+        SenderHandlerG.getCommandHandlerG().setCommand("Login-" + login.getText() + "-" + vlpass1.getText());
     }
 
     @FXML

@@ -20,13 +20,16 @@ public class HelloApplication extends Application
     }
 
     public static void main(String[] args) throws IOException {
-        launch();
         CommunicationHandlerSender sender = new CommunicationHandlerSender();
         CommunicationHandlerReceiver receiver = new CommunicationHandlerReceiver();
         sender.start();
         receiver.start();
-        CommandHandler commandHandler = new CommandHandler();
-        commandHandler.scanner(sender);
+        SenderHandlerG.setSender(sender);
+        SenderHandler senderHandler = new SenderHandler();
+        new Thread(() -> {
+            launch();
+        }).start();
+        senderHandler.scanner(sender);
 
     }
 
