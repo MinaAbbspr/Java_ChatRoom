@@ -41,7 +41,7 @@
                         </Label>
                         <HBox prefHeight="28.0" prefWidth="275.0" spacing="5.0" styleClass="HBox" stylesheets="@light.css">
                            <children>
-                              <TextField fx:id="login" prefHeight="26.0" prefWidth="304.0" promptText="Email or Username" styleClass="mainAnc" />
+                              <TextField fx:id="login1" prefHeight="26.0" prefWidth="304.0" promptText="Email or Username" styleClass="mainAnc" />
                            </children>
                            <VBox.margin>
                               <Insets />
