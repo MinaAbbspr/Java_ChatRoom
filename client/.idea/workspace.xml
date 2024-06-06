@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba7f0ccf-aa3d-4de9-a219-194814455c34" name="Changes" comment="fxml controller added">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_6_2024_5_20_PM__Changes_.xml" afterDir="false" />
+    <list default="true" id="ba7f0ccf-aa3d-4de9-a219-194814455c34" name="Changes" comment="login debug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/hello-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -134,7 +130,7 @@
       <workItem from="1717598625769" duration="2142000" />
       <workItem from="1717652760416" duration="603000" />
       <workItem from="1717654562720" duration="8245000" />
-      <workItem from="1717665878063" duration="11853000" />
+      <workItem from="1717665878063" duration="12389000" />
     </task>
     <task id="LOCAL-00001" summary="&#10;main">
       <option name="closed" value="true" />
@@ -216,7 +212,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717679131954</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="g-animation added">
+      <option name="closed" value="true" />
+      <created>1717681763006</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1717681763006</updated>
+    </task>
+    <task id="LOCAL-00012" summary="g-animation added">
+      <option name="closed" value="true" />
+      <created>1717681764108</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1717681764108</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +256,8 @@
     <MESSAGE value="g-signup page added" />
     <MESSAGE value="FinishController added" />
     <MESSAGE value="g-login page added" />
-    <option name="LAST_COMMIT_MESSAGE" value="g-login page added" />
+    <MESSAGE value="g-animation added" />
+    <option name="LAST_COMMIT_MESSAGE" value="g-animation added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
