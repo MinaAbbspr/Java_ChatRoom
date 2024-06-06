@@ -13,11 +13,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="799.0" prefWidth="1330.0" styleClass="mainAnc" stylesheets="@light.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="799.0" prefWidth="1330.0" styleClass="mainAnc" stylesheets="@light.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.HelloController">
    <center>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="950.0" prefWidth="1369.0">
          <children>
-            <AnchorPane layoutX="345.0" layoutY="-1.0" prefHeight="953.0" prefWidth="994.0" styleClass="mainAnc" stylesheets="@light.css">
+            <AnchorPane fx:id="whitePane" layoutX="345.0" layoutY="-1.0" prefHeight="953.0" prefWidth="994.0" styleClass="mainAnc" stylesheets="@light.css">
                <children>
                   <VBox fx:id="signupV" layoutX="326.0" layoutY="165.0" prefHeight="457.0" prefWidth="322.0" styleClass="vbox">
                      <children>
@@ -112,7 +112,7 @@
                         <Insets left="5.0" right="5.0" />
                      </padding>
                   </VBox>
-                  <VBox fx:id="loginnV" layoutX="326.0" layoutY="165.0" prefHeight="457.0" prefWidth="322.0" styleClass="vbox" visible="false">
+                  <VBox fx:id="loginV" layoutX="326.0" layoutY="165.0" prefHeight="457.0" prefWidth="322.0" styleClass="vbox" visible="false">
                      <children>
                         <ImageView fitHeight="45.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -187,19 +187,19 @@
                      </padding>
                   </VBox>
                </children></AnchorPane>
-            <AnchorPane layoutX="-2.0" layoutY="-2.0" prefHeight="956.0" prefWidth="343.0" styleClass="l_s_animation" stylesheets="@light.css">
+            <AnchorPane fx:id="blackPane" layoutX="-2.0" layoutY="-2.0" prefHeight="956.0" prefWidth="343.0" styleClass="l_s_animation" stylesheets="@light.css">
                <children>
-                  <Label alignment="CENTER" layoutX="-8.0" layoutY="83.0" prefHeight="75.0" prefWidth="347.0" styleClass="label-animation" text="Welcome Back!">
+                  <Label fx:id="lbl_welcome" alignment="CENTER" layoutX="-8.0" layoutY="83.0" prefHeight="75.0" prefWidth="347.0" styleClass="label-animation" text="Welcome Back!">
                      <font>
                         <Font name="Arial Bold" size="22.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" layoutX="-6.0" layoutY="152.0" prefHeight="75.0" prefWidth="348.0" styleClass="label-animation" text="contact your friends and send unlimited messages">
+                  <Label fx:id="lbl_inner" alignment="CENTER" layoutX="-6.0" layoutY="152.0" prefHeight="75.0" prefWidth="348.0" styleClass="label-animation" text="contact your friends and send unlimited messages">
                      <font>
                         <Font name="Arial" size="13.0" />
                      </font>
                   </Label>
-                  <Button layoutX="58.0" layoutY="240.0" mnemonicParsing="false" onMouseClicked="#animation" prefHeight="45.0" prefWidth="218.0" style="-fx-background-radius: 20;" styleClass="animation-btn" text="Login">
+                  <Button fx:id="btn_login_signup" layoutX="58.0" layoutY="240.0" mnemonicParsing="false" onMouseClicked="#animation" prefHeight="45.0" prefWidth="218.0" style="-fx-background-radius: 20;" styleClass="animation-btn" text="Login">
                      <font>
                         <Font name="System Bold" size="17.0" />
                      </font>
