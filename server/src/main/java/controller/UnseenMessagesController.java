@@ -21,7 +21,7 @@ public class UnseenMessagesController {
         return unseenMessagesController;
     }
 
-    public void loginShowUnseenMessages(String ID) throws SQLException {
+    public void finishShowUnseenMessages(String ID) throws SQLException {
         StringBuilder stringBuilder = new StringBuilder();
         String sqlCmd = String.format("SELECT messageID FROM unseenMessage WHERE accountID = '%s'",ID);
         ResultSet resultSet = SQLConnection.getSqlConnection().executeSelect(sqlCmd);
@@ -34,7 +34,8 @@ public class UnseenMessagesController {
                         .append(messages.getString("massage")).append("\n").append(messages.getString("time")).append("\n");
             }
         }
-
+        sqlCmd = String.format("DELETE FROM unseenMessage WHERE accountID = '%s'",ID);
+        SQLConnection.getSqlConnection().execute(sqlCmd);
         if(stringBuilder.isEmpty())
             stringBuilder.append("there is no unseen message");
         DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(String.valueOf(stringBuilder));

@@ -34,7 +34,7 @@ public class LoginController {
             throw new RepeatedAccount("This user is already logged in");
         }
 
-        String innerCmd = String.format("UPDATE accounts SET isOnline = %s WHERE ID = '%s'",true,ID);
+        String innerCmd = String.format("UPDATE accounts SET isOnline = %s WHERE ID = '%s'",1,ID);
         SQLConnection.getSqlConnection().execute(innerCmd);
 
         DataBase.getDataBase().getThread(Thread.currentThread().getName()).setName(ID);

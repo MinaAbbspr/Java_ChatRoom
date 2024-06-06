@@ -61,6 +61,13 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
+    ]
   }
 }]]></component>
   <component name="RunManager">
@@ -99,7 +106,41 @@
       <option name="presentableId" value="Default" />
       <updated>1717591139247</updated>
       <workItem from="1717652766887" duration="1351000" />
+      <workItem from="1717654558043" duration="3989000" />
     </task>
+    <task id="LOCAL-00001" summary="showOnlineUsers method added">
+      <option name="closed" value="true" />
+      <created>1717654587163</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1717654587163</updated>
+    </task>
+    <task id="LOCAL-00002" summary="showOnlineUsers method added">
+      <option name="closed" value="true" />
+      <created>1717654659597</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717654659597</updated>
+    </task>
+    <task id="LOCAL-00003" summary="showOnlineUsers method added">
+      <option name="closed" value="true" />
+      <created>1717654756689</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717654756689</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ClearHistoryController added">
+      <option name="closed" value="true" />
+      <created>1717667021067</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717667021067</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,5 +156,30 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="showOnlineUsers method added" />
+    <MESSAGE value="ClearHistoryController added" />
+    <option name="LAST_COMMIT_MESSAGE" value="ClearHistoryController added" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/controller/UnseenMessagesController.java</url>
+          <line>60</line>
+          <properties class="controller.UnseenMessagesController" method="pvShowUnseenMessages">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controller/ShowMsgController.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
