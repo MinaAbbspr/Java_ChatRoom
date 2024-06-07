@@ -113,9 +113,6 @@
 .scroll-pane2 {
     -fx-background-color: #ffffff;
     -fx-border-color: #150101;
-    -fx-border-radius: 20;
-    -fx-background-radius: 20;
-
 }
 .scroll-pane2 > .viewport{
     -fx-background-color: transparent;
@@ -162,3 +159,26 @@
      -fx-border-radius: 20;
      -fx-border-color: white;
  }
+.vbox-g{
+    -fx-background-color: #ffffff;
+}
+.vbox-g:hover {
+    -fx-background-color: rgba(204, 193, 193, 0.79);
+    -fx-background-radius: 20;
+}
+.profile-g{
+    -fx-background-color: #ffffff;
+    -fx-text-fill: black;
+}
+.profile-g:hover {
+    -fx-background-color: rgba(86, 61, 61, 0.59);
+    -fx-background-radius: 20;
+}
+.label-g{
+    -fx-text-fill: black;
+}
+.vbox-list{
+    -fx-background-color: #ffffff;
+}
+
+

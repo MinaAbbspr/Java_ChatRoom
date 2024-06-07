@@ -218,7 +218,7 @@
                         </VBox>
                         <ImageView fx:id="topInfo1" fitHeight="23.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                            <HBox.margin>
-                              <Insets left="650.0" top="20.0" />
+                              <Insets left="640.0" top="20.0" />
                            </HBox.margin>
                            <image>
                               <Image url="@images/output-onlinepngtools-7.png" />
@@ -228,9 +228,9 @@
                   </HBox>
                   <ScrollPane layoutX="67.0" layoutY="404.0" prefHeight="348.0" prefWidth="484.0" style="-fx-background-radius: 20;" styleClass="scroll-pane2">
                      <content>
-                        <VBox fx:id="artistList2" prefHeight="364.0" prefWidth="463.0" spacing="10.0" styleClass="vbox">
+                        <VBox fx:id="artistList2" prefHeight="364.0" prefWidth="463.0" spacing="10.0" styleClass="vbox-list">
                            <children>
-                              <Label prefHeight="16.0" prefWidth="80.0" text="members" textFill="WHITE">
+                              <Label prefHeight="16.0" prefWidth="80.0" styleClass="label-g" text="members" textFill="WHITE">
                                  <font>
                                     <Font name="Arial Bold" size="13.0" />
                                  </font>
@@ -238,10 +238,64 @@
                                     <Insets left="5.0" top="5.0" />
                                  </VBox.margin>
                               </Label>
+                              <HBox prefHeight="51.0" prefWidth="461.0" styleClass="vbox-g">
+                                 <children>
+                                    <Circle fill="DODGERBLUE" radius="20.0" stroke="BLACK" strokeType="INSIDE" styleClass="profile-circle">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Circle>
+                                    <VBox maxHeight="77.0" prefHeight="54.0" prefWidth="135.0" spacing="2.0">
+                                       <children>
+                                          <Label fx:id="groupName1" prefHeight="16.0" prefWidth="125.0" styleClass="label-g" text="Parinaz" textFill="WHITE">
+                                             <font>
+                                                <Font name="Arial Bold" size="13.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets top="8.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label fx:id="memberCount1" prefHeight="12.0" prefWidth="171.0" styleClass="label-g" text="\@laprnz">
+                                             <font>
+                                                <Font name="Arial" size="11.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <ImageView fitHeight="14.0" fitWidth="9.0" pickOnBounds="true" preserveRatio="true">
+                                       <HBox.margin>
+                                          <Insets left="260.0" top="17.0" />
+                                       </HBox.margin>
+                                       <image>
+                                          <Image url="@../../../../../../../Downloads/61140.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
                            </children>
                         </VBox>
                      </content>
                   </ScrollPane>
+                  <VBox layoutX="862.0" layoutY="52.0" prefHeight="59.0" prefWidth="82.0" styleClass="l_s_animation">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="44.0" prefWidth="82.0" styleClass="vbox" text="block" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="82.0" styleClass="vbox" text=" clear history" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
                </children>
             </AnchorPane>
          </children>

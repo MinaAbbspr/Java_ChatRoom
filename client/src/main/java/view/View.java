@@ -34,7 +34,7 @@ public class View {
     }
 
     public void showMessenger() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("tobBar.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("messenger.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Messenger!");
         stage.setScene(scene);
@@ -42,8 +42,8 @@ public class View {
     }
 
     public void showLogin_signup() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(),1290,800);
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("messenger.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Messenger!");
         stage.setScene(scene);
         stage.show();

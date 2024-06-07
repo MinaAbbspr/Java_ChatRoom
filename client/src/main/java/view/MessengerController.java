@@ -23,6 +23,7 @@ public class MessengerController implements Initializable
     public VBox group1;
     @FXML private Label memberCount;
     @FXML private Label groupName;
+    @FXML private Label d;
     @FXML private VBox chats;
     @FXML private VBox group;
     @FXML private VBox usersSideList;
@@ -38,7 +39,7 @@ public class MessengerController implements Initializable
         groupImg.setFill(new ImagePattern(groupI));
         Image backImg = new Image(Objects.requireNonNull(MessengerController.class.getResource("Image.jpg")).toExternalForm());
         back.setFill(new ImagePattern(backImg));
-        gBack.setFill(new ImagePattern(backImg));
+        d.setText(".\n.\n.");
     }
 
 
