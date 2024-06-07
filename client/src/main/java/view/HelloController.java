@@ -167,9 +167,9 @@ public class HelloController implements Initializable {
     {
         if(svpass.getText().isEmpty())
             svpass.setText(spas.getText());
-        if(login1.getText().isEmpty() || log1.getText().isEmpty() || svpass.getText().isEmpty()){
+        if(login1.getText().isEmpty() || log1.getText().isEmpty() || svpass.getText().isEmpty())
             return;
-        }
+
         GHandler.getgHandler().signup("Signup-" + log1.getText() + "-" + login1.getText() + "-" + svpass.getText(),file);
         usernameES.setVisible(true);
     }

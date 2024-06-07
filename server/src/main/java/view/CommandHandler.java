@@ -144,10 +144,12 @@ public class CommandHandler
     }
 
     public void fileHandler(File file) throws FileNotFoundException, SQLException {
-        String sqlCmd = String.format("UPDATE accounts SET image = ? WHERE ID = '%s'",Thread.currentThread().getName());
-        PreparedStatement ps = SQLConnection.getSqlConnection().executeFile(sqlCmd);
-        ps.setBinaryStream(1, (InputStream)new FileInputStream(file), (int)file.length() );
-        ps.execute();
-        ps.close();
+        if(file != null) {
+            String sqlCmd = String.format("UPDATE accounts SET image = ? WHERE ID = '%s'", Thread.currentThread().getName());
+            PreparedStatement ps = SQLConnection.getSqlConnection().executeFile(sqlCmd);
+            ps.setBinaryStream(1, (InputStream) new FileInputStream(file), (int) file.length());
+            ps.execute();
+            ps.close();
+        }
     }
 }

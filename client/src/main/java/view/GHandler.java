@@ -45,7 +45,7 @@ public class GHandler {
     }
     public void signup(String message, File file) throws InterruptedException {
         SenderHandlerG.getCommandHandlerG().setCommand(message);
-        Thread.sleep(10000);
+        Thread.sleep(1000);
         SenderHandlerG.getCommandHandlerG().sendFile(file);
     }
 }
