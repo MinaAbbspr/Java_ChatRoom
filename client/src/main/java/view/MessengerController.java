@@ -25,6 +25,7 @@ import java.util.ResourceBundle;
 
 public class MessengerController implements Initializable
 {
+
     public VBox group1;
     @FXML
     private ScrollPane allUsers;
