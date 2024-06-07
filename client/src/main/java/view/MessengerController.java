@@ -5,8 +5,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextField;
+import javafx.scene.effect.BoxBlur;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
@@ -30,11 +34,18 @@ public class MessengerController implements Initializable
     @FXML private Circle back;
     @FXML private Circle close;
     @FXML private ScrollPane members;
+    @FXML private AnchorPane groupP;
+    @FXML private AnchorPane sideBar;
+    @FXML private HBox topBar;
+    @FXML private HBox messageBar;
+    @FXML private TextField message;
     @FXML private Circle gBack;
     @FXML private Circle H;
+    private boolean isGroup;
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
+        isGroup = false;
         Image groupI = new Image(Objects.requireNonNull(MessengerController.class.getResource("Images-6.jpeg")).toExternalForm());
         H.setFill(new ImagePattern(groupI));
         groupImage.setFill(new ImagePattern(groupI));
@@ -42,6 +53,7 @@ public class MessengerController implements Initializable
         Image backImg = new Image(Objects.requireNonNull(MessengerController.class.getResource("Image.jpg")).toExternalForm());
         back.setFill(new ImagePattern(backImg));
         options.setVisible(false);
+        groupP.setVisible(false);
     }
 
 
@@ -98,12 +110,18 @@ public class MessengerController implements Initializable
 
     public void member(MouseEvent event)
     {
+
         members.setVisible(true);
         TranslateTransition slide1 = new TranslateTransition();
         slide1.setDuration(Duration.seconds(2));
         slide1.setNode(members);
         slide1.setToY(-400);
         slide1.play();
+        BoxBlur blur = new BoxBlur();
+        sideBar.setEffect(blur);
+        messageBar.setEffect(blur);
+        topBar.setEffect(blur);
+        message.setDisable(true);
     }
 
     public void close(MouseEvent event)
@@ -113,8 +131,18 @@ public class MessengerController implements Initializable
         slide1.setNode(members);
         slide1.setToY(400);
         slide1.play();
+        sideBar.setEffect(null);
+        topBar.setEffect(null);
+        messageBar.setEffect(null);
+        message.setDisable(false);
     }
 
-    public void previous(MouseEvent event) {
+    public void previous(MouseEvent event)
+    {
+    }
+
+    public void groupIn(MouseEvent event)
+    {
+        groupP.setVisible(true);
     }
 }
