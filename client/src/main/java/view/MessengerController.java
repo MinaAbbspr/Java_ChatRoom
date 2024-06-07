@@ -1,9 +1,11 @@
 package view;
 
+import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.DragEvent;
@@ -12,6 +14,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
+import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
@@ -30,16 +33,19 @@ public class MessengerController implements Initializable
     @FXML private Circle groupImage;
     @FXML private Circle groupImg;
     @FXML private Circle back;
+    @FXML private Circle close;
+    @FXML private ScrollPane members;
     @FXML private Circle gBack;
+    @FXML private Circle H;
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
-        Image groupI = new Image(Objects.requireNonNull(MessengerController.class.getResource("images-11.jpeg")).toExternalForm());
+        Image groupI = new Image(Objects.requireNonNull(MessengerController.class.getResource("Images-6.jpeg")).toExternalForm());
+        H.setFill(new ImagePattern(groupI));
         groupImage.setFill(new ImagePattern(groupI));
         groupImg.setFill(new ImagePattern(groupI));
         Image backImg = new Image(Objects.requireNonNull(MessengerController.class.getResource("Image.jpg")).toExternalForm());
         back.setFill(new ImagePattern(backImg));
-        d.setText(".\n.\n.");
     }
 
 
@@ -63,6 +69,16 @@ public class MessengerController implements Initializable
 
     public void search(MouseEvent event) {
     }
+    public void o(MouseEvent event) {
+        Image closeImg = new Image(Objects.requireNonNull(MessengerController.class.getResource("IMG_0075.jpg")).toExternalForm());
+        close.setFill(new ImagePattern(closeImg));
+    }
+
+    public void c(MouseEvent event)
+    {
+        Image closeImg = new Image(Objects.requireNonNull(MessengerController.class.getResource("Screenshot 2024-06-08 at 12.26.57 AM.jpg")).toExternalForm());
+        close.setFill(new ImagePattern(closeImg));
+    }
     public void showSideUsers()
     {
 //        try {
@@ -82,5 +98,24 @@ public class MessengerController implements Initializable
     }
 
     public void gEnter(MouseEvent event) {
+    }
+
+    public void member(MouseEvent event)
+    {
+        members.setVisible(true);
+        TranslateTransition slide1 = new TranslateTransition();
+        slide1.setDuration(Duration.seconds(2));
+        slide1.setNode(members);
+        slide1.setToY(-400);
+        slide1.play();
+    }
+
+    public void close(MouseEvent event)
+    {
+        TranslateTransition slide1 = new TranslateTransition();
+        slide1.setDuration(Duration.seconds(2));
+        slide1.setNode(members);
+        slide1.setToY(400);
+        slide1.play();
     }
 }

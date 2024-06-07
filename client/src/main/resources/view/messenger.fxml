@@ -191,7 +191,7 @@
                               <Image url="@images/p.png" />
                            </image>
                         </ImageView>
-                        <Circle fx:id="groupImg" fill="DODGERBLUE" radius="19.0" stroke="BLACK" strokeType="INSIDE" styleClass="profile-circle">
+                        <Circle fx:id="groupImg" fill="DODGERBLUE" radius="19.0" stroke="BLACK" strokeType="INSIDE">
                            <HBox.margin>
                               <Insets left="25.0" top="15.0" />
                            </HBox.margin>
@@ -216,7 +216,7 @@
                               <Insets left="10.0" top="17.0" />
                            </HBox.margin>
                         </VBox>
-                        <ImageView fx:id="topInfo1" fitHeight="23.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="topInfo1" fitHeight="23.0" fitWidth="39.0" onMouseClicked="#member" pickOnBounds="true" preserveRatio="true">
                            <HBox.margin>
                               <Insets left="640.0" top="20.0" />
                            </HBox.margin>
@@ -226,11 +226,34 @@
                         </ImageView>
                      </children>
                   </HBox>
-                  <ScrollPane layoutX="67.0" layoutY="404.0" prefHeight="348.0" prefWidth="484.0" style="-fx-background-radius: 20;" styleClass="scroll-pane2">
+                  <ScrollPane fx:id="members" layoutX="67.0" layoutY="582.0" prefHeight="361.0" prefWidth="484.0">
                      <content>
-                        <VBox fx:id="artistList2" prefHeight="364.0" prefWidth="463.0" spacing="10.0" styleClass="vbox-list">
+                        <VBox fx:id="members_v" prefHeight="364.0" prefWidth="463.0" styleClass="vbox-members">
                            <children>
-                              <Label prefHeight="16.0" prefWidth="80.0" styleClass="label-g" text="members" textFill="WHITE">
+                              <Circle fx:id="close" fill="#432323" onMouseClicked="#close" onMouseEntered="#o" onMouseExited="#c" radius="5.0" stroke="BLACK" strokeType="INSIDE">
+                                 <VBox.margin>
+                                    <Insets left="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </Circle>
+                              <Circle fx:id="H" fill="DODGERBLUE" radius="32.0" stroke="BLACK" strokeType="INSIDE">
+                                 <VBox.margin>
+                                    <Insets left="190.0" top="10.0" />
+                                 </VBox.margin>
+                              </Circle>
+                              <Label styleClass="label-g" text="group">
+                                 <VBox.margin>
+                                    <Insets left="207.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label layoutX="217.0" layoutY="104.0" styleClass="label-g" text="12 members">
+                                 <VBox.margin>
+                                    <Insets left="192.0" top="2.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="13.0" prefWidth="80.0" styleClass="label-g" text="members" textFill="WHITE">
                                  <font>
                                     <Font name="Arial Bold" size="13.0" />
                                  </font>
@@ -238,7 +261,7 @@
                                     <Insets left="5.0" top="5.0" />
                                  </VBox.margin>
                               </Label>
-                              <HBox prefHeight="51.0" prefWidth="461.0" styleClass="vbox-g">
+                              <HBox prefHeight="51.0" prefWidth="461.0" styleClass="profile-g">
                                  <children>
                                     <Circle fill="DODGERBLUE" radius="20.0" stroke="BLACK" strokeType="INSIDE" styleClass="profile-circle">
                                        <HBox.margin>
@@ -277,6 +300,9 @@
                                        </image>
                                     </ImageView>
                                  </children>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
                               </HBox>
                            </children>
                         </VBox>

@@ -35,15 +35,16 @@ public class ReceiverHandlerG {
             }
             default ->{
                 chats = message;
-                View.getView().showMessenger();
+//                View.getView().showMessenger();
             }
         }
     }
-    private void signupCheck(String message) throws IOException {
+    private void signupCheck(String message) throws IOException
+    {
         if (message.equals("This id exist")) {
         } else {
             chats = message;
-            View.getView().showMessenger();
+//            View.getView().showMessenger();
         }
     }
 }
