@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba7f0ccf-aa3d-4de9-a219-194814455c34" name="Changes" comment="Merge remote-tracking branch 'origin/parinaz' into parinaz">
+    <list default="true" id="ba7f0ccf-aa3d-4de9-a219-194814455c34" name="Changes" comment="login debug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/MessengerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/MessengerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/messanger.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/messanger.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,40 +40,43 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2h0AJNFNGWqWjQSjLxGSoA5W6Sk" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HelloApplication.executor&quot;: &quot;Coverage&quot;,
-    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Application.h2.executor&quot;: &quot;Coverage&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;parinaz&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/parinaz/IdeaProjects/secondproject-chatroom-parinaz_mina11/client&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.HelloApplication.executor": "Coverage",
+    "Application.Unnamed.executor": "Run",
+    "Application.h2.executor": "Coverage",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "parinaz",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/parinaz/IdeaProjects/secondproject-chatroom-parinaz_mina11/client",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;,
-      &quot;module&quot;,
-      &quot;repository&quot;
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/view/images" />
@@ -113,7 +119,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176" />
       </set>
     </attachedChunks>
   </component>
@@ -232,21 +238,21 @@
       <option name="project" value="LOCAL" />
       <updated>1717681764108</updated>
     </task>
-    <task id="LOCAL-00013" summary="G login signup controller">
+    <task id="LOCAL-00013" summary="g-visible + invisible methods added">
       <option name="closed" value="true" />
-      <created>1717689815501</created>
+      <created>1717715080353</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1717689815501</updated>
+      <updated>1717715080353</updated>
     </task>
-    <task id="LOCAL-00014" summary="Merge remote-tracking branch 'origin/parinaz' into parinaz">
+    <task id="LOCAL-00014" summary="g-visible + invisible methods added">
       <option name="closed" value="true" />
-      <created>1717700741084</created>
+      <created>1717715083555</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1717700741084</updated>
+      <updated>1717715083555</updated>
     </task>
     <option name="localTasksCounter" value="15" />
     <servers />
@@ -266,6 +272,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="&#10;main" />
     <MESSAGE value="&#10;CommunicationHandlerSender" />
     <MESSAGE value="&#10;sender wait error" />
@@ -277,10 +284,9 @@
     <MESSAGE value="FinishController added" />
     <MESSAGE value="g-login page added" />
     <MESSAGE value="g-animation added" />
-    <MESSAGE value="G login signup controller" />
-    <MESSAGE value="G login signup exception controller" />
-    <MESSAGE value="Merge remote-tracking branch 'origin/parinaz' into parinaz" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/parinaz' into parinaz" />
+    <MESSAGE value="fixup! g-options added" />
+    <MESSAGE value="g-visible + invisible methods added" />
+    <option name="LAST_COMMIT_MESSAGE" value="g-visible + invisible methods added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/client$HelloApplication.ic" NAME="HelloApplication Coverage Results" MODIFIED="1717658814219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

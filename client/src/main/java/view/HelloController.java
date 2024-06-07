@@ -31,7 +31,6 @@ public class HelloController implements Initializable {
     @FXML private HBox invisibleV1;
     @FXML private TextField logintext;
     @FXML private AnchorPane blackPane;
-
     @FXML private Button btn_login_signup;
     @FXML private Button complete;
 
