@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba7f0ccf-aa3d-4de9-a219-194814455c34" name="Changes" comment="login debug">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_6_2024_6_26_PM__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/SenderHandlerG.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_6_24__5_57PM.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_6_24__5_57PM.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/SenderHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/CommunicationHandlerReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/CommunicationHandlerReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/AccountController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/MessengerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/MessengerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/messanger.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/messanger.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,36 +47,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.HelloApplication.executor": "Coverage",
-    "Application.Unnamed.executor": "Run",
-    "Application.h2.executor": "Coverage",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "parinaz",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/parinaz/IdeaProjects/secondproject-chatroom-parinaz_mina11/client",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Coverage&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Application.h2.executor&quot;: &quot;Coverage&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;parinaz&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/parinaz/IdeaProjects/secondproject-chatroom-parinaz_mina11/client&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "GitStage.ChangesTree.GroupingKeys": [
-      "directory",
-      "module",
-      "repository"
+  &quot;keyToStringList&quot;: {
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/view/images" />
@@ -143,6 +141,8 @@
       <workItem from="1717654562720" duration="8245000" />
       <workItem from="1717665878063" duration="12389000" />
       <workItem from="1717687732345" duration="1089000" />
+      <workItem from="1717719106543" duration="478000" />
+      <workItem from="1717741178057" duration="1102000" />
     </task>
     <task id="LOCAL-00001" summary="&#10;main">
       <option name="closed" value="true" />
@@ -256,7 +256,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717715083555</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="g-account fxml added">
+      <option name="closed" value="true" />
+      <created>1717718303058</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1717718303058</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,7 +296,8 @@
     <MESSAGE value="g-animation added" />
     <MESSAGE value="fixup! g-options added" />
     <MESSAGE value="g-visible + invisible methods added" />
-    <option name="LAST_COMMIT_MESSAGE" value="g-visible + invisible methods added" />
+    <MESSAGE value="g-account fxml added" />
+    <option name="LAST_COMMIT_MESSAGE" value="g-account fxml added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/client$HelloApplication.ic" NAME="HelloApplication Coverage Results" MODIFIED="1717658814219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
