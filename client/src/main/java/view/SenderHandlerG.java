@@ -2,6 +2,8 @@ package view;
 
 import model.Message;
 
+import java.io.File;
+
 
 public class SenderHandlerG {
     private String senderID;
@@ -46,5 +48,8 @@ public class SenderHandlerG {
                 }
             }
             sender.setMessage(new Message(command,senderID,receiverID));
+    }
+    public void sendFile(File file){
+        sender.setFile(file);
     }
 }

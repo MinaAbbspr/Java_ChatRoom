@@ -5,6 +5,12 @@ import controller.exceptions.*;
 import model.DataBase;
 import model.Message;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class CommandHandler
@@ -135,5 +141,13 @@ public class CommandHandler
                 }
             }
         }
+    }
+
+    public void fileHandler(File file) throws FileNotFoundException, SQLException {
+        String sqlCmd = String.format("UPDATE accounts SET image = ? WHERE ID = '%s'",Thread.currentThread().getName());
+        PreparedStatement ps = SQLConnection.getSqlConnection().executeFile(sqlCmd);
+        ps.setBinaryStream(1, (InputStream)new FileInputStream(file), (int)file.length() );
+        ps.execute();
+        ps.close();
     }
 }

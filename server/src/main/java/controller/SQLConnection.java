@@ -42,4 +42,15 @@ public class SQLConnection {
             return null;
         }
     }
+
+    public PreparedStatement executeFile(String sqlCommand) {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection connection = DriverManager.getConnection(url, "root", "");
+            return connection.prepareStatement(sqlCommand);
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }

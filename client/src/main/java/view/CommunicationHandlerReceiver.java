@@ -28,7 +28,7 @@ public class CommunicationHandlerReceiver extends Thread
             in.close();
             clientSocket.close();
         }
-        catch (IOException ex) { }
+        catch (IOException ignored) { }
     }
 
 }

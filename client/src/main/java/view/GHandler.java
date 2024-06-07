@@ -1,5 +1,7 @@
 package view;
 
+import java.io.File;
+
 public class GHandler {
     private static GHandler gHandler;
     private boolean loginExceptionID;
@@ -42,7 +44,9 @@ public class GHandler {
 
         return loginExceptionID;
     }
-    public void signup(String message) {
+    public void signup(String message, File file) throws InterruptedException {
         SenderHandlerG.getCommandHandlerG().setCommand(message);
+        Thread.sleep(10000);
+        SenderHandlerG.getCommandHandlerG().sendFile(file);
     }
 }

@@ -3,6 +3,7 @@ package controller;
 import model.Message;
 import view.CommandHandler;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.Socket;
@@ -25,13 +26,20 @@ public class CommunicationHandlerReceiver extends Thread{
             ObjectInputStream reader = new ObjectInputStream(socket.getInputStream());
             Message message;
             while (true) {
-                message = (Message) reader.readObject();
-                if (message.getText().equals("exit")) {
-                    commandHandler.scanner(message);
-                    break;
-                } else {
-                    commandHandler.scanner(message);
+                Object obj = reader.readObject();
+                try {
+                    message = (Message) obj;
+                    if (message.getText().equals("exit")) {
+                        commandHandler.scanner(message);
+                        break;
+                    } else {
+                        commandHandler.scanner(message);
+                    }
+                }catch (Exception e){
+                    File file = (File) obj;
+                    commandHandler.fileHandler(file);
                 }
+
             }
             reader.close();
             socket.close();
