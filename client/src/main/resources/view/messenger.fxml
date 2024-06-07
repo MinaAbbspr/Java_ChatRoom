@@ -21,9 +21,9 @@
    <center>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="950.0" prefWidth="1369.0">
          <children>
-            <AnchorPane fx:id="whitePane" layoutX="337.0" layoutY="-1.0" prefHeight="966.0" prefWidth="1030.0" stylesheets="@light.css" visible="false">
+            <AnchorPane fx:id="whitePane" layoutX="337.0" layoutY="-1.0" prefHeight="966.0" prefWidth="1030.0" stylesheets="@light.css">
                <children>
-                  <HBox layoutX="1.0" layoutY="1.0" prefHeight="68.0" prefWidth="1029.0" styleClass="l_s_animation">
+                  <HBox layoutX="1.0" layoutY="1.0" prefHeight="63.0" prefWidth="1029.0" styleClass="l_s_animation">
                      <children>
                         <Circle fx:id="back" fill="DODGERBLUE" radius="14.0" stroke="BLACK" strokeType="INSIDE">
                            <HBox.margin>
@@ -125,11 +125,11 @@
                         <VBox fx:id="usersSideList" prefHeight="756.0" prefWidth="266.0" />
                      </content>
                   </ScrollPane>
-                  <VBox fx:id="group" layoutX="52.0" layoutY="183.0" prefHeight="756.0" prefWidth="266.0">
+                  <VBox fx:id="group" layoutX="52.0" layoutY="183.0" prefHeight="756.0" prefWidth="266.0" visible="false">
                      <children>
-                        <HBox onMouseClicked="#gEnter" prefHeight="29.0" prefWidth="266.0" styleClass="l_s_animation" stylesheets="@light.css">
+                        <HBox prefHeight="29.0" prefWidth="266.0" styleClass="l_s_animation" stylesheets="@light.css">
                            <children>
-                              <Circle fx:id="groupImage" radius="19.0" stroke="BLACK" strokeType="INSIDE">
+                              <Circle fx:id="groupImage" radius="17.0" stroke="BLACK" strokeType="INSIDE">
                                  <HBox.margin>
                                     <Insets bottom="2.0" left="5.0" top="2.0" />
                                  </HBox.margin>
@@ -177,71 +177,6 @@
                         </HBox>
                      </children>
                   </VBox>
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="whitePane1" layoutX="337.0" layoutY="-1.0" prefHeight="966.0" prefWidth="1030.0" stylesheets="@light.css">
-               <children>
-                  <HBox layoutX="1.0" layoutY="1.0" prefHeight="68.0" prefWidth="1029.0" styleClass="l_s_animation">
-                     <children>
-                        <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
-                           <HBox.margin>
-                              <Insets left="10.0" top="19.0" />
-                           </HBox.margin>
-                           <image>
-                              <Image url="@images/p.png" />
-                           </image>
-                        </ImageView>
-                        <Circle fx:id="groupImg" fill="DODGERBLUE" radius="19.0" stroke="BLACK" strokeType="INSIDE" styleClass="profile-circle">
-                           <HBox.margin>
-                              <Insets left="25.0" top="15.0" />
-                           </HBox.margin>
-                        </Circle>
-                        <VBox maxHeight="77.0" prefHeight="77.0" prefWidth="135.0" spacing="2.0">
-                           <children>
-                              <Label fx:id="groupName" prefHeight="16.0" prefWidth="125.0" styleClass="label-m" text="Group">
-                                 <font>
-                                    <Font name="Arial" size="13.0" />
-                                 </font>
-                              </Label>
-                              <Label fx:id="memberCount" prefHeight="12.0" prefWidth="171.0" styleClass="label-m" text="12 members, 11 online">
-                                 <font>
-                                    <Font name="Arial" size="11.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets />
-                                 </VBox.margin>
-                              </Label>
-                           </children>
-                           <HBox.margin>
-                              <Insets left="10.0" top="17.0" />
-                           </HBox.margin>
-                        </VBox>
-                        <ImageView fx:id="topInfo1" fitHeight="23.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
-                           <HBox.margin>
-                              <Insets left="650.0" top="20.0" />
-                           </HBox.margin>
-                           <image>
-                              <Image url="@images/output-onlinepngtools-7.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </HBox>
-                  <ScrollPane layoutX="67.0" layoutY="404.0" prefHeight="348.0" prefWidth="484.0" style="-fx-background-radius: 20;" styleClass="scroll-pane2">
-                     <content>
-                        <VBox fx:id="artistList2" prefHeight="364.0" prefWidth="463.0" spacing="10.0" styleClass="vbox">
-                           <children>
-                              <Label prefHeight="16.0" prefWidth="80.0" text="members" textFill="WHITE">
-                                 <font>
-                                    <Font name="Arial Bold" size="13.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="5.0" top="5.0" />
-                                 </VBox.margin>
-                              </Label>
-                           </children>
-                        </VBox>
-                     </content>
-                  </ScrollPane>
                </children>
             </AnchorPane>
          </children>

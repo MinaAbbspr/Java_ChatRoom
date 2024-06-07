@@ -22,7 +22,7 @@ public class CommunicationHandlerSender extends Thread{
 
     public synchronized void setFile(File file) {
         this.file = file;
-        this.message = new Message("*signup*","");
+        this.message = new Message("*signup*","","");
         synchronized (this){
             this.notify();
         }

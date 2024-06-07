@@ -147,7 +147,7 @@ public class CommandHandler
         if(file != null) {
             String sqlCmd = String.format("UPDATE accounts SET image = ? WHERE ID = '%s'", Thread.currentThread().getName());
             PreparedStatement ps = SQLConnection.getSqlConnection().executeFile(sqlCmd);
-            ps.setBinaryStream(1, (InputStream) new FileInputStream(file), (int) file.length());
+            ps.setBinaryStream(1, new FileInputStream(file), (int) file.length());
             ps.execute();
             ps.close();
         }
