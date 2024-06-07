@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a159cde1-525c-4d08-9699-06706bc4629e" name="Changes" comment="block method added">
+      <change afterPath="$PROJECT_DIR$/../client/src/main/java/view/View.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/java/view/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/view/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/view/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/view/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/view/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/view/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/view/MessengerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/view/MessengerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/view/ReceiverHandlerG.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/view/ReceiverHandlerG.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/view/Image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/view/images/Image.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/view/images-11.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/view/images/images-11.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/view/messanger.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/view/messanger.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/CommandHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +86,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
       </set>
     </attachedChunks>
   </component>
@@ -96,11 +102,7 @@
       <workItem from="1717687707506" duration="5000" />
       <workItem from="1717687737330" duration="1199000" />
       <workItem from="1717704360756" duration="789000" />
-      <workItem from="1717705285116" duration="6036000" />
-      <workItem from="1717719099671" duration="484000" />
-      <workItem from="1717741201628" duration="1145000" />
-      <workItem from="1717744836802" duration="2755000" />
-      <workItem from="1717750410663" duration="3571000" />
+      <workItem from="1717705285116" duration="5437000" />
     </task>
     <servers />
   </component>
@@ -117,5 +119,26 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controller/ShowMsgController.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/view/CommandHandler.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controller/CommunicationHandlerReceiver.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

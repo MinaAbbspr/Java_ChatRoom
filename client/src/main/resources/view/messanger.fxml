@@ -19,11 +19,11 @@
 
 <BorderPane prefHeight="799.0" prefWidth="1330.0" styleClass="mainAnc" stylesheets="@light.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MessengerController">
    <center>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="950.0" prefWidth="1369.0">
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="950.0" prefWidth="1330.0">
          <children>
             <AnchorPane fx:id="whitePane" layoutX="337.0" layoutY="-1.0" prefHeight="966.0" prefWidth="1030.0" stylesheets="@light.css">
                <children>
-                  <HBox layoutX="1.0" layoutY="1.0" prefHeight="63.0" prefWidth="1029.0" styleClass="l_s_animation">
+                  <HBox layoutX="1.0" layoutY="1.0" prefHeight="63.0" prefWidth="993.0" styleClass="l_s_animation">
                      <children>
                         <Circle fx:id="back" fill="DODGERBLUE" radius="14.0" stroke="BLACK" strokeType="INSIDE">
                            <HBox.margin>
@@ -69,7 +69,7 @@
             </AnchorPane>
             <AnchorPane fx:id="blackPane" layoutX="-10.0" layoutY="-2.0" prefHeight="956.0" prefWidth="349.0" styleClass="l_s_animation" stylesheets="@light.css">
                <children>
-                  <TextField layoutX="65.0" layoutY="19.0" prefHeight="40.0" prefWidth="225.0" promptText="search" styleClass="search" />
+                  <TextField fx:id="txt_search" layoutX="65.0" layoutY="19.0" prefHeight="40.0" prefWidth="225.0" promptText="search" styleClass="search" />
                   <ImageView fitHeight="46.0" fitWidth="39.0" layoutX="245.0" layoutY="24.0" onMouseClicked="#search" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/search.png" />
@@ -97,7 +97,7 @@
                               </Label>
                            </children>
                         </VBox>
-                        <VBox fx:id="group1" onMouseEntered="#groupF" onMouseExited="#groupE" prefHeight="0.0" prefWidth="34.0" styleClass="item" stylesheets="@light.css">
+                        <VBox fx:id="group" onMouseEntered="#groupF" onMouseExited="#groupE" prefHeight="0.0" prefWidth="34.0" styleClass="item" stylesheets="@light.css">
                            <children>
                               <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -125,7 +125,7 @@
                         <VBox fx:id="usersSideList" prefHeight="756.0" prefWidth="266.0" />
                      </content>
                   </ScrollPane>
-                  <VBox fx:id="group" layoutX="52.0" layoutY="183.0" prefHeight="756.0" prefWidth="266.0" visible="false">
+                  <VBox fx:id="vBox_users" layoutX="52.0" layoutY="183.0" prefHeight="756.0" prefWidth="266.0" visible="false">
                      <children>
                         <HBox prefHeight="29.0" prefWidth="266.0" styleClass="l_s_animation" stylesheets="@light.css">
                            <children>

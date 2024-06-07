@@ -1,5 +1,6 @@
 package model;
 import java.io.Serializable;
+import java.sql.Time;
 import java.time.LocalTime;
 
 public class Message implements Serializable,Comparable<Message>
@@ -16,9 +17,9 @@ public class Message implements Serializable,Comparable<Message>
         this.receiver = receiver;
     }
 
-    public Message(String text, String sender) {
+    public Message(String text, String sender, Time time) {
         this.text = text;
-        time = LocalTime.now();
+        this.time = time.toLocalTime();
         this.sender = sender;
     }
 
