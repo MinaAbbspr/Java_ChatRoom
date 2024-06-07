@@ -54,3 +54,19 @@
     -fx-border-radius: 30;
     -fx-border-color:  white;
 }
+.label-m{
+    -fx-text-fill: white;
+}
+.vbox-m
+{
+    -fx-border-radius: 10;
+    -fx-border-color: linear-gradient(#150101, #dcd6d6);
+}
+.item
+{
+    -fx-border-width: 0 0 0 0;
+    -fx-border-color: white;
+}
+.label-p{
+    -fx-text-fill: black;
+}

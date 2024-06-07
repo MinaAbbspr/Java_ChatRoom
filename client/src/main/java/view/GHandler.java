@@ -37,7 +37,6 @@ public class GHandler {
     }
     public boolean login(String message) throws InterruptedException {
         SenderHandlerG.getCommandHandlerG().setCommand(message);
-
         synchronized (this){
             this.wait();
         }

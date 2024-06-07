@@ -25,12 +25,15 @@ import java.util.ResourceBundle;
 
 public class HelloController implements Initializable {
 
-    public TextField login1;
-    @FXML
-    private AnchorPane blackPane;
+    @FXML private Button loginBtn;
+    @FXML private TextField login1;
+    @FXML private HBox visibleV1;
+    @FXML private HBox invisibleV1;
+    @FXML private TextField logintext;
+    @FXML private AnchorPane blackPane;
 
-    @FXML
-    private Button btn_login_signup;
+    @FXML private Button btn_login_signup;
+    @FXML private Button complete;
 
     @FXML
     private ImageView invisible;
@@ -43,15 +46,13 @@ public class HelloController implements Initializable {
 
     @FXML
     private Label lbl_inner;
+    @FXML private TextField login;
 
     @FXML
     private Label lbl_welcome;
 
     @FXML
     private TextField log1;
-
-    @FXML
-    private TextField login;
 
     @FXML
     private VBox loginV;
@@ -109,7 +110,14 @@ public class HelloController implements Initializable {
     void animation(MouseEvent event)
     {
         if(!animationS) {
+            loginV.setVisible(false);
+            signupV.setVisible(true);
+            logintext.setText(null);
+            invlpass.setText(null);
+            vlpass1.setText(null);
             animationS = true;
+            loginBtn.setVisible(true);
+            complete.setVisible(false);
             signupV.setVisible(false);
             loginV.setVisible(true);
             btn_login_signup.setText("Signup");
@@ -128,7 +136,15 @@ public class HelloController implements Initializable {
         }
         else
         {
+            loginV.setVisible(false);
+            signupV.setVisible(true);
+            login1.setText(null);
+            log1.setText(null);
+            svpass.setText(null);
+            spas.setText(null);
             animationS = false;
+            complete.setVisible(true);
+            loginBtn.setVisible(false);
             signupV.setVisible(true);
             loginV.setVisible(false);
             btn_login_signup.setText("Login");
@@ -148,7 +164,8 @@ public class HelloController implements Initializable {
     }
 
     @FXML
-    void complete(MouseEvent event) throws InterruptedException {
+    void complete(MouseEvent event) throws InterruptedException
+    {
         if(svpass.getText().isEmpty())
             svpass.setText(spas.getText());
         if(login1.getText().isEmpty() || log1.getText().isEmpty() || svpass.getText().isEmpty()){
@@ -159,10 +176,23 @@ public class HelloController implements Initializable {
     }
 
     @FXML
-    void invisible(MouseEvent event) {
-
+    void invisible(MouseEvent event)
+    {
+        svpass.setText(spas.getText());
+        signupV.getChildren().remove(visibleV1);
+        signupV.getChildren().add(invisibleV1);
+        signupV.getChildren().remove(passInE1);
+        signupV.getChildren().add(passInE1);
     }
-
+    @FXML
+    void visible(MouseEvent event)
+    {
+        spas.setText(svpass.getText());
+        signupV.getChildren().remove(invisibleV1);
+        signupV.getChildren().add(visibleV1);
+        signupV.getChildren().remove(passInE1);
+        signupV.getChildren().add(passInE1);
+    }
     @FXML
     void login(MouseEvent event) throws InterruptedException {
         if(vlpass1.getText().isEmpty())
@@ -188,11 +218,6 @@ public class HelloController implements Initializable {
     }
 
     @FXML
-    void visible(MouseEvent event) {
-
-    }
-
-    @FXML
     void profile(MouseEvent event) {
         Stage stage = new Stage();
         FileChooser fileChooser = new FileChooser();
@@ -206,5 +231,31 @@ public class HelloController implements Initializable {
         animationS = false;
         loginV.setVisible(false);
         signupV.setVisible(true);
+        loginBtn.setVisible(false);
+        complete.setVisible(true);
+        signupV.getChildren().remove(invisibleV1);
+        loginV.getChildren().remove(vpas1);
+    }
+
+    public void invisibleL(MouseEvent event)
+    {
+        vlpass1.setText(invlpass.getText());
+        loginV.getChildren().remove(pas1);
+        loginV.getChildren().add(vpas1);
+        loginV.getChildren().remove(lbl_loggedInError);
+        loginV.getChildren().add(lbl_loggedInError);
+        loginV.getChildren().remove(passInE1);
+        loginV.getChildren().add(passInE1);
+    }
+
+    public void visibleL(MouseEvent event)
+    {
+        invlpass.setText(vlpass1.getText());
+        loginV.getChildren().remove(vpas1);
+        loginV.getChildren().add(pas1);
+        loginV.getChildren().remove(lbl_loggedInError);
+        loginV.getChildren().add(lbl_loggedInError);
+        loginV.getChildren().remove(passInE1);
+        loginV.getChildren().add(passInE1);
     }
 }
