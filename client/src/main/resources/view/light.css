@@ -70,3 +70,43 @@
 .label-p{
     -fx-text-fill: black;
 }
+.scroll-pane {
+    -fx-background-color: #150101;
+}
+.scroll-pane > .viewport{
+    -fx-background-color: #150101;
+}
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color: #150101;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: #150101;
+    -fx-border-color: #150101;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: #150101;
+    -fx-border-color: #150101;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #150101;
+    -fx-background-radius: 5em;
+}
+.scroll-pane > .corner,
+.scroll-pane > .corner{
+    -fx-background-color: #150101;
+}
+.scroll-pane > .scroll-bar{
+    -fx-background-color: #150101;
+}
+.scroll-pane > .border-color {
+    -fx-background-color: #150101;
+}
+.profile-circle{
+    -fx-fill: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 50.0%, #392121 0.0%, #ffffff 100.0%);
+}
