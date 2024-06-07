@@ -42,6 +42,6 @@ public class TobBarController implements Initializable
 
     public void info(MouseEvent event)
     {
-
+        block.setVisible(true);
     }
 }

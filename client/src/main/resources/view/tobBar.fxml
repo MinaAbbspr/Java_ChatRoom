@@ -11,11 +11,14 @@
 
 <HBox maxWidth="935.0" prefHeight="63.0" prefWidth="935.0" styleClass="l_s_animation" stylesheets="@light.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.TobBarController">
    <children>
-      <Circle fx:id="previous" fill="DODGERBLUE" onMouseClicked="#previous" radius="14.0" stroke="BLACK" strokeType="INSIDE">
+      <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/p.png" />
+         </image>
          <HBox.margin>
-            <Insets left="10.0" top="20.0" />
+            <Insets left="10.0" top="19.0" />
          </HBox.margin>
-      </Circle>
+      </ImageView>
       <Circle fx:id="topImage" fill="DODGERBLUE" radius="19.0" stroke="BLACK" strokeType="INSIDE" styleClass="profile-circle">
          <HBox.margin>
             <Insets left="25.0" top="15.0" />
@@ -41,13 +44,18 @@
             <Insets left="10.0" top="17.0" />
          </HBox.margin>
       </VBox>
-      <ImageView fx:id="topInfo" fitHeight="23.0" fitWidth="39.0" onMouseClicked="#info" pickOnBounds="true" preserveRatio="true">
+      <VBox prefHeight="0.0" prefWidth="37.0">
+         <children>
+            <ImageView fx:id="topInfo" fitHeight="23.0" fitWidth="39.0" onMouseClicked="#info" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/output-onlinepngtools-7.png" />
+               </image>
+            </ImageView>
+            <VBox prefHeight="134.0" prefWidth="37.0" />
+         </children>
          <HBox.margin>
             <Insets left="650.0" top="20.0" />
          </HBox.margin>
-         <image>
-            <Image url="@images/output-onlinepngtools-7.png" />
-         </image>
-      </ImageView>
+      </VBox>
    </children>
 </HBox>

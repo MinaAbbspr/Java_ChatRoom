@@ -3,7 +3,9 @@ package view;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
@@ -19,18 +21,24 @@ import java.util.ResourceBundle;
 public class MessengerController implements Initializable
 {
     public VBox group1;
+    @FXML private Label memberCount;
+    @FXML private Label groupName;
     @FXML private VBox chats;
    @FXML private VBox group;
     @FXML private VBox usersSideList;
     @FXML private Circle groupImage;
+    @FXML private Circle groupImg;
     @FXML private Circle back;
+    @FXML private Circle gBack;
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
-        Image groupImg = new Image(Objects.requireNonNull(MessengerController.class.getResource("images-11.jpeg")).toExternalForm());
-        groupImage.setFill(new ImagePattern(groupImg));
+        Image groupI = new Image(Objects.requireNonNull(MessengerController.class.getResource("images-11.jpeg")).toExternalForm());
+        groupImage.setFill(new ImagePattern(groupI));
+        groupImg.setFill(new ImagePattern(groupI));
         Image backImg = new Image(Objects.requireNonNull(MessengerController.class.getResource("Image.jpg")).toExternalForm());
         back.setFill(new ImagePattern(backImg));
+        gBack.setFill(new ImagePattern(backImg));
     }
 
 
@@ -70,5 +78,8 @@ public class MessengerController implements Initializable
 //        } catch (IOException e) {
 //            throw new RuntimeException(e);
 //        }
+    }
+
+    public void gEnter(MouseEvent event) {
     }
 }
