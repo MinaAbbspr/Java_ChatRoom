@@ -183,7 +183,7 @@
                <children>
                   <HBox layoutX="1.0" layoutY="1.0" prefHeight="68.0" prefWidth="1029.0" styleClass="l_s_animation">
                      <children>
-                        <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="32.0" fitWidth="34.0" onMouseClicked="#previous" pickOnBounds="true" preserveRatio="true">
                            <HBox.margin>
                               <Insets left="10.0" top="19.0" />
                            </HBox.margin>
@@ -226,7 +226,7 @@
                         </ImageView>
                      </children>
                   </HBox>
-                  <ScrollPane fx:id="members" layoutX="67.0" layoutY="582.0" prefHeight="361.0" prefWidth="484.0">
+                  <ScrollPane fx:id="members" layoutX="67.0" layoutY="582.0" prefHeight="361.0" prefWidth="484.0" visible="false">
                      <content>
                         <VBox fx:id="members_v" prefHeight="364.0" prefWidth="463.0" styleClass="vbox-members">
                            <children>
@@ -308,7 +308,7 @@
                         </VBox>
                      </content>
                   </ScrollPane>
-                  <VBox layoutX="862.0" layoutY="52.0" prefHeight="59.0" prefWidth="82.0" styleClass="l_s_animation">
+                  <VBox fx:id="options" layoutX="862.0" layoutY="52.0" prefHeight="59.0" prefWidth="82.0" styleClass="l_s_animation">
                      <children>
                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="44.0" prefWidth="82.0" styleClass="vbox" text="block" textFill="WHITE">
                            <font>
@@ -322,6 +322,18 @@
                         </Label>
                      </children>
                   </VBox>
+                  <HBox fx:id="messageBar" layoutX="19.0" layoutY="617.0" prefHeight="41.0" prefWidth="909.0" styleClass="message-bar">
+                     <children>
+                        <TextField prefHeight="39.0" prefWidth="877.0" promptText="type something ..." style="-fx-background-radius: 40; -fx-border-radius: 40;" styleClass="scroll-pane3" />
+                        <ImageView fitHeight="17.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Downloads/images-11.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children></HBox>
                </children>
             </AnchorPane>
          </children>

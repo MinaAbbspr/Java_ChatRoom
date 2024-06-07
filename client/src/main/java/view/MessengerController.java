@@ -2,21 +2,15 @@ package view;
 
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.DragEvent;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.util.Duration;
-
-import java.io.IOException;
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
@@ -30,6 +24,7 @@ public class MessengerController implements Initializable
     @FXML private VBox chats;
     @FXML private VBox group;
     @FXML private VBox usersSideList;
+    @FXML private VBox options;
     @FXML private Circle groupImage;
     @FXML private Circle groupImg;
     @FXML private Circle back;
@@ -46,6 +41,7 @@ public class MessengerController implements Initializable
         groupImg.setFill(new ImagePattern(groupI));
         Image backImg = new Image(Objects.requireNonNull(MessengerController.class.getResource("Image.jpg")).toExternalForm());
         back.setFill(new ImagePattern(backImg));
+        options.setVisible(false);
     }
 
 
@@ -117,5 +113,8 @@ public class MessengerController implements Initializable
         slide1.setNode(members);
         slide1.setToY(400);
         slide1.play();
+    }
+
+    public void previous(MouseEvent event) {
     }
 }
