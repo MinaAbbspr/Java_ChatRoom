@@ -43,8 +43,9 @@ public class MessengerController implements Initializable
     @FXML private Circle close;
     @FXML private ScrollPane members;
     @FXML private ScrollPane searchResultSc;
+    @FXML private ScrollPane chatSc;
     @FXML private VBox searchResultV;
-    @FXML private VBox chatPage;
+    @FXML private VBox chatV;
     @FXML private AnchorPane groupP;
     @FXML private AnchorPane sideBar;
     @FXML private HBox topBar;
@@ -65,7 +66,6 @@ public class MessengerController implements Initializable
         back.setFill(new ImagePattern(backImg));
         options.setVisible(false);
         groupP.setVisible(false);
-
         setMessages();
         setUsers();
     }
@@ -76,7 +76,7 @@ public class MessengerController implements Initializable
             View.getView().setMessage(new Message(chats[i],chats[i+1], Time.valueOf(chats[i+2])));
 
             try {
-                chatPage.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("message.fxml")).load());
+                chatV.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("message.fxml")).load());
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -92,7 +92,7 @@ public class MessengerController implements Initializable
                     }
                     Platform.runLater(() -> {
                         try {
-                            chatPage.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("message.fxml")).load());
+                            chatV.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("message.fxml")).load());
                         } catch (IOException e) {
                             e.printStackTrace();
                         }

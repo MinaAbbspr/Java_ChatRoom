@@ -70,8 +70,7 @@ public class HelloController implements Initializable {
     @FXML
     private PasswordField spas;
 
-    @FXML
-    private TextField svpass;
+    @FXML private TextField svpass;
 
     @FXML
     private Label usernameES;
@@ -242,10 +241,10 @@ public class HelloController implements Initializable {
         vlpass1.setText(invlpass.getText());
         loginV.getChildren().remove(pas1);
         loginV.getChildren().add(vpas1);
-        loginV.getChildren().remove(lbl_loggedInError);
-        loginV.getChildren().add(lbl_loggedInError);
         loginV.getChildren().remove(passInE1);
         loginV.getChildren().add(passInE1);
+        loginV.getChildren().remove(lbl_loggedInError);
+        loginV.getChildren().add(lbl_loggedInError);
     }
 
     public void visibleL(MouseEvent event)
@@ -253,9 +252,9 @@ public class HelloController implements Initializable {
         invlpass.setText(vlpass1.getText());
         loginV.getChildren().remove(vpas1);
         loginV.getChildren().add(pas1);
-        loginV.getChildren().remove(lbl_loggedInError);
-        loginV.getChildren().add(lbl_loggedInError);
         loginV.getChildren().remove(passInE1);
         loginV.getChildren().add(passInE1);
+        loginV.getChildren().remove(lbl_loggedInError);
+        loginV.getChildren().add(lbl_loggedInError);
     }
 }

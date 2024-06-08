@@ -127,7 +127,7 @@
                   </ScrollPane>
                   <VBox fx:id="group" layoutX="52.0" layoutY="183.0" prefHeight="756.0" prefWidth="266.0">
                      <children>
-                        <HBox onMouseClicked="#gEnter" prefHeight="29.0" prefWidth="266.0" styleClass="l_s_animation" stylesheets="@light.css">
+                        <HBox onMouseClicked="#groupIn" prefHeight="29.0" prefWidth="266.0" styleClass="l_s_animation" stylesheets="@light.css">
                            <children>
                               <Circle fx:id="groupImage" radius="19.0" stroke="BLACK" strokeType="INSIDE">
                                  <HBox.margin>
@@ -177,7 +177,7 @@
                         </HBox>
                      </children>
                   </VBox>
-                  <ScrollPane fx:id="searchResultSc" layoutX="46.0" layoutY="83.0" prefHeight="706.0" prefWidth="268.0">
+                  <ScrollPane fx:id="searchResultSc" layoutX="46.0" layoutY="83.0" prefHeight="706.0" prefWidth="268.0" visible="false">
                     <content>
                         <VBox fx:id="searchResultV" prefHeight="848.0" prefWidth="249.0" styleClass="scroll-pane" />
                     </content>
@@ -210,7 +210,7 @@
                               </Label>
                               <HBox maxHeight="12.0" prefHeight="12.0" prefWidth="171.0">
                                  <children>
-                                    <Label fx:id="lbl_memberNumber" prefHeight="66.0" prefWidth="17.0" styleClass="label-m" text="12">
+                                    <Label fx:id="lbl_memberNumber" prefHeight="14.0" prefWidth="13.0" styleClass="label-m" text="12">
                                        <font>
                                           <Font name="Arial" size="11.0" />
                                        </font>
@@ -220,7 +220,7 @@
                                           <Font name="Arial" size="11.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="lbl_userNumber" prefHeight="66.0" prefWidth="15.0" styleClass="label-m" text="11">
+                                    <Label fx:id="lbl_userNumber" prefHeight="14.0" prefWidth="13.0" styleClass="label-m" text="11">
                                        <font>
                                           <Font name="Arial" size="11.0" />
                                        </font>
@@ -247,7 +247,7 @@
                         </ImageView>
                      </children>
                   </HBox>
-                  <ScrollPane fx:id="members" layoutX="67.0" layoutY="582.0" prefHeight="361.0" prefWidth="484.0" visible="false">
+                  <ScrollPane fx:id="members" layoutX="67.0" layoutY="582.0" prefHeight="361.0" prefWidth="484.0" styleClass="scroll-pane2" visible="false">
                      <content>
                         <VBox fx:id="members_v" prefHeight="364.0" prefWidth="463.0" styleClass="vbox-members">
                            <children>
@@ -355,7 +355,11 @@
                            </HBox.margin>
                         </ImageView>
                      </children></HBox>
-                  <VBox fx:id="chatPage" layoutX="37.0" layoutY="77.0" prefHeight="471.0" prefWidth="879.0" />
+                  <ScrollPane fx:id="chatSc" layoutX="37.0" layoutY="77.0" prefHeight="662.0" prefWidth="876.0" styleClass="scroll-pane2">
+                     <content>
+                        <VBox fx:id="chatV" prefHeight="660.0" prefWidth="855.0" styleClass="vbox-members" />
+                     </content>
+                  </ScrollPane>
                   <VBox fx:id="message1" layoutX="50.0" layoutY="658.0" prefHeight="47.0" prefWidth="179.0" styleClass="message" stylesheets="@light.css">
                      <children>
                         <Label fx:id="senderName1" prefHeight="17.0" prefWidth="118.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="message-label" text="Mina">
