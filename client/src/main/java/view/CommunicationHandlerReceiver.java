@@ -1,13 +1,9 @@
 package view;
 
-import javafx.application.Application;
-import javafx.stage.Stage;
 import view.graphic.ReceiverHandlerG;
-import view.graphic.View;
 
 import java.io.*;
 import java.net.Socket;
-import java.util.Scanner;
 
 public class CommunicationHandlerReceiver extends Thread
 {

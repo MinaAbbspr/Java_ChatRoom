@@ -178,9 +178,9 @@
                         </HBox>
                      </children>
                   </VBox>
-                  <ScrollPane fx:id="searchResultSc" layoutX="46.0" layoutY="83.0" prefHeight="706.0" prefWidth="268.0" visible="false">
+                  <ScrollPane fx:id="searchResultSc" layoutX="46.0" layoutY="83.0" prefHeight="706.0" prefWidth="270.0" visible="false">
                     <content>
-                        <VBox fx:id="searchResultV" prefHeight="848.0" prefWidth="249.0" styleClass="scroll-pane" />
+                        <VBox fx:id="searchResultV" prefHeight="848.0" prefWidth="270.0" styleClass="scroll-pane" />
                     </content>
                   </ScrollPane>
                </children>
@@ -250,7 +250,7 @@
                   </HBox>
                   <ScrollPane fx:id="members" layoutX="58.0" layoutY="643.0" prefHeight="361.0" prefWidth="484.0" styleClass="scroll-pane2" visible="false">
                      <content>
-                        <VBox fx:id="members_v" prefHeight="364.0" prefWidth="463.0" styleClass="vbox-members">
+                        <VBox fx:id="members_v" onMouseClicked="#goPV" prefHeight="364.0" prefWidth="463.0" styleClass="vbox-members">
                            <children>
                               <Circle fx:id="close" fill="#432323" onMouseClicked="#close" onMouseEntered="#o" onMouseExited="#c" radius="5.0" stroke="BLACK" strokeType="INSIDE">
                                  <VBox.margin>
@@ -266,14 +266,6 @@
                                  <VBox.margin>
                                     <Insets left="207.0" top="5.0" />
                                  </VBox.margin>
-                              </Label>
-                              <Label layoutX="217.0" layoutY="104.0" styleClass="label-g" text="12 members">
-                                 <VBox.margin>
-                                    <Insets left="192.0" top="2.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font size="11.0" />
-                                 </font>
                               </Label>
                               <Label prefHeight="13.0" prefWidth="80.0" styleClass="label-g" text="members" textFill="WHITE">
                                  <font>

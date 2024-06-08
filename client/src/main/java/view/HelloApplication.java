@@ -4,6 +4,7 @@ package view;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.stage.Stage;
+import model.Message;
 import view.graphic.SenderHandlerG;
 import view.graphic.View;
 
@@ -20,7 +21,7 @@ public class HelloApplication extends Application
         View.getView().showLogin_signup();
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         isLogin = false;
         CommunicationHandlerSender sender = new CommunicationHandlerSender();
         CommunicationHandlerReceiver receiver = new CommunicationHandlerReceiver();
@@ -48,6 +49,9 @@ public class HelloApplication extends Application
         });
         graphic.start();
         senderHandler.scanner(sender);
+
+        graphic.join();
+        sender.setMessage(new Message("exit","",""));
     }
 
     public static void setIsLogin(boolean isLogin) {

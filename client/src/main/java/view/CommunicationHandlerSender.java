@@ -47,14 +47,13 @@ public class CommunicationHandlerSender extends Thread{
                     writer.writeObject(message);
                     break;
                 }
-                else if(message.getText().equals("*signup*")){
+                else if(message.getText().equals("*signup*"))
                     writer.writeObject(file);
-                    writer.flush();
-                }
-                else {
+
+                else
                     writer.writeObject(message);
-                    writer.flush();
-                }
+
+                writer.flush();
                 message = null;
             }
             writer.close();

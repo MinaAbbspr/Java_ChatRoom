@@ -35,11 +35,6 @@ public class HelloController implements Initializable {
     @FXML private Button btn_login_signup;
     @FXML private Button complete;
 
-    @FXML
-    private ImageView invisible;
-
-    @FXML
-    private ImageView invisible1;
 
     @FXML
     private PasswordField invlpass;
@@ -63,9 +58,6 @@ public class HelloController implements Initializable {
     private Label passInE1;
 
     @FXML
-    private HBox signup;
-
-    @FXML
     private VBox signupV;
 
     @FXML
@@ -78,12 +70,6 @@ public class HelloController implements Initializable {
 
     @FXML
     private Label usernameInE1;
-
-    @FXML
-    private ImageView visible;
-
-    @FXML
-    private ImageView visible1;
 
     @FXML
     private TextField vlpass1;
@@ -164,7 +150,7 @@ public class HelloController implements Initializable {
     @FXML
     void complete(MouseEvent event) throws InterruptedException
     {
-        if(svpass.getText().isEmpty())
+        if(svpass.getText() == null)
             svpass.setText(spas.getText());
         if(login1.getText().isEmpty() || log1.getText().isEmpty() || svpass.getText().isEmpty())
             return;
@@ -195,7 +181,7 @@ public class HelloController implements Initializable {
     void login(MouseEvent event) throws InterruptedException {
         if(vlpass1.getText() == null)
             vlpass1.setText(invlpass.getText());
-        if(logintext.getText() == null || vlpass1.getText() == null){
+        if(logintext.getText().isEmpty() || vlpass1.getText().isEmpty()){
             return;
         }
 

@@ -34,6 +34,7 @@ public class CommunicationHandlerSender extends Thread
                         this.wait();
                     }
                 writer.writeUTF(message);
+                writer.flush();
                 message = null;
             }
 

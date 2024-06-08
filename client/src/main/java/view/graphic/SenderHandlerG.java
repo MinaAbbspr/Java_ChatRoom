@@ -65,19 +65,19 @@ public class SenderHandlerG {
                     }
                 }
                 case "ShowOnline" ->
-                        ReceiverHandlerG.getReceiverHandlerG().setCommandSaver("Login");
+                        ReceiverHandlerG.getReceiverHandlerG().setCommandSaver("ShowOnline");
 
                 case "search" ->
-                        ReceiverHandlerG.getReceiverHandlerG().setCommandSaver("Login");
+                        ReceiverHandlerG.getReceiverHandlerG().setCommandSaver("search");
 
                 case "clearHistory" ->
-                        ReceiverHandlerG.getReceiverHandlerG().setCommandSaver("Login");
+                        ReceiverHandlerG.getReceiverHandlerG().setCommandSaver("clearHistory");
 
                 case "finish" ->
-                        ReceiverHandlerG.getReceiverHandlerG().setCommandSaver("Login");
+                        ReceiverHandlerG.getReceiverHandlerG().setCommandSaver("finish");
 
                 case "Block" ->
-                        ReceiverHandlerG.getReceiverHandlerG().setCommandSaver("Login");
+                        ReceiverHandlerG.getReceiverHandlerG().setCommandSaver("Block");
                 case "Ping" ->{}
 
                 default -> isUse = true;
