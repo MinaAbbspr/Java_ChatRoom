@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba7f0ccf-aa3d-4de9-a219-194814455c34" name="Changes" comment="set pv block">
+    <list default="true" id="ba7f0ccf-aa3d-4de9-a219-194814455c34" name="Changes" comment="set users and newMessages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/graphic/ReceiverHandlerG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/graphic/ReceiverHandlerG.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/graphic/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/graphic/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/graphic/fxmlController/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/graphic/fxmlController/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/graphic/fxmlController/GroupMembersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/graphic/fxmlController/GroupMembersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/graphic/fxmlController/MessengerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/graphic/fxmlController/MessengerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/graphic/fxmlController/NewMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/graphic/fxmlController/NewMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/groupMembers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/groupMembers.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/messenger.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/messenger.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,43 +51,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.HelloApplication.executor": "Debug",
-    "Application.Unnamed.executor": "Run",
-    "Application.h2.executor": "Coverage",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "parinaz",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/parinaz/IdeaProjects/secondproject-chatroom-parinaz_mina11/client",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Application.h2.executor&quot;: &quot;Coverage&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;parinaz&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/parinaz/IdeaProjects/secondproject-chatroom-parinaz_mina11/client&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "GitStage.ChangesTree.GroupingKeys": [
-      "directory",
-      "module",
-      "repository"
+  &quot;keyToStringList&quot;: {
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Uni\2\Quera\12\secondproject-chatroom-parinaz_mina\client\src\main\resources\view" />
-      <recent name="E:\Uni\2\Quera\12\secondproject-chatroom-parinaz_mina\client\src\main\resources\view\images" />
       <recent name="$PROJECT_DIR$/src/main/resources/view/images" />
       <recent name="$PROJECT_DIR$/src/main/resources/view" />
+      <recent name="E:\Uni\2\Quera\12\secondproject-chatroom-parinaz_mina\client\src\main\resources\view" />
+      <recent name="E:\Uni\2\Quera\12\secondproject-chatroom-parinaz_mina\client\src\main\resources\view\images" />
       <recent name="$PROJECT_DIR$/src/main/resources/" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
@@ -92,7 +95,7 @@
   <component name="RunManager">
     <configuration name="HelloApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="view.HelloApplication" />
-      <module name="client" />
+      <module name="Kotlin" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="view.graphic.fxmlController.*" />
@@ -103,13 +106,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -485,15 +481,7 @@
       <option name="project" value="LOCAL" />
       <updated>1717874598365</updated>
     </task>
-    <task id="LOCAL-00044" summary="set pv block">
-      <option name="closed" value="true" />
-      <created>1717879872882</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1717879872882</updated>
-    </task>
-    <option name="localTasksCounter" value="45" />
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,6 +500,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="&#10;sender wait error" />
     <MESSAGE value="CommandHandler method" />
     <MESSAGE value="sender edite" />
     <MESSAGE value="MapThread" />
@@ -536,8 +525,7 @@
     <MESSAGE value="g- pass debug + chat Sc" />
     <MESSAGE value="send message" />
     <MESSAGE value="set users and newMessages" />
-    <MESSAGE value="set pv block" />
-    <option name="LAST_COMMIT_MESSAGE" value="set pv block" />
+    <option name="LAST_COMMIT_MESSAGE" value="set users and newMessages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -550,11 +538,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/view/graphic/SenderHandlerG.java</url>
           <line>47</line>
           <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/view/graphic/fxmlController/NewMessage.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

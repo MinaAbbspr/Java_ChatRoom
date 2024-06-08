@@ -15,7 +15,8 @@ public class CommunicationHandlerSender extends Thread{
 
     public synchronized void setMessage(Message message) {
         this.message = message;
-        synchronized (this){
+        synchronized (this)
+        {
             this.notify();
         }
     }

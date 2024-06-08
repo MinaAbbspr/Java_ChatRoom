@@ -223,7 +223,7 @@ public class MessengerController implements Initializable
             new Thread(() -> {
                 while (true) {
                     Platform.runLater(() -> {
-                        if (!isPV) {
+                        if (isGroup) {
                             GHandler.getgHandler().send("Block");
                             try {
                                 Thread.sleep(1000);
@@ -234,7 +234,7 @@ public class MessengerController implements Initializable
 
                             GHandler.getgHandler().send("ShowOnline");
                             try {
-                                Thread.sleep(2000);
+                                Thread.sleep(1000);
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
                             }
@@ -299,15 +299,14 @@ public class MessengerController implements Initializable
             group.setVisible(false);
         }
 
-
     }
     public void o(MouseEvent event) {
-        Image closeImg = new Image(Objects.requireNonNull(MessengerController.class.getResource("images/IMG_0075.jpg")).toExternalForm());
+        Image closeImg = new Image(Objects.requireNonNull(HelloApplication.class.getResource("images/IMG_0075.jpg")).toExternalForm());
         close.setFill(new ImagePattern(closeImg));
     }
 
     public void c(MouseEvent event) {
-        Image closeImg = new Image(Objects.requireNonNull(MessengerController.class.getResource("images/Screenshot 2024-06-08 at 12.26.57 AM.jpg")).toExternalForm());
+        Image closeImg = new Image(Objects.requireNonNull(HelloApplication.class.getResource("images/v.jpg")).toExternalForm());
         close.setFill(new ImagePattern(closeImg));
     }
 
@@ -364,7 +363,7 @@ public class MessengerController implements Initializable
     @FXML
     void goPV(MouseEvent event) throws InterruptedException {
         GHandler.getgHandler().send("PV-" + View.getView().getUser()[1]);
-        isPV = true;
+
         Thread.sleep(500);
 
         String[] chats = ReceiverHandlerG.getReceiverHandlerG().getSaveMessage().split("\n");
@@ -388,7 +387,6 @@ public class MessengerController implements Initializable
 
     @FXML
     void finish(MouseEvent event) {
-        isPV = false;
         vBox_PV.getChildren().clear();
         chatSc.setVisible(true);
         chatPv.setVisible(false);
