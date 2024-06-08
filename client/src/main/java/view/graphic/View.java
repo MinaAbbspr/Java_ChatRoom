@@ -1,9 +1,10 @@
-package view;
+package view.graphic;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import model.Message;
+import view.HelloApplication;
 
 import java.io.IOException;
 
@@ -43,6 +44,7 @@ public class View {
     }
 
     public void showMessenger() throws IOException {
+        Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("messenger.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Messenger!");

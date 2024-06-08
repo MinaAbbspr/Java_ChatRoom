@@ -17,7 +17,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="799.0" prefWidth="1330.0" styleClass="mainAnc" stylesheets="@light.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MessengerController">
+<BorderPane prefHeight="799.0" prefWidth="1330.0" styleClass="mainAnc" stylesheets="@light.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.graphic.fxmlController.MessengerController">
    <center>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="950.0" prefWidth="1369.0">
          <children>
@@ -343,9 +343,9 @@
                         </Label>
                      </children>
                   </VBox>
-                  <HBox fx:id="messageBar" layoutX="14.0" layoutY="740.0" prefHeight="41.0" prefWidth="909.0" styleClass="message-bar">
+                  <HBox fx:id="messageBar" layoutX="37.0" layoutY="742.0" prefHeight="40.0" prefWidth="879.0" spacing="5.0" styleClass="message-bar">
                      <children>
-                        <TextField fx:id="message" prefHeight="39.0" prefWidth="877.0" promptText="type something ..." style="-fx-background-radius: 40; -fx-border-radius: 40;" styleClass="scroll-pane3" />
+                        <TextField fx:id="message" prefHeight="40.0" prefWidth="851.0" promptText="type something ..." style="-fx-background-radius: 40; -fx-border-radius: 40;" styleClass="scroll-pane3" />
                         <ImageView fitHeight="17.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@images/images-11.png" />

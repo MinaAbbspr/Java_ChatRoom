@@ -1,4 +1,4 @@
-package view;
+package view.graphic;
 
 import java.io.IOException;
 
@@ -56,7 +56,7 @@ public class ReceiverHandlerG {
             }
             default ->{
                 saveMessage = message;
-//                View.getView().showMessenger();
+                View.getView().showMessenger();
             }
         }
     }
@@ -65,7 +65,7 @@ public class ReceiverHandlerG {
         if (message.equals("This id exist")) {
         } else {
             saveMessage = message;
-//            View.getView().showMessenger();
+            View.getView().showMessenger();
         }
     }
 }

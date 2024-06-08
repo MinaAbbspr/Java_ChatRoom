@@ -1,5 +1,8 @@
 package view;
 
+import view.graphic.ReceiverHandlerG;
+import view.graphic.View;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

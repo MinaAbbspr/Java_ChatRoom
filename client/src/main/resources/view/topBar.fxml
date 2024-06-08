@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxWidth="935.0" prefHeight="63.0" prefWidth="935.0" styleClass="l_s_animation" stylesheets="@light.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.TobBarController">
+<HBox maxWidth="935.0" prefHeight="63.0" prefWidth="935.0" styleClass="l_s_animation" stylesheets="@light.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.graphic.fxmlController.TobBarController">
    <children>
       <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
          <image>

@@ -1,6 +1,7 @@
-package view;
+package view.graphic;
 
 import model.Message;
+import view.CommunicationHandlerSender;
 
 import java.io.File;
 
@@ -15,7 +16,6 @@ public class SenderHandlerG {
     private static SenderHandlerG senderHandlerG;
 
     private SenderHandlerG() {
-
     }
 
     public static void setSender(CommunicationHandlerSender sender) {
@@ -35,6 +35,10 @@ public class SenderHandlerG {
 
     public boolean isUse() {
         return isUse;
+    }
+
+    public String getSenderID() {
+        return senderID;
     }
 
     private void scanner(){

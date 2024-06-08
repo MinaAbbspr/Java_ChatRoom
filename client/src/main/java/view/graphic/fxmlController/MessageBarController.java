@@ -1,4 +1,4 @@
-package view;
+package view.graphic.fxmlController;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

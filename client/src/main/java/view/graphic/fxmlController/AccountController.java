@@ -1,21 +1,23 @@
-package view;
+package view.graphic.fxmlController;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
+import view.graphic.View;
 
-import java.util.Objects;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class AccountController
+public class AccountController implements Initializable
 {
 
     @FXML private Circle profSide;
     @FXML private  VBox userSide;
     @FXML private  Label usernameSide;
     @FXML private  Label lastMessage;
+    private String[] user;
     public void setUsers()
     {
 //        Image artistPic = new Image(Objects.requireNonNull(BaseHomeController.class.getResource("output-onlinepngtools.png")).toExternalForm());
@@ -29,4 +31,9 @@ public class AccountController
 //        userL.setText(artist.getUserName());
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        this.user = View.getView().getUser();
+        usernameSide.setText(user[0]);
+    }
 }

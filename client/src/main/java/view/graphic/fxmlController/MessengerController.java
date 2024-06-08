@@ -1,4 +1,4 @@
-package view;
+package view.graphic.fxmlController;
 
 import javafx.animation.TranslateTransition;
 import javafx.application.Platform;
@@ -19,6 +19,10 @@ import javafx.scene.shape.Circle;
 import model.Message;
 
 import javafx.util.Duration;
+import view.HelloApplication;
+import view.graphic.View;
+import view.graphic.GHandler;
+import view.graphic.ReceiverHandlerG;
 
 import java.io.IOException;
 import java.net.URL;
@@ -51,55 +55,74 @@ public class MessengerController implements Initializable
     @FXML private HBox topBar;
     @FXML private HBox messageBar;
     @FXML private TextField message;
-    @FXML private Circle gBack;
     @FXML private Circle H;
+    @FXML
+    private Label lbl_memberNumber;
+
+    @FXML
+    private Label lbl_userNumber;
     private boolean isGroup;
+    private Thread messageThread;
+    private boolean newMessage;
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
-        isGroup = false;
-        Image groupI = new Image(Objects.requireNonNull(MessengerController.class.getResource("images/Images-6.jpeg")).toExternalForm());
+        isGroup = true;
+        Image groupI = new Image(Objects.requireNonNull(HelloApplication.class.getResource("images/images-6.jpeg")).toExternalForm());
         H.setFill(new ImagePattern(groupI));
         groupImage.setFill(new ImagePattern(groupI));
         groupImg.setFill(new ImagePattern(groupI));
-        Image backImg = new Image(Objects.requireNonNull(MessengerController.class.getResource("images/Image.jpg")).toExternalForm());
+        Image backImg = new Image(Objects.requireNonNull(HelloApplication.class.getResource("images/Image.jpg")).toExternalForm());
         back.setFill(new ImagePattern(backImg));
         options.setVisible(false);
         groupP.setVisible(false);
+
+        this.newMessage = false;
         setMessages();
-        setUsers();
+        numberOfMember();
     }
 
     private void setMessages(){
         String[] chats = ReceiverHandlerG.getReceiverHandlerG().getSaveMessage().split("\n");
-        for(int i=0; i< chats.length-1; i+=3){
-            View.getView().setMessage(new Message(chats[i],chats[i+1], Time.valueOf(chats[i+2])));
+        for(int i=0; i< chats.length-1; i+=3) {
+            View.getView().setMessage(new Message(chats[i], chats[i + 1], Time.valueOf(chats[i + 2])));
 
             try {
                 chatV.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("message.fxml")).load());
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
-            new Thread(() -> {
-                while (true) {
-                    synchronized (Thread.currentThread()) {
-                        try {
-                            Thread.currentThread().wait();
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                    Platform.runLater(() -> {
-                        try {
-                            chatV.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("message.fxml")).load());
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    });
-                }
-            }).start();
         }
+
+//        messageThread = new Thread(() -> {
+//            while (true) {
+//                while (!newMessage)
+//                    synchronized (chatV) {
+//                        try {
+//                            Thread.currentThread().wait();
+//                        } catch (InterruptedException e) {
+//                            e.printStackTrace();
+//                        }
+//                    }
+//                Platform.runLater(() -> {
+//                    try {
+//                        chatV.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("message.fxml")).load());
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                    }
+//                });
+//                newMessage = false;
+//            }
+//        });
+//        messageThread.start();
+    }
+
+    public void setNewMessage(boolean newMessage) throws IOException {
+        this.newMessage = newMessage;
+        chatV.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("message.fxml")).load());
+//        synchronized (chatV){
+//            messageThread.notify();
+//        }
     }
 
     private void setUsers(){
@@ -107,7 +130,6 @@ public class MessengerController implements Initializable
         String[] users = ReceiverHandlerG.getReceiverHandlerG().getSaveMessage().split("\n");
         for(String str : users){
             View.getView().setUser(str.split(" @"));
-
             try {
                 usersSideList.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("account.fxml")).load());
             } catch (Exception e) {
@@ -116,7 +138,7 @@ public class MessengerController implements Initializable
 
             new Thread(() -> {
                 while (true) {
-                    synchronized (Thread.currentThread()) {
+                    synchronized (usersSideList) {
                         try {
                             Thread.currentThread().wait();
                         } catch (InterruptedException e) {
@@ -138,8 +160,27 @@ public class MessengerController implements Initializable
     }
 
     private void numberOfMember(){
-        if(isGroup) {
-            GHandler.getgHandler().send("Block");
+        {
+            new Thread(() -> {
+                while (true) {
+                    Platform.runLater(() -> {
+                        if (isGroup) {
+                            GHandler.getgHandler().send("Block");
+                            lbl_memberNumber.setText(String.valueOf(ReceiverHandlerG.getReceiverHandlerG().getSaveMessage().split("\n").length + 1));
+
+                            GHandler.getgHandler().send("ShowOnline");
+                            lbl_userNumber.setText(String.valueOf(ReceiverHandlerG.getReceiverHandlerG().getSaveMessage().split("\n").length + 1));
+                        }
+                    });
+
+                    try {
+                        Thread.sleep(30000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }).start();
+
         }
     }
 

@@ -3,6 +3,9 @@ package view;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
+import view.graphic.SenderHandlerG;
+import view.graphic.View;
+
 import java.io.IOException;
 
 public class HelloApplication extends Application
@@ -14,13 +17,13 @@ public class HelloApplication extends Application
     }
 
     public static void main(String[] args) throws IOException {
+        new Thread(Application::launch).start();
         CommunicationHandlerSender sender = new CommunicationHandlerSender();
         CommunicationHandlerReceiver receiver = new CommunicationHandlerReceiver();
         sender.start();
         receiver.start();
         SenderHandlerG.setSender(sender);
         SenderHandler senderHandler = new SenderHandler();
-        new Thread(Application::launch).start();
         senderHandler.scanner(sender);
     }
 

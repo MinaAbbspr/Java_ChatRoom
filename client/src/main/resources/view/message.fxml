@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="message" prefHeight="47.0" prefWidth="179.0" styleClass="message" stylesheets="@light.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MessageController">
+<VBox fx:id="message" prefHeight="47.0" prefWidth="400.0" styleClass="message" stylesheets="@light.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.graphic.fxmlController.MessageController">
    <children>
-      <Label fx:id="senderName" prefHeight="17.0" prefWidth="118.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="message-label" text="Mina">
+      <Label fx:id="senderName" prefHeight="14.0" prefWidth="380.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="message-label" text="Mina">
          <VBox.margin>
             <Insets left="10.0" top="5.0" />
          </VBox.margin>
@@ -15,7 +15,7 @@
             <Font name="Arial Bold" size="11.0" />
          </font>
       </Label>
-      <Label fx:id="text" prefHeight="0.0" prefWidth="153.0" styleClass="label-g" text="hello everyone">
+      <Label fx:id="text" prefHeight="16.0" prefWidth="367.0" styleClass="label-g" text="hello everyone">
          <VBox.margin>
             <Insets left="15.0" top="2.0" />
          </VBox.margin>
@@ -23,9 +23,9 @@
             <Font name="Arial" size="13.0" />
          </font>
       </Label>
-      <Label fx:id="time" prefHeight="10.0" prefWidth="37.0" style="-fx-text-fill: gray;" styleClass="label-g" text="22:23:03">
+      <Label fx:id="time" alignment="TOP_RIGHT" prefHeight="11.0" prefWidth="368.0" style="-fx-text-fill: gray;" styleClass="label-g" text="22:23:03">
          <VBox.margin>
-            <Insets bottom="2.0" left="130.0" />
+            <Insets left="15.0" />
          </VBox.margin>
          <font>
             <Font name="Arial" size="9.0" />

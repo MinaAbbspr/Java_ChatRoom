@@ -1,4 +1,4 @@
-package view;
+package view.graphic.fxmlController;
 
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
@@ -18,6 +18,7 @@ import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import view.graphic.GHandler;
 
 import java.io.File;
 import java.net.URL;
