@@ -6,16 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a159cde1-525c-4d08-9699-06706bc4629e" name="Changes" comment="block method added">
       <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/java/view/CommunicationHandlerReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/view/CommunicationHandlerReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/java/view/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/view/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/java/view/graphic/SenderHandlerG.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/view/graphic/SenderHandlerG.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/main/java/view/graphic/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/view/graphic/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/view/graphic/fxmlController/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/view/graphic/fxmlController/AccountController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/main/java/view/graphic/fxmlController/GroupMembersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/view/graphic/fxmlController/GroupMembersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/java/view/graphic/fxmlController/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/view/graphic/fxmlController/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/main/java/view/graphic/fxmlController/MessengerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/view/graphic/fxmlController/MessengerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/view/groupMembers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/view/groupMembers.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/main/resources/view/messenger.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/view/messenger.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CommunicationHandlerSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CommunicationHandlerSender.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

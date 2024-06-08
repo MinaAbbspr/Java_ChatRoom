@@ -17,17 +17,21 @@ public class GroupMembersController implements Initializable
     @FXML private Circle profile;
     @FXML private ImageView info;
 
-    private String receiverID;
+    private String[] parts;
+
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
-        String[] parts = View.getView().getUser();
+        parts = View.getView().getUser();
         name.setText(parts[0]);
         id.setText(parts[1]);
-        this.receiverID = parts[1];
     }
     public void setInfo()
     {
-        View.getView().setReceiverID(receiverID);
+    }
+
+    public void PV()
+    {
+        View.getView().setUser(parts);
     }
 }

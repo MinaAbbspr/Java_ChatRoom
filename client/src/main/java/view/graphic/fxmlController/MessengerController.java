@@ -92,6 +92,12 @@ public class MessengerController implements Initializable
     private Label lbl_userNumber;
 
     @FXML
+    private Label lbl_name;
+
+    @FXML
+    private HBox pvHeader;
+
+    @FXML
     private Label memberCount1;
 
     @FXML
@@ -152,6 +158,7 @@ public class MessengerController implements Initializable
     private AnchorPane whitePane;
 
     private boolean isGroup;
+    private boolean isPV;
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
@@ -164,6 +171,7 @@ public class MessengerController implements Initializable
         back.setFill(new ImagePattern(backImg));
         options.setVisible(false);
         groupP.setVisible(false);
+        pvHeader.setVisible(false);
 
         groupP.getChildren().remove(chatSc);
         groupP.getChildren().add(chatSc);
@@ -171,6 +179,8 @@ public class MessengerController implements Initializable
         numberOfMember();
         setMembers();
         NewMessage.getNewMessage().setvBox(chatV);
+
+        isPV = false;
     }
 
     private void setMessages(){
@@ -245,6 +255,9 @@ public class MessengerController implements Initializable
 
     public void chatF(MouseEvent event) {
         chats.setStyle("-fx-border-width: 0 0 2 0 ");
+        searchResultSc.setVisible(false);
+        allUsers.setVisible(false);
+        group.setVisible(true);
     }
 
     public void chatE(MouseEvent event)
@@ -255,6 +268,9 @@ public class MessengerController implements Initializable
     public void groupF(MouseEvent event)
     {
         group1.setStyle("-fx-border-width: 0 0 2 0 ");
+        searchResultSc.setVisible(false);
+        allUsers.setVisible(true);
+        group.setVisible(false);
     }
 
     public void groupE(MouseEvent event) {
@@ -265,12 +281,12 @@ public class MessengerController implements Initializable
         if(!txt_search.getText().isEmpty()){
             GHandler.getgHandler().send("search-" + txt_search.getText());
 
-            Thread.sleep(1000);
+            Thread.sleep(5000);
             searchResultV.getChildren().clear();
             String[] chats = ReceiverHandlerG.getReceiverHandlerG().getSaveMessage().split("\n");
             for(int i=0; i< chats.length; i++) {
                 String[] parts = chats[i].split(" ");
-                View.getView().setMessage(new Message(parts[1], parts[0], Time.valueOf(parts[2])));
+                View.getView().setMessage(new Message(parts[1], parts[0], String.valueOf(parts[2])));
 
                 try {
                     searchResultV.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("message.fxml")).load());
@@ -290,27 +306,9 @@ public class MessengerController implements Initializable
         close.setFill(new ImagePattern(closeImg));
     }
 
-    public void c(MouseEvent event)
-    {
+    public void c(MouseEvent event) {
         Image closeImg = new Image(Objects.requireNonNull(MessengerController.class.getResource("images/Screenshot 2024-06-08 at 12.26.57 AM.jpg")).toExternalForm());
         close.setFill(new ImagePattern(closeImg));
-    }
-    public void showSideUsers()
-    {
-//        try {
-//            for (UserAccount userAccount : getDataBase().getUsers()) {
-//                FXMLLoader fxmlLoader = new FXMLLoader();
-//                fxmlLoader.setLocation(getClass().getResource("account.fxml"));
-//                HBox vBox = fxmlLoader.load();
-//                ArtistAdminController artistAdminController = fxmlLoader.getController();
-//                if(userAccount instanceof Artist) {
-//                    artistAdminController.set((Artist) userAccount);
-//                    artistList2.getChildren().add(vBox);
-//                }
-//            }
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
     }
 
     public void gEnter(MouseEvent event) {
@@ -365,9 +363,58 @@ public class MessengerController implements Initializable
 
     @FXML
     void goPV(MouseEvent event) throws InterruptedException {
+        GHandler.getgHandler().send("PV-" + View.getView().getUser()[1]);
+
         Thread.sleep(500);
-        GHandler.getgHandler().send("PV-" + View.getView().getReceiverID());
+
+        String[] chats = ReceiverHandlerG.getReceiverHandlerG().getSaveMessage().split("\n");
+        for(int i=0; i< chats.length; i++) {
+            String[] parts = chats[i].split(" ");
+            View.getView().setMessage(new Message(parts[1], parts[0], String.valueOf(parts[2])));
+            try {
+                vBox_PV.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("message.fxml")).load());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        NewMessage.getNewMessage().setvBox(vBox_PV);
+
+        lbl_name.setText(View.getView().getUser()[0]);
         chatSc.setVisible(false);
         chatPv.setVisible(true);
+        messageBar.setVisible(true);
+    }
+
+    @FXML
+    void finish(MouseEvent event) {
+        vBox_PV.getChildren().clear();
+        chatSc.setVisible(true);
+        chatPv.setVisible(false);
+        messageBar.setVisible(true);
+        NewMessage.getNewMessage().setvBox(chatV);
+
+        GHandler.getgHandler().send("finish");
+    }
+
+    @FXML
+    void info(MouseEvent event) {
+        options.setVisible(true);
+    }
+
+    @FXML
+    void clearHistory(MouseEvent event) {
+        vBox_PV.getChildren().clear();
+        GHandler.getgHandler().send("clearHistory");
+    }
+
+    @FXML
+    void closeOption(MouseEvent event){
+        options.setVisible(false);
+    }
+
+    @FXML
+    void block(MouseEvent event) {
+        messageBar.setVisible(false);
     }
 }

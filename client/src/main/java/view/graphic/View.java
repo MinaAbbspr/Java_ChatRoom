@@ -14,7 +14,6 @@ public class View{
     private Stage stage;
     private Message message;
     private String[] user;
-    private String receiverID;
 
     private View() {
     }
@@ -45,17 +44,9 @@ public class View{
         this.user = user;
     }
 
-    public String getReceiverID() {
-        return receiverID;
-    }
-
-    public void setReceiverID(String receiverID) {
-        this.receiverID = receiverID;
-    }
-
     public void showMessenger() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("messenger.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
+        Scene scene = new Scene(fxmlLoader.load(),1290,800);
         stage.setTitle("Messenger!");
         stage.setScene(scene);
         stage.show();
