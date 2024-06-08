@@ -32,19 +32,15 @@ public class ShowMsgController
         }
     }
     private void showMessagePV(Message message) throws SQLException, BlockedUser {
-        String sqlCmd = String.format("SELECT blocked FROM blocklist WHERE blocker = '%s'", Thread.currentThread().getName());
+        String sqlCmd = String.format("SELECT * FROM blocklist WHERE blocker = '%s' AND blocked = '%s'", Thread.currentThread().getName(),message.getReceiver());
         ResultSet rs1 = SQLConnection.getSqlConnection().executeSelect(sqlCmd);
-        if(rs1!=null)
-            while (rs1.next())
-                if(rs1.getString("blocked").equals(message.getReceiver()))
-                    throw new BlockedUser("user is blocked");
+        if(rs1!=null && rs1.next())
+            throw new BlockedUser("user is blocked");
 
-        sqlCmd = String.format("SELECT blocked FROM blocklist WHERE blocker = '%s'", message.getReceiver());
+        sqlCmd = String.format("SELECT * FROM blocklist WHERE blocker = '%s' AND blocked = '%s' ", message.getReceiver(), Thread.currentThread().getName());
         rs1 = SQLConnection.getSqlConnection().executeSelect(sqlCmd);
-        if(rs1!=null)
-            while (rs1.next())
-                if(rs1.getString("blocked").equals(Thread.currentThread().getName()))
-                    throw new BlockedUser("user is blocked");
+        if(rs1!=null && rs1.next())
+            throw new BlockedUser("user is blocked");
 
         String cmd2 = String.format("INSERT INTO massage (ID,massage,time,senderID,receiverID) VALUES (%s,'%s','%s','%s','%s')", getMaxId() + 1, message.getText(), message.getTime(), message.getSender(), message.getReceiver());
         SQLConnection.getSqlConnection().execute(cmd2);
@@ -58,7 +54,7 @@ public class ShowMsgController
     private void setShowMessageGroup(Message message) throws SQLException {
         String cmd2 = String.format("INSERT INTO massage (ID,massage,time,senderID,receiverID) VALUES (%s,'%s','%s','%s','%s')", getMaxId() + 1, message.getText(), message.getTime(), message.getSender(), "group");
         SQLConnection.getSqlConnection().execute(cmd2);
-        cmd2 = String.format("SELECT ID FROM accounts WHERE isOnline =%s AND isPV = %s", true, false);
+        cmd2 = String.format("SELECT ID FROM accounts WHERE isOnline =%s AND isPV = %s",1,0);
         ResultSet rs2 = SQLConnection.getSqlConnection().executeSelect(cmd2);
         if (rs2 != null) {
             while (rs2.next())
@@ -66,7 +62,7 @@ public class ShowMsgController
                 DataBase.getDataBase().getThread(rs2.getString("ID")).setMessage(message.toString());
             }
         }
-        cmd2 = String.format("SELECT ID FROM accounts WHERE isOnline =%s OR isPV = %s", false,true);
+        cmd2 = String.format("SELECT ID FROM accounts WHERE isOnline =%s OR isPV = %s",0,1);
         rs2 = SQLConnection.getSqlConnection().executeSelect(cmd2);
         if (rs2 != null) {
             while (rs2.next())
