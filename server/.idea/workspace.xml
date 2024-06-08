@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a159cde1-525c-4d08-9699-06706bc4629e" name="Changes" comment="block method added">
       <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/java/view/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/view/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/view/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/view/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/view/MessengerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/view/MessengerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +79,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
       </set>
     </attachedChunks>
   </component>
