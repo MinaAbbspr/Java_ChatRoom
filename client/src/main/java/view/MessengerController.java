@@ -144,6 +144,7 @@ public class MessengerController implements Initializable
     public void groupIn(MouseEvent event)
     {
 
+
         groupP.setVisible(true);
     }
 }
