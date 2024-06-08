@@ -9,18 +9,14 @@ import view.HelloApplication;
 
 import java.io.IOException;
 
-public class View extends Application implements Runnable {
+public class View{
     private static View view;
     private Stage stage;
     private Message message;
     private String[] user;
+    private String receiverID;
 
     private View() {
-    }
-
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-
     }
 
     public static View getView() {
@@ -49,6 +45,14 @@ public class View extends Application implements Runnable {
         this.user = user;
     }
 
+    public String getReceiverID() {
+        return receiverID;
+    }
+
+    public void setReceiverID(String receiverID) {
+        this.receiverID = receiverID;
+    }
+
     public void showMessenger() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("messenger.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
@@ -63,10 +67,5 @@ public class View extends Application implements Runnable {
         stage.setTitle("Messenger!");
         stage.setScene(scene);
         stage.show();
-    }
-
-    @Override
-    public void run() {
-
     }
 }
