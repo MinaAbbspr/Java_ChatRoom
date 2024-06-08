@@ -66,7 +66,7 @@ public class CommandHandler
                     FinishController.getFinishContrller().finish();
                     isPV = false;
                 }
-                case "Block" -> DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(BlockController.getBlockController().block(Thread.currentThread().getName()));
+                case "Block" -> DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(BlockController.getBlockController().block(message.getReceiver()));
                 default -> {
                     try {
                         ShowMsgController.getShowMsgController().showMessage(message);

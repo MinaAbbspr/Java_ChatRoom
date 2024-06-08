@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a159cde1-525c-4d08-9699-06706bc4629e" name="Changes" comment="block method added">
+    <list default="true" id="a159cde1-525c-4d08-9699-06706bc4629e" name="Changes" comment="block debug">
       <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/view/graphic/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/view/graphic/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/view/graphic/fxmlController/MessengerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/view/graphic/fxmlController/MessengerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ShowMsgController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ShowMsgController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/CommandHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +108,15 @@
       <workItem from="1717837594757" duration="664000" />
       <workItem from="1717852445264" duration="2951000" />
     </task>
+    <task id="LOCAL-00001" summary="block debug">
+      <option name="closed" value="true" />
+      <created>1717883946395</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1717883946395</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,6 +132,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="block debug" />
+    <option name="LAST_COMMIT_MESSAGE" value="block debug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

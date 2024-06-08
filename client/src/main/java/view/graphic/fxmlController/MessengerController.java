@@ -367,7 +367,7 @@ public class MessengerController implements Initializable
         Thread.sleep(500);
 
         String[] chats = ReceiverHandlerG.getReceiverHandlerG().getSaveMessage().split("\n");
-        for(int i=0; i< chats.length; i++) {
+        for(int i=0; i< chats.length-1; i++) {
             String[] parts = chats[i].split(" ");
             View.getView().setMessage(new Message(parts[1], parts[0], String.valueOf(parts[2])));
             try {
