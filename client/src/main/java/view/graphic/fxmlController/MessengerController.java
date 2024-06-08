@@ -10,6 +10,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.effect.BoxBlur;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
@@ -33,37 +34,124 @@ import java.util.ResourceBundle;
 public class MessengerController implements Initializable
 {
 
-    public VBox group1;
-    @FXML private Label memberCount;
-    @FXML private Label groupName;
-    @FXML private Label d;
-    @FXML private VBox chats;
-    @FXML private VBox group;
-    @FXML private VBox usersSideList;
-    @FXML private VBox options;
-    @FXML private Circle groupImage;
-    @FXML private Circle groupImg;
-    @FXML private Circle back;
-    @FXML private Circle close;
-    @FXML private ScrollPane members;
-    @FXML private ScrollPane searchResultSc;
-    @FXML private ScrollPane chatSc;
-    @FXML private VBox searchResultV;
-    @FXML private VBox chatV;
-    @FXML private AnchorPane groupP;
-    @FXML private AnchorPane sideBar;
-    @FXML private HBox topBar;
-    @FXML private HBox messageBar;
-    @FXML private TextField message;
-    @FXML private Circle H;
+    @FXML
+    private Circle H;
+
+    @FXML
+    private ScrollPane allUsers;
+
+    @FXML
+    private Circle back;
+
+    @FXML
+    private AnchorPane sideBar;
+
+    @FXML
+    private ScrollPane chatPv;
+
+    @FXML
+    private ScrollPane chatSc;
+
+    @FXML
+    private VBox chatV;
+
+    @FXML
+    private VBox chats;
+
+    @FXML
+    private Circle close;
+
+    @FXML
+    private VBox group;
+
+    @FXML
+    private VBox group1;
+
+    @FXML
+    private Circle groupImage;
+
+    @FXML
+    private Circle groupImg;
+
+    @FXML
+    private Label groupName;
+
+    @FXML
+    private Label groupName1;
+
+    @FXML
+    private AnchorPane groupP;
+
+    @FXML
+    private Label lastMessageG;
+
     @FXML
     private Label lbl_memberNumber;
 
     @FXML
     private Label lbl_userNumber;
+
+    @FXML
+    private Label memberCount1;
+
+    @FXML
+    private ScrollPane members;
+
+    @FXML
+    private VBox members_v;
+
+    @FXML
+    private TextField message;
+
+    @FXML
+    private HBox messageBar;
+
+    @FXML
+    private Label on_off_top;
+
+    @FXML
+    private VBox options;
+
+    @FXML
+    private ScrollPane searchResultSc;
+
+    @FXML
+    private VBox searchResultV;
+
+    @FXML
+    private HBox topBar;
+
+    @FXML
+    private Circle topImage;
+
+    @FXML
+    private ImageView topInfo;
+
+    @FXML
+    private ImageView topInfo1;
+
+    @FXML
+    private Label topName;
+
+    @FXML
+    private TextField txt_search;
+
+    @FXML
+    private VBox userSide;
+
+    @FXML
+    private Label usernameSide;
+
+    @FXML
+    private VBox usersSideList;
+
+    @FXML
+    private VBox vBox_PV;
+
+    @FXML
+    private AnchorPane whitePane;
+
     private boolean isGroup;
-    private Thread messageThread;
-    private boolean newMessage;
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
@@ -77,15 +165,18 @@ public class MessengerController implements Initializable
         options.setVisible(false);
         groupP.setVisible(false);
 
-        this.newMessage = false;
+        groupP.getChildren().remove(chatSc);
+        groupP.getChildren().add(chatSc);
         setMessages();
         numberOfMember();
+        NewMessage.getNewMessage().setvBox(chatV);
     }
 
     private void setMessages(){
         String[] chats = ReceiverHandlerG.getReceiverHandlerG().getSaveMessage().split("\n");
-        for(int i=0; i< chats.length-1; i+=3) {
-            View.getView().setMessage(new Message(chats[i], chats[i + 1], Time.valueOf(chats[i + 2])));
+        for(int i=0; i< chats.length; i++) {
+            String[] parts = chats[i].split(" ");
+            View.getView().setMessage(new Message(parts[1], parts[0], Time.valueOf(parts[2])));
 
             try {
                 chatV.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("message.fxml")).load());
@@ -117,12 +208,8 @@ public class MessengerController implements Initializable
 //        messageThread.start();
     }
 
-    public void setNewMessage(boolean newMessage) throws IOException {
-        this.newMessage = newMessage;
-        chatV.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("message.fxml")).load());
-//        synchronized (chatV){
-//            messageThread.notify();
-//        }
+    public void setNewMessage() throws IOException {
+        setMessages();
     }
 
     private void setUsers(){
@@ -166,9 +253,19 @@ public class MessengerController implements Initializable
                     Platform.runLater(() -> {
                         if (isGroup) {
                             GHandler.getgHandler().send("Block");
+                            try {
+                                Thread.sleep(1000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
                             lbl_memberNumber.setText(String.valueOf(ReceiverHandlerG.getReceiverHandlerG().getSaveMessage().split("\n").length + 1));
 
                             GHandler.getgHandler().send("ShowOnline");
+                            try {
+                                Thread.sleep(1000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
                             lbl_userNumber.setText(String.valueOf(ReceiverHandlerG.getReceiverHandlerG().getSaveMessage().split("\n").length + 1));
                         }
                     });
@@ -212,7 +309,7 @@ public class MessengerController implements Initializable
 
     public void c(MouseEvent event)
     {
-        Image closeImg = new Image(Objects.requireNonNull(MessengerController.class.getResource("images/Screenshot 2024-06-08 at 12.26.57 AM.jpg")).toExternalForm());
+        Image closeImg = new Image(Objects.requireNonNull(MessengerController.class.getResource("images/Screenshot 2024-06-08 at 12.26.57 AM.jpg")).toExternalForm());
         close.setFill(new ImagePattern(closeImg));
     }
     public void showSideUsers()
@@ -238,7 +335,8 @@ public class MessengerController implements Initializable
 
     public void member(MouseEvent event)
     {
-
+        groupP.getChildren().remove(members);
+        groupP.getChildren().add(members);
         members.setVisible(true);
         TranslateTransition slide1 = new TranslateTransition();
         slide1.setDuration(Duration.seconds(2));
@@ -272,5 +370,13 @@ public class MessengerController implements Initializable
     public void groupIn(MouseEvent event)
     {
         groupP.setVisible(true);
+    }
+
+    @FXML
+    void send(MouseEvent event) {
+        if(!message.getText().isEmpty()) {
+            GHandler.getgHandler().send(message.getText());
+            message.setText("");
+        }
     }
 }

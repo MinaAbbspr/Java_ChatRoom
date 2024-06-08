@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="message" prefHeight="47.0" prefWidth="400.0" styleClass="message" stylesheets="@light.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.graphic.fxmlController.MessageController">
+<VBox fx:id="message" maxHeight="400.0" prefHeight="47.0" prefWidth="400.0" styleClass="message" stylesheets="@light.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.graphic.fxmlController.MessageController">
    <children>
       <Label fx:id="senderName" prefHeight="14.0" prefWidth="380.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="message-label" text="Mina">
          <VBox.margin>

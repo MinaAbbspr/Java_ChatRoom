@@ -28,7 +28,7 @@ public class BlockController {
         {
             String ID = resultSet.getString("ID");
             if(!ID.equals(Thread.currentThread().getName()))
-                users.append(ID).append("\t@").append(resultSet.getString("name")).append("\n");
+                users.append(ID).append(" @").append(resultSet.getString("name")).append("\n");
         }
         users.deleteCharAt(users.length()-1);
         return String.valueOf(users);

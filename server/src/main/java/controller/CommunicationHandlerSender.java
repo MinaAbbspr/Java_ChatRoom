@@ -27,15 +27,14 @@ public class CommunicationHandlerSender extends Thread
     public void run() {
         try
         {
-            PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+            ObjectOutputStream writer = new ObjectOutputStream(socket.getOutputStream());
             while (true) {
                 while (message == null)
                     synchronized (this) {
                         this.wait();
                     }
-                out.println(message);
+                writer.writeUTF(message);
                 message = null;
-                out.flush();
             }
 
         }

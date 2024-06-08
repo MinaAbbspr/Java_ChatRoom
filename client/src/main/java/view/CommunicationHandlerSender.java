@@ -9,7 +9,7 @@ import java.net.Socket;
 import java.util.Objects;
 
 public class CommunicationHandlerSender extends Thread{
-    private Socket clientSocket;
+    private final Socket clientSocket;
     private Message message;
     private File file;
 
@@ -43,8 +43,10 @@ public class CommunicationHandlerSender extends Thread{
                     synchronized (this) {
                         this.wait();
                     }
-                if(message.getText().equals("exit"))
+                if(message.getText().equals("exit")) {
+                    writer.writeObject(message);
                     break;
+                }
                 else if(message.getText().equals("*signup*")){
                     writer.writeObject(file);
                     writer.flush();

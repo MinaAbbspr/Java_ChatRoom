@@ -1,5 +1,8 @@
 package view.graphic;
 
+import view.HelloApplication;
+import view.graphic.fxmlController.NewMessage;
+
 import java.io.IOException;
 
 public class ReceiverHandlerG {
@@ -9,7 +12,7 @@ public class ReceiverHandlerG {
     private String commandSaver;
 
     private ReceiverHandlerG() {
-        commandSaver = "null";
+        commandSaver = "PV";
     }
 
     public static ReceiverHandlerG getReceiverHandlerG() {
@@ -30,12 +33,10 @@ public class ReceiverHandlerG {
                 case "PV" ->
                 {}
                 case "ShowOnline", "search", "finish", "Block" -> saveMessage = message;
-                default -> {
-                    ///notify update new message
-                }
+                default ->NewMessage.getNewMessage().setMessages();
             }
         else {
-            ///notify update new message
+            NewMessage.getNewMessage().setMessages();
         }
     }
 
@@ -57,7 +58,7 @@ public class ReceiverHandlerG {
             default ->
             {
                 saveMessage = message;
-                View.getView().showMessenger();
+                HelloApplication.setIsLogin(true);
             }
         }
     }
@@ -66,7 +67,7 @@ public class ReceiverHandlerG {
         if (message.equals("This id exist")) {
         } else {
             saveMessage = message;
-            View.getView().showMessenger();
+            HelloApplication.setIsLogin(true);
         }
     }
 }

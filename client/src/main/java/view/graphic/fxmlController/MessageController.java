@@ -32,6 +32,7 @@ public class MessageController implements Initializable
         senderName.setText(messageClass.getSender());
         text.setText(messageClass.getText());
         time.setText(messageClass.getTime());
+        message.setMaxWidth(400);
 
         if (SenderHandlerG.getCommandHandlerG().getSenderID().equals(messageClass.getSender())) {
             senderName.setAlignment(Pos.TOP_RIGHT);

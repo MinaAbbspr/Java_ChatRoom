@@ -13,14 +13,14 @@ public class GHandler {
     }
 
     public static GHandler getgHandler() {
-        if(gHandler == null)
+        if (gHandler == null)
             gHandler = new GHandler();
         return gHandler;
     }
 
     public void setLoginExceptionID(boolean loginExceptionID) {
         this.loginExceptionID = loginExceptionID;
-        synchronized (this){
+        synchronized (this) {
             this.notify();
         }
     }
@@ -33,23 +33,22 @@ public class GHandler {
         this.loggedInException = loggedInException;
     }
 
-    public void senderAndReceiverConnector(){
-    }
     public boolean login(String message) throws InterruptedException {
         SenderHandlerG.getCommandHandlerG().setCommand(message);
-        synchronized (this){
+        synchronized (this) {
             this.wait();
         }
 
         return loginExceptionID;
     }
+
     public void signup(String message, File file) throws InterruptedException {
         SenderHandlerG.getCommandHandlerG().setCommand(message);
-        Thread.sleep(1000);
+        Thread.sleep(500);
         SenderHandlerG.getCommandHandlerG().sendFile(file);
     }
 
-    public void send(String message){
+    public void send(String message) {
         SenderHandlerG.getCommandHandlerG().setCommand(message);
     }
 }

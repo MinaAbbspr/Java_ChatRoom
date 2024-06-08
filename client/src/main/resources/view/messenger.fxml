@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
@@ -67,9 +68,9 @@
                   </HBox>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="blackPane" layoutX="-10.0" layoutY="-2.0" prefHeight="956.0" prefWidth="349.0" styleClass="l_s_animation" stylesheets="@light.css">
+            <AnchorPane fx:id="sideBar" layoutX="-10.0" layoutY="-2.0" prefHeight="956.0" prefWidth="349.0" styleClass="l_s_animation" stylesheets="@light.css">
                <children>
-                  <TextField layoutX="65.0" layoutY="19.0" prefHeight="40.0" prefWidth="225.0" promptText="search" styleClass="search" />
+                  <TextField fx:id="txt_search" layoutX="65.0" layoutY="19.0" prefHeight="40.0" prefWidth="225.0" promptText="search" styleClass="search" />
                   <ImageView fitHeight="46.0" fitWidth="39.0" layoutX="245.0" layoutY="24.0" onMouseClicked="#search" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/search.png" />
@@ -247,7 +248,7 @@
                         </ImageView>
                      </children>
                   </HBox>
-                  <ScrollPane fx:id="members" layoutX="67.0" layoutY="582.0" prefHeight="361.0" prefWidth="484.0" styleClass="scroll-pane2" visible="false">
+                  <ScrollPane fx:id="members" layoutX="58.0" layoutY="643.0" prefHeight="361.0" prefWidth="484.0" styleClass="scroll-pane2" visible="false">
                      <content>
                         <VBox fx:id="members_v" prefHeight="364.0" prefWidth="463.0" styleClass="vbox-members">
                            <children>
@@ -329,24 +330,27 @@
                         </VBox>
                      </content>
                   </ScrollPane>
-                  <VBox fx:id="options" layoutX="862.0" layoutY="52.0" prefHeight="59.0" prefWidth="82.0" styleClass="l_s_animation">
+                  <VBox fx:id="options" layoutX="862.0" layoutY="47.0" prefHeight="59.0" prefWidth="82.0" styleClass="l_s_animation">
                      <children>
                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="44.0" prefWidth="82.0" styleClass="vbox" text="block" textFill="WHITE">
                            <font>
                               <Font name="Arial" size="13.0" />
                            </font>
                         </Label>
-                        <Label layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="82.0" styleClass="vbox" text=" clear history" textFill="WHITE">
+                        <Label cache="true" layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="82.0" styleClass="vbox" text=" clear history" textFill="WHITE" textOverrun="CLIP">
                            <font>
                               <Font name="Arial" size="13.0" />
                            </font>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
                         </Label>
                      </children>
                   </VBox>
                   <HBox fx:id="messageBar" layoutX="37.0" layoutY="742.0" prefHeight="40.0" prefWidth="879.0" spacing="5.0" styleClass="message-bar">
                      <children>
                         <TextField fx:id="message" prefHeight="40.0" prefWidth="851.0" promptText="type something ..." style="-fx-background-radius: 40; -fx-border-radius: 40;" styleClass="scroll-pane3" />
-                        <ImageView fitHeight="17.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="17.0" fitWidth="24.0" onMouseClicked="#send" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@images/images-11.png" />
                            </image>
@@ -357,37 +361,20 @@
                      </children></HBox>
                   <ScrollPane fx:id="chatSc" layoutX="37.0" layoutY="77.0" prefHeight="662.0" prefWidth="876.0" styleClass="scroll-pane2">
                      <content>
-                        <VBox fx:id="chatV" prefHeight="660.0" prefWidth="855.0" styleClass="vbox-members" />
+                        <VBox fx:id="chatV" prefHeight="660.0" prefWidth="855.0" spacing="15.0" styleClass="vbox-members">
+                           <padding>
+                              <Insets left="10.0" top="10.0" />
+                           </padding></VBox>
                      </content>
                   </ScrollPane>
-                  <VBox fx:id="message1" layoutX="50.0" layoutY="658.0" prefHeight="47.0" prefWidth="179.0" styleClass="message" stylesheets="@light.css">
-                     <children>
-                        <Label fx:id="senderName1" prefHeight="17.0" prefWidth="118.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="message-label" text="Mina">
-                           <VBox.margin>
-                              <Insets left="10.0" top="5.0" />
-                           </VBox.margin>
-                           <font>
-                              <Font name="Arial Bold" size="11.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="text1" prefHeight="0.0" prefWidth="153.0" styleClass="label-g" text="hello everyone">
-                           <VBox.margin>
-                              <Insets left="15.0" top="2.0" />
-                           </VBox.margin>
-                           <font>
-                              <Font name="Arial" size="13.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="time1" prefHeight="0.0" prefWidth="40.0" style="-fx-text-fill: gray;" styleClass="label-g" text="22:23:03">
-                           <VBox.margin>
-                              <Insets bottom="2.0" left="130.0" />
-                           </VBox.margin>
-                           <font>
-                              <Font name="Arial" size="9.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </VBox>
+                  <ScrollPane fx:id="chatPv" layoutX="36.0" layoutY="77.0" prefHeight="659.0" prefWidth="877.0" styleClass="scroll-pane2" visible="false">
+                     <content>
+                        <VBox fx:id="vBox_PV" prefHeight="660.0" prefWidth="868.0" spacing="15.0" styleClass="vbox-members">
+                           <padding>
+                              <Insets left="10.0" top="10.0" />
+                           </padding></VBox>
+                     </content>
+                  </ScrollPane>
                </children>
             </AnchorPane>
          </children>

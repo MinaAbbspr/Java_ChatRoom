@@ -49,8 +49,8 @@ public class UnseenMessagesController {
         {
             while (messages.next())
             {
-                unseenMessages.append(messages.getString("senderID")).append("\n")
-                        .append(messages.getString("massage")).append("\n").append(messages.getString("time")).append("\n");
+                unseenMessages.append(messages.getString("senderID")).append(" ")
+                        .append(messages.getString("massage")).append(" ").append(messages.getString("time")).append("\n");
             }
         }
         if(unseenMessages.isEmpty())

@@ -1,34 +1,34 @@
 package view;
 
+import javafx.application.Application;
+import javafx.stage.Stage;
 import view.graphic.ReceiverHandlerG;
 import view.graphic.View;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class CommunicationHandlerReceiver extends Thread
 {
-    private Socket clientSocket;
+    private final Socket clientSocket;
 
     public CommunicationHandlerReceiver() throws IOException {
         clientSocket = new Socket("localhost",6666);
     }
+
     @Override
     public void run() {
         try {
-            InputStreamReader reader = new InputStreamReader(clientSocket.getInputStream());
-            BufferedReader in = new BufferedReader(reader);
-            String message;
+            ObjectInputStream reader = new ObjectInputStream(clientSocket.getInputStream());
 
             while (true) {
-                message = in.readLine();
+                String message = reader.readUTF();
                 ReceiverHandlerG.getReceiverHandlerG().handler(message);
                 if(ReceiverHandler.getReceiverHandler().handler(message))
                     break;
             }
-            in.close();
+            reader.close();
             clientSocket.close();
         }
         catch (IOException ignored) { }
