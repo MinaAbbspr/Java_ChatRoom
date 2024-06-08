@@ -23,7 +23,7 @@ public class NewMessage {
         this.vBox = vBox;
     }
 
-    public void setMessages() {
+    public void setMessages(String message) {
         String[] chats = ReceiverHandlerG.getReceiverHandlerG().getSaveMessage().split("\n");
         for (int i = 0; i < chats.length; i++) {
             String[] parts = chats[i].split(" ");

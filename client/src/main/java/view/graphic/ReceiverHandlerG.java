@@ -33,10 +33,10 @@ public class ReceiverHandlerG {
                 case "PV" ->
                 {}
                 case "ShowOnline", "search", "finish", "Block" -> saveMessage = message;
-                default ->NewMessage.getNewMessage().setMessages();
+                default ->NewMessage.getNewMessage().setMessages(message);
             }
         else {
-            NewMessage.getNewMessage().setMessages();
+            NewMessage.getNewMessage().setMessages(message);
         }
     }
 
