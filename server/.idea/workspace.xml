@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a159cde1-525c-4d08-9699-06706bc4629e" name="Changes" comment="block debug">
       <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/java/view/graphic/ReceiverHandlerG.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/view/graphic/ReceiverHandlerG.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/java/view/graphic/fxmlController/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/view/graphic/fxmlController/MessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/java/view/graphic/fxmlController/NewMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/view/graphic/fxmlController/NewMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/view/message.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/view/message.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/main/resources/view/topBar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/resources/view/topBar.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
