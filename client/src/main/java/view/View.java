@@ -11,6 +11,7 @@ public class View {
     private static View view;
     private Stage stage;
     private Message message;
+    private String[] user;
 
     private View() {
     }
@@ -31,6 +32,14 @@ public class View {
 
     public void setMessage(Message message) {
         this.message = message;
+    }
+
+    public String[] getUser() {
+        return user;
+    }
+
+    public void setUser(String[] user) {
+        this.user = user;
     }
 
     public void showMessenger() throws IOException {

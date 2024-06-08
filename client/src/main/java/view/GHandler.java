@@ -48,4 +48,8 @@ public class GHandler {
         Thread.sleep(1000);
         SenderHandlerG.getCommandHandlerG().sendFile(file);
     }
+
+    public void send(String message){
+        SenderHandlerG.getCommandHandlerG().setCommand(message);
+    }
 }

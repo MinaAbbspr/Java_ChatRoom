@@ -30,7 +30,7 @@ public class PvController
         {
             String ID = resultSet.getString("ID");
             if(!ID.equals(Thread.currentThread().getName()))
-                users.append(ID).append("\t@").append(resultSet.getString("name")).append("\n");
+                users.append(ID).append(" @").append(resultSet.getString("name")).append("\n");
         }
         return users;
     }

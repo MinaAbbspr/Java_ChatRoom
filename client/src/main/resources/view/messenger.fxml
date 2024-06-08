@@ -67,7 +67,7 @@
                   </HBox>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="sideBar" layoutX="-10.0" layoutY="-2.0" prefHeight="956.0" prefWidth="349.0" styleClass="l_s_animation" stylesheets="@light.css">
+            <AnchorPane fx:id="blackPane" layoutX="-10.0" layoutY="-2.0" prefHeight="956.0" prefWidth="349.0" styleClass="l_s_animation" stylesheets="@light.css">
                <children>
                   <TextField layoutX="65.0" layoutY="19.0" prefHeight="40.0" prefWidth="225.0" promptText="search" styleClass="search" />
                   <ImageView fitHeight="46.0" fitWidth="39.0" layoutX="245.0" layoutY="24.0" onMouseClicked="#search" pickOnBounds="true" preserveRatio="true">
@@ -97,7 +97,7 @@
                               </Label>
                            </children>
                         </VBox>
-                        <VBox fx:id="group1" onMouseClicked="#groupIn" onMouseEntered="#groupF" onMouseExited="#groupE" prefHeight="0.0" prefWidth="34.0" styleClass="item" stylesheets="@light.css">
+                        <VBox fx:id="group1" onMouseEntered="#groupF" onMouseExited="#groupE" prefHeight="0.0" prefWidth="34.0" styleClass="item" stylesheets="@light.css">
                            <children>
                               <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -203,14 +203,30 @@
                                     <Font name="Arial" size="13.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="memberCount" prefHeight="12.0" prefWidth="171.0" styleClass="label-m" text="12 members, 11 online">
-                                 <font>
-                                    <Font name="Arial" size="11.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets />
-                                 </VBox.margin>
-                              </Label>
+                              <HBox maxHeight="12.0" prefHeight="12.0" prefWidth="171.0">
+                                 <children>
+                                    <Label fx:id="lbl_memberNumber" prefHeight="66.0" prefWidth="17.0" styleClass="label-m" text="12">
+                                       <font>
+                                          <Font name="Arial" size="11.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="66.0" prefWidth="58.0" styleClass="label-m" text=" members, ">
+                                       <font>
+                                          <Font name="Arial" size="11.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbl_userNumber" prefHeight="66.0" prefWidth="15.0" styleClass="label-m" text="11">
+                                       <font>
+                                          <Font name="Arial" size="11.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="66.0" prefWidth="38.0" styleClass="label-m" text=" online">
+                                       <font>
+                                          <Font name="Arial" size="11.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
                            </children>
                            <HBox.margin>
                               <Insets left="10.0" top="17.0" />

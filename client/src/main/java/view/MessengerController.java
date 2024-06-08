@@ -1,6 +1,7 @@
 package view;
 
 import javafx.animation.TranslateTransition;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -14,13 +15,17 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
+import model.Message;
+
 import javafx.util.Duration;
 import java.net.URL;
+import java.sql.Time;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class MessengerController implements Initializable
 {
+
     public VBox group1;
     @FXML private Label memberCount;
     @FXML private Label groupName;
@@ -50,8 +55,71 @@ public class MessengerController implements Initializable
         H.setFill(new ImagePattern(groupI));
         groupImage.setFill(new ImagePattern(groupI));
         groupImg.setFill(new ImagePattern(groupI));
-        Image backImg = new Image(Objects.requireNonNull(MessengerController.class.getResource("Image.jpg")).toExternalForm());
+        Image backImg = new Image(Objects.requireNonNull(MessengerController.class.getResource("images/Image.jpg")).toExternalForm());
         back.setFill(new ImagePattern(backImg));
+        setMessages();
+        setUsers();
+        options.setVisible(false);
+        groupP.setVisible(false);
+
+    }
+
+    private void setMessages(){
+        String[] chats = ReceiverHandlerG.getReceiverHandlerG().getSaveMessage().split("\n");
+        for(int i=0; i< chats.length-1; i+=3){
+            View.getView().setMessage(new Message(chats[i],chats[i+1], Time.valueOf(chats[i+2])));
+
+            try {
+                //vBox_messages.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("message.fxml")).load());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            new Thread(() -> {
+                while (true) {
+                    synchronized (Thread.currentThread()) {
+                        try {
+                            Thread.currentThread().wait();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    Platform.runLater(() -> {
+                        //vBox_messages.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("message.fxml")).load());
+                    });
+                }
+            }).start();
+        }
+    }
+
+    private void setUsers(){
+        GHandler.getgHandler().send("Block");
+        GHandler.getgHandler().send("ShowOnline");
+        String[] users = ReceiverHandlerG.getReceiverHandlerG().getSaveMessage().split("\n");
+        for(String str : users){
+            View.getView().setUser(str.split(" @"));
+
+            try {
+                //vBox_users.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("user.fxml")).load());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            new Thread(() -> {
+                while (true) {
+                    synchronized (Thread.currentThread()) {
+                        try {
+                            Thread.currentThread().wait();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    Platform.runLater(() -> {
+                        //vBox_users.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("user.fxml")).load());
+                    });
+                }
+            }).start();
+        }
         options.setVisible(false);
         groupP.setVisible(false);
     }

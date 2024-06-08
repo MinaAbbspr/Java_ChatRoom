@@ -5,7 +5,7 @@ import java.io.IOException;
 public class ReceiverHandlerG {
     private static ReceiverHandlerG receiverHandlerG;
 
-    private String chats;
+    private String saveMessage;
 
     private ReceiverHandlerG() {
     }
@@ -17,12 +17,24 @@ public class ReceiverHandlerG {
     }
 
     public void handler(String message) throws IOException {
-        signupCheck(message);
-        loginCheck(message);
+        if(SenderHandlerG.getCommandHandlerG().isUse())
+            switch (SenderHandlerG.getCommandHandlerG().getCommandSaver()){
+                case "Login" -> loginCheck(message);
+                case "Signup" -> signupCheck(message);
+                case "PV" ->{
+                }
+                case "ShowOnline", "search", "finish", "Block" -> saveMessage = message;
+                default -> {
+                    ///notify update new message
+                }
+            }
+        else {
+            ///notify update new message
+        }
     }
 
-    public String getChats() {
-        return chats;
+    public String getSaveMessage() {
+        return saveMessage;
     }
 
     private void loginCheck(String message) throws IOException {
@@ -34,7 +46,7 @@ public class ReceiverHandlerG {
                 GHandler.getgHandler().setLoginExceptionID(false);
             }
             default ->{
-                chats = message;
+                saveMessage = message;
 //                View.getView().showMessenger();
             }
         }
@@ -43,7 +55,7 @@ public class ReceiverHandlerG {
     {
         if (message.equals("This id exist")) {
         } else {
-            chats = message;
+            saveMessage = message;
 //            View.getView().showMessenger();
         }
     }
