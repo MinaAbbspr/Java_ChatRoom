@@ -3,6 +3,7 @@ package view;
 import javafx.animation.TranslateTransition;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
@@ -18,6 +19,8 @@ import javafx.scene.shape.Circle;
 import model.Message;
 
 import javafx.util.Duration;
+
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Time;
 import java.util.Objects;
@@ -54,17 +57,17 @@ public class MessengerController implements Initializable
     public void initialize(URL location, ResourceBundle resources)
     {
         isGroup = false;
-        Image groupI = new Image(Objects.requireNonNull(MessengerController.class.getResource("Images-6.jpeg")).toExternalForm());
+        Image groupI = new Image(Objects.requireNonNull(MessengerController.class.getResource("images/Images-6.jpeg")).toExternalForm());
         H.setFill(new ImagePattern(groupI));
         groupImage.setFill(new ImagePattern(groupI));
         groupImg.setFill(new ImagePattern(groupI));
         Image backImg = new Image(Objects.requireNonNull(MessengerController.class.getResource("images/Image.jpg")).toExternalForm());
         back.setFill(new ImagePattern(backImg));
-        setMessages();
-        setUsers();
         options.setVisible(false);
         groupP.setVisible(false);
 
+        setMessages();
+        setUsers();
     }
 
     private void setMessages(){
@@ -73,7 +76,7 @@ public class MessengerController implements Initializable
             View.getView().setMessage(new Message(chats[i],chats[i+1], Time.valueOf(chats[i+2])));
 
             try {
-                //vBox_messages.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("message.fxml")).load());
+                chatPage.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("message.fxml")).load());
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -88,7 +91,11 @@ public class MessengerController implements Initializable
                         }
                     }
                     Platform.runLater(() -> {
-                        //vBox_messages.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("message.fxml")).load());
+                        try {
+                            chatPage.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("message.fxml")).load());
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                     });
                 }
             }).start();
@@ -96,14 +103,13 @@ public class MessengerController implements Initializable
     }
 
     private void setUsers(){
-        GHandler.getgHandler().send("Block");
         GHandler.getgHandler().send("ShowOnline");
         String[] users = ReceiverHandlerG.getReceiverHandlerG().getSaveMessage().split("\n");
         for(String str : users){
             View.getView().setUser(str.split(" @"));
 
             try {
-                //vBox_users.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("user.fxml")).load());
+                usersSideList.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("account.fxml")).load());
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -118,7 +124,11 @@ public class MessengerController implements Initializable
                         }
                     }
                     Platform.runLater(() -> {
-                        //vBox_users.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("user.fxml")).load());
+                        try {
+                            usersSideList.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("account.fxml")).load());
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                     });
                 }
             }).start();
@@ -127,6 +137,11 @@ public class MessengerController implements Initializable
         groupP.setVisible(false);
     }
 
+    private void numberOfMember(){
+        if(isGroup) {
+            GHandler.getgHandler().send("Block");
+        }
+    }
 
     public void chatF(MouseEvent event) {
         chats.setStyle("-fx-border-width: 0 0 2 0 ");
@@ -147,15 +162,16 @@ public class MessengerController implements Initializable
     }
 
     public void search(MouseEvent event) {
+
     }
     public void o(MouseEvent event) {
-        Image closeImg = new Image(Objects.requireNonNull(MessengerController.class.getResource("IMG_0075.jpg")).toExternalForm());
+        Image closeImg = new Image(Objects.requireNonNull(MessengerController.class.getResource("images/IMG_0075.jpg")).toExternalForm());
         close.setFill(new ImagePattern(closeImg));
     }
 
     public void c(MouseEvent event)
     {
-        Image closeImg = new Image(Objects.requireNonNull(MessengerController.class.getResource("Screenshot 2024-06-08 at 12.26.57 AM.jpg")).toExternalForm());
+        Image closeImg = new Image(Objects.requireNonNull(MessengerController.class.getResource("images/Screenshot 2024-06-08 at 12.26.57 AM.jpg")).toExternalForm());
         close.setFill(new ImagePattern(closeImg));
     }
     public void showSideUsers()

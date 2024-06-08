@@ -45,7 +45,6 @@ public class HelloController implements Initializable {
 
     @FXML
     private Label lbl_inner;
-    @FXML private TextField login;
 
     @FXML
     private Label lbl_welcome;
@@ -194,15 +193,16 @@ public class HelloController implements Initializable {
     }
     @FXML
     void login(MouseEvent event) throws InterruptedException {
-        if(vlpass1.getText().isEmpty())
+        if(vlpass1.getText() == null)
             vlpass1.setText(invlpass.getText());
-        if(login.getText().isEmpty() || vlpass1.getText().isEmpty()){
+        if(logintext.getText() == null || vlpass1.getText() == null){
             return;
         }
 
-        if(GHandler.getgHandler().login("Login-" + login.getText() + "-" + vlpass1.getText())) {
+        if(GHandler.getgHandler().login("Login-" + logintext.getText() + "-" + vlpass1.getText())) {
             usernameInE1.setVisible(true);
             passInE1.setVisible(false);
+            lbl_loggedInError.setVisible(false);
         }else {
             if(GHandler.getgHandler().isLoggedInException()){
                 usernameInE1.setVisible(false);
@@ -212,6 +212,7 @@ public class HelloController implements Initializable {
             else {
                 usernameInE1.setVisible(false);
                 passInE1.setVisible(true);
+                lbl_loggedInError.setVisible(false);
             }
         }
     }

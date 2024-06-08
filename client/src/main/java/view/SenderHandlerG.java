@@ -9,12 +9,13 @@ public class SenderHandlerG {
     private String senderID;
     private String receiverID;
     private String command;
-    private String commandSaver;
+
     private boolean isUse;
     private static CommunicationHandlerSender sender;
     private static SenderHandlerG senderHandlerG;
 
     private SenderHandlerG() {
+
     }
 
     public static void setSender(CommunicationHandlerSender sender) {
@@ -32,42 +33,49 @@ public class SenderHandlerG {
         return senderHandlerG;
     }
 
-    public String getCommandSaver() {
-        return commandSaver;
-    }
-
     public boolean isUse() {
         return isUse;
     }
 
     private void scanner(){
             String[] commands = command.split("-");
-
             isUse = false;
+
             switch (commands[0]) {
                 case "Login" -> {
                     if (commands.length == 3){
                         senderID = commands[1];
-                        commandSaver = "Login";
+                        ReceiverHandlerG.getReceiverHandlerG().setCommandSaver("Login");
                     }
                 }
                 case "Signup" -> {
                     if (commands.length == 4){
                         senderID = commands[1];
-                        commandSaver = "Signup";
+                        ReceiverHandlerG.getReceiverHandlerG().setCommandSaver("Signup");
                     }
                 }
                 case "PV" ->{
                     if(commands.length == 2) {
                         receiverID = commands[1];
-                        commandSaver = "PV";
+                        ReceiverHandlerG.getReceiverHandlerG().setCommandSaver("PV");
                     }
                 }
-                case "ShowOnline" -> commandSaver = "ShowOnline";
-                case "search" -> commandSaver = "search";
-                case "clearHistory" -> commandSaver = "clearHistory";
-                case "finish" -> commandSaver = "finish";
-                case "Block" -> commandSaver = "Block";
+                case "ShowOnline" ->
+                        ReceiverHandlerG.getReceiverHandlerG().setCommandSaver("Login");
+
+                case "search" ->
+                        ReceiverHandlerG.getReceiverHandlerG().setCommandSaver("Login");
+
+                case "clearHistory" ->
+                        ReceiverHandlerG.getReceiverHandlerG().setCommandSaver("Login");
+
+                case "finish" ->
+                        ReceiverHandlerG.getReceiverHandlerG().setCommandSaver("Login");
+
+                case "Block" ->
+                        ReceiverHandlerG.getReceiverHandlerG().setCommandSaver("Login");
+                case "Ping" ->{}
+
                 default -> isUse = true;
             }
             sender.setMessage(new Message(command,senderID,receiverID));

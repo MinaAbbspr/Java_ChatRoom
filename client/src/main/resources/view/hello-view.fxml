@@ -24,7 +24,7 @@
                      <children>
                         <ImageView fitHeight="35.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@images/IMG_9612%202.jpg" />
+                              <Image url="@images/IMG_9612 2.jpg" />
                            </image>
                         </ImageView>
                         <Label alignment="CENTER" prefHeight="102.0" prefWidth="337.0" stylesheets="@light.css" text="Create Account ...">
@@ -117,7 +117,7 @@
                      <children>
                         <ImageView fitHeight="45.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@images/IMG_9612%202.jpg" />
+                              <Image url="@images/IMG_9612 2.jpg" />
                            </image>
                         </ImageView>
                         <Label alignment="CENTER" prefHeight="102.0" prefWidth="337.0" stylesheets="@light.css" text="Login to continue ...">

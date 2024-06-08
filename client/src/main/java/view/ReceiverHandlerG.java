@@ -6,8 +6,10 @@ public class ReceiverHandlerG {
     private static ReceiverHandlerG receiverHandlerG;
 
     private String saveMessage;
+    private String commandSaver;
 
     private ReceiverHandlerG() {
+        commandSaver = "null";
     }
 
     public static ReceiverHandlerG getReceiverHandlerG() {
@@ -16,9 +18,13 @@ public class ReceiverHandlerG {
         return receiverHandlerG;
     }
 
+    public void setCommandSaver(String commandSaver) {
+        this.commandSaver = commandSaver;
+    }
+
     public void handler(String message) throws IOException {
-        if(SenderHandlerG.getCommandHandlerG().isUse())
-            switch (SenderHandlerG.getCommandHandlerG().getCommandSaver()){
+        if(! SenderHandlerG.getCommandHandlerG().isUse())
+            switch (commandSaver){
                 case "Login" -> loginCheck(message);
                 case "Signup" -> signupCheck(message);
                 case "PV" ->{
@@ -40,7 +46,10 @@ public class ReceiverHandlerG {
     private void loginCheck(String message) throws IOException {
         switch (message){
             case "This id is not available" -> GHandler.getgHandler().setLoginExceptionID(true);
-            case "Your password is not correct" -> GHandler.getgHandler().setLoginExceptionID(false);
+            case "Your password is not correct" -> {
+                GHandler.getgHandler().setLoginExceptionID(false);
+                GHandler.getgHandler().setLoggedInException(false);
+            }
             case "This user is already logged in" ->{
                 GHandler.getgHandler().setLoggedInException(true);
                 GHandler.getgHandler().setLoginExceptionID(false);

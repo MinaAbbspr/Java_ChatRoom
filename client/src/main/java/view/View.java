@@ -51,8 +51,8 @@ public class View {
     }
 
     public void showLogin_signup() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("messenger.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(),1290,800);
         stage.setTitle("Messenger!");
         stage.setScene(scene);
         stage.show();
