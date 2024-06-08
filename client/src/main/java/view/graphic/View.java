@@ -1,5 +1,6 @@
 package view.graphic;
 
+import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -8,13 +9,18 @@ import view.HelloApplication;
 
 import java.io.IOException;
 
-public class View {
+public class View extends Application implements Runnable {
     private static View view;
     private Stage stage;
     private Message message;
     private String[] user;
 
     private View() {
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+
     }
 
     public static View getView() {
@@ -44,7 +50,6 @@ public class View {
     }
 
     public void showMessenger() throws IOException {
-        Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("messenger.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Messenger!");
@@ -58,5 +63,10 @@ public class View {
         stage.setTitle("Messenger!");
         stage.setScene(scene);
         stage.show();
+    }
+
+    @Override
+    public void run() {
+
     }
 }

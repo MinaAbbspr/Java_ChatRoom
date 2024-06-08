@@ -27,8 +27,8 @@ public class ReceiverHandlerG {
             switch (commandSaver){
                 case "Login" -> loginCheck(message);
                 case "Signup" -> signupCheck(message);
-                case "PV" ->{
-                }
+                case "PV" ->
+                {}
                 case "ShowOnline", "search", "finish", "Block" -> saveMessage = message;
                 default -> {
                     ///notify update new message
@@ -54,7 +54,8 @@ public class ReceiverHandlerG {
                 GHandler.getgHandler().setLoggedInException(true);
                 GHandler.getgHandler().setLoginExceptionID(false);
             }
-            default ->{
+            default ->
+            {
                 saveMessage = message;
                 View.getView().showMessenger();
             }
