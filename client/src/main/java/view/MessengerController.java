@@ -39,6 +39,9 @@ public class MessengerController implements Initializable
     @FXML private Circle back;
     @FXML private Circle close;
     @FXML private ScrollPane members;
+    @FXML private ScrollPane searchResultSc;
+    @FXML private VBox searchResultV;
+    @FXML private VBox chatPage;
     @FXML private AnchorPane groupP;
     @FXML private AnchorPane sideBar;
     @FXML private HBox topBar;
@@ -211,8 +214,6 @@ public class MessengerController implements Initializable
 
     public void groupIn(MouseEvent event)
     {
-
-
         groupP.setVisible(true);
     }
 }
