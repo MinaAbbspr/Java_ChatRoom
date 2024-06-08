@@ -28,7 +28,7 @@ public class ShowMsgController
             showMessagePV(message);
         }
         else{
-
+            setShowMessageGroup(message);
         }
     }
     private void showMessagePV(Message message) throws SQLException, BlockedUser {
