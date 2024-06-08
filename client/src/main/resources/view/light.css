@@ -177,7 +177,8 @@
     -fx-border-color: white;
     -fx-control-inner-background: white;
 }
-.scroll-bar:horizontal, .scroll-bar:vertical{
+.scroll-bar:horizontal, .scroll-bar:vertical
+{
     -fx-background-color: #ffffff;
 }
 
