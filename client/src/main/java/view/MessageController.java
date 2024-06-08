@@ -16,8 +16,7 @@ public class MessageController implements Initializable
     @FXML private  Label time;
 
     @Override
-    public void initialize(URL location, ResourceBundle resources)
-    {
+    public void initialize(URL location, ResourceBundle resources) {
 
     }
 }
