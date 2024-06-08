@@ -351,7 +351,7 @@
                            </HBox.margin>
                         </ImageView>
                      </children></HBox>
-                  <ScrollPane fx:id="chatSc" layoutX="37.0" layoutY="77.0" prefHeight="662.0" prefWidth="876.0" styleClass="scroll-pane2">
+                  <ScrollPane fx:id="chatSc" layoutX="39.0" layoutY="77.0" prefHeight="649.0" prefWidth="877.0" styleClass="scroll-pane2">
                      <content>
                         <VBox fx:id="chatV" prefHeight="660.0" prefWidth="855.0" spacing="15.0" styleClass="vbox-members">
                            <padding>

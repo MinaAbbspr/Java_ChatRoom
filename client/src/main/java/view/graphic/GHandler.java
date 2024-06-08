@@ -38,7 +38,6 @@ public class GHandler {
         synchronized (this) {
             this.wait();
         }
-
         return loginExceptionID;
     }
 

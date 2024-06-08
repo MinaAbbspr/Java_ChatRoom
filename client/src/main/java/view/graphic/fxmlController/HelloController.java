@@ -152,6 +152,8 @@ public class HelloController implements Initializable {
     {
         if(svpass.getText() == null)
             svpass.setText(spas.getText());
+        else if(spas.getText() == null)
+            spas.setText(svpass.getText());
         if(login1.getText().isEmpty() || log1.getText().isEmpty() || svpass.getText().isEmpty())
             return;
 
