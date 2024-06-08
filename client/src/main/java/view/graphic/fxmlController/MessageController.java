@@ -2,6 +2,7 @@ package view.graphic.fxmlController;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
@@ -39,6 +40,8 @@ public class MessageController implements Initializable
             text.setAlignment(Pos.TOP_RIGHT);
             time.setAlignment(Pos.TOP_LEFT);
             message.setAlignment(Pos.TOP_RIGHT);
+            message.setStyle("messageS");
+            VBox.setMargin(message, new Insets(10,10,10,450));
         } else {
             senderName.setAlignment(Pos.TOP_LEFT);
             text.setAlignment(Pos.TOP_LEFT);

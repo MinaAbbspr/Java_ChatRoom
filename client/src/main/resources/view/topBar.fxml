@@ -11,7 +11,7 @@
 
 <HBox maxWidth="935.0" prefHeight="63.0" prefWidth="935.0" styleClass="l_s_animation" stylesheets="@light.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.graphic.fxmlController.TobBarController">
    <children>
-      <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="32.0" fitWidth="34.0" onMouseClicked="#finish" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/p.png" />
          </image>
@@ -26,7 +26,7 @@
       </Circle>
       <VBox maxHeight="77.0" prefHeight="77.0" prefWidth="135.0" spacing="2.0">
          <children>
-            <Label fx:id="topName" prefHeight="0.0" prefWidth="135.0" styleClass="label-m" text="Parinaz">
+            <Label fx:id="lbl_name" prefHeight="0.0" prefWidth="135.0" styleClass="label-m" text="Parinaz">
                <font>
                   <Font name="Arial" size="13.0" />
                </font>

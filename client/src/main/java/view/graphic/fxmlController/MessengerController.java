@@ -383,6 +383,8 @@ public class MessengerController implements Initializable
         chatSc.setVisible(false);
         chatPv.setVisible(true);
         messageBar.setVisible(true);
+        pvHeader.setVisible(true);
+        topBar.setVisible(false);
     }
 
     @FXML
@@ -391,6 +393,8 @@ public class MessengerController implements Initializable
         chatSc.setVisible(true);
         chatPv.setVisible(false);
         messageBar.setVisible(true);
+        pvHeader.setVisible(false);
+        topBar.setVisible(true);
         NewMessage.getNewMessage().setvBox(chatV);
 
         GHandler.getgHandler().send("finish");
