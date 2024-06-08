@@ -58,7 +58,7 @@ public class Message implements Serializable,Comparable<Message>
     @Override
     public String toString()
     {
-        return sender +"\n" + text + "\n" + getTime() + "\n";
+        return sender +" " + text + " " + getTime() + " ";
     }
 
     @Override

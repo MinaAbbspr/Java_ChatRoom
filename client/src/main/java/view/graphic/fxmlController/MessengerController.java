@@ -201,7 +201,7 @@ public class MessengerController implements Initializable
         GHandler.getgHandler().send("Block");
 
         try {
-            Thread.sleep(1000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
