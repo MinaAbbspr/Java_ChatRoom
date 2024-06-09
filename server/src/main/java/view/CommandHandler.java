@@ -67,6 +67,17 @@ public class CommandHandler
                     isPV = false;
                 }
                 case "Block" -> DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(BlockController.getBlockController().block(message.getReceiver()));
+                case "showUsers" -> {
+                    if(commands.length == 1) {
+                        try {
+                            DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(BlockController.getBlockController().showUsers());
+                        } catch (NoOnlineUser e) {
+                            DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(e.getMessage());
+                        }
+                    }
+                    else
+                        DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("incorrect command format");
+                }
                 default -> {
                     try {
                         ShowMsgController.getShowMsgController().showMessage(message);
@@ -123,6 +134,17 @@ public class CommandHandler
                     }
                     else if(commands.length == 2)
                         DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(BlockController.getBlockController().block(commands[1]));
+                    else
+                        DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("incorrect command format");
+                }
+                case "showUsers" -> {
+                    if(commands.length == 1) {
+                        try {
+                            DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(BlockController.getBlockController().showUsers());
+                        } catch (NoOnlineUser e) {
+                            DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage(e.getMessage());
+                        }
+                    }
                     else
                         DataBase.getDataBase().getThread(Thread.currentThread().getName()).setMessage("incorrect command format");
                 }

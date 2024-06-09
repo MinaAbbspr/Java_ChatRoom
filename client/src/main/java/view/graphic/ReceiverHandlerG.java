@@ -32,7 +32,7 @@ public class ReceiverHandlerG {
                 case "Signup" -> signupCheck(message);
                 case "PV" ->
                 {}
-                case "ShowOnline", "search", "finish", "Block" -> saveMessage = message;
+                case "ShowOnline", "search", "finish", "Block", "showUsers" -> saveMessage = message;
                 default ->NewMessage.getNewMessage().setMessage(message);
             }
         else {

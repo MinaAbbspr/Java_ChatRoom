@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba7f0ccf-aa3d-4de9-a219-194814455c34" name="Changes" comment="send message debug">
+    <list default="true" id="ba7f0ccf-aa3d-4de9-a219-194814455c34" name="Changes" comment="send message debug3">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_9_24__3_09AM.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_9_24__3_09AM.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/graphic/ReceiverHandlerG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/graphic/ReceiverHandlerG.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/graphic/fxmlController/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/graphic/fxmlController/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/graphic/SenderHandlerG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/graphic/SenderHandlerG.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/graphic/fxmlController/MessengerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/graphic/fxmlController/MessengerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/graphic/fxmlController/NewMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/graphic/fxmlController/NewMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/message.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/message.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/topBar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/topBar.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/controller/UnseenMessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/controller/UnseenMessagesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/model/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/view/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/view/CommandHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +97,7 @@
   <component name="RunManager">
     <configuration name="HelloApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="view.HelloApplication" />
-      <module name="Kotlin" />
+      <module name="client" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="view.graphic.fxmlController.*" />

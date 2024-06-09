@@ -78,6 +78,8 @@ public class SenderHandlerG {
 
                 case "Block" ->
                         ReceiverHandlerG.getReceiverHandlerG().setCommandSaver("Block");
+                case "showUsers" ->
+                        ReceiverHandlerG.getReceiverHandlerG().setCommandSaver("showUsers");
                 case "Ping" ->{}
 
                 default -> isUse = true;

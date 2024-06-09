@@ -198,7 +198,7 @@ public class MessengerController implements Initializable
     }
 
     private void setMembers(){
-        GHandler.getgHandler().send("Block");
+        GHandler.getgHandler().send("showUsers");
 
         try {
             Thread.sleep(3000);
@@ -224,7 +224,7 @@ public class MessengerController implements Initializable
                 while (true) {
                     Platform.runLater(() -> {
                         if (isGroup) {
-                            GHandler.getgHandler().send("Block");
+                            GHandler.getgHandler().send("showUsers");
                             try {
                                 Thread.sleep(1000);
                             } catch (InterruptedException e) {

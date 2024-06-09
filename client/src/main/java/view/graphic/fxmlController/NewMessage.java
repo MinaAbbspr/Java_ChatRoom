@@ -5,10 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.VBox;
 import model.Message;
 import view.HelloApplication;
-import view.graphic.ReceiverHandlerG;
 import view.graphic.View;
 
-import java.io.IOException;
 import java.sql.Time;
 
 public class NewMessage {
@@ -35,29 +33,6 @@ public class NewMessage {
         this.vBox = vBox;
     }
 
-    public void setMessages(String message) {
-//        String[] chats = ReceiverHandlerG.getReceiverHandlerG().getSaveMessage().split("\n");
-//        for (int i = 0; i < chats.length; i++) {
-//            String[] parts = chats[i].split(" ");
-//            View.getView().setMessage(new Message(parts[1], parts[0], Time.valueOf(parts[2])));
-//
-//            try {
-//                vBox.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("message.fxml")).load());
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//        }
-
-        String[] parts = message.split(" ");
-        View.getView().setMessage(new Message(parts[1], parts[0], Time.valueOf(parts[2])));
-
-        try {
-            vBox.getChildren(). add(new FXMLLoader(HelloApplication.class.getResource("message.fxml")).load());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
     public void thread(){
         thread =new Thread(() -> {
             while (true){
@@ -71,7 +46,7 @@ public class NewMessage {
                     }
                 Platform.runLater(() -> {
                     String[] parts = message.split(" ");
-                    View.getView().setMessage(new Message(parts[1], parts[0], Time.valueOf(parts[2])));
+                    View.getView().setMessage(new Message(parts[1], parts[0], String.valueOf(parts[2])));
 
                     try {
                         vBox.getChildren(). add(new FXMLLoader(HelloApplication.class.getResource("message.fxml")).load());
