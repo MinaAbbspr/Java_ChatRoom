@@ -286,7 +286,7 @@ public class MessengerController implements Initializable
             String[] chats = ReceiverHandlerG.getReceiverHandlerG().getSaveMessage().split("\n");
             for(int i=0; i< chats.length; i++) {
                 String[] parts = chats[i].split(" ");
-                View.getView().setMessage(new Message(parts[1], parts[0], String.valueOf(parts[2])));
+                View.getView().setMessage(new Message(parts[1], parts[0], Time.valueOf(parts[2])));
 
                 try {
                     searchResultV.getChildren().add(new FXMLLoader(HelloApplication.class.getResource("message.fxml")).load());

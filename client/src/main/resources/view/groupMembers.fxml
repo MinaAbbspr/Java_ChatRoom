@@ -44,7 +44,7 @@
             <Insets left="260.0" top="20.0" />
          </HBox.margin>
          <image>
-            <Image url="@../../../../../../../Downloads/61140.png" />
+            <Image url="@images/61140.png" />
          </image>
       </ImageView>
    </children>
