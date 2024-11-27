@@ -4,21 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba7f0ccf-aa3d-4de9-a219-194814455c34" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/parinaz_mina.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ba7f0ccf-aa3d-4de9-a219-194814455c34" name="Changes" comment="send message debug3">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_9_24__3_09AM.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_9_24__3_09AM.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/graphic/ReceiverHandlerG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/graphic/ReceiverHandlerG.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/graphic/SenderHandlerG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/graphic/SenderHandlerG.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/graphic/fxmlController/MessengerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/graphic/fxmlController/MessengerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/graphic/fxmlController/NewMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/graphic/fxmlController/NewMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/controller/UnseenMessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/controller/UnseenMessagesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/model/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/view/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/view/CommandHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="FxmlFile" />
+        <option value="Kotlin Class" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -34,26 +46,61 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2h0AJNFNGWqWjQSjLxGSoA5W6Sk" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Application.h2.executor&quot;: &quot;Coverage&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;parinaz&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/parinaz/IdeaProjects/secondproject-chatroom-parinaz_mina11/client&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
+    ]
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Uni\2\Quera\12\secondproject-chatroom-parinaz_mina\client\src\main\resources\view" />
+      <recent name="E:\Uni\2\Quera\12\secondproject-chatroom-parinaz_mina\client\src\main\resources\view\images" />
+      <recent name="$PROJECT_DIR$/src/main/resources/view/images" />
+      <recent name="$PROJECT_DIR$/src/main/resources/view" />
+      <recent name="$PROJECT_DIR$/src/main/resources/" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="HelloApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="view.HelloApplication" />
       <module name="client" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="view.*" />
+          <option name="PATTERN" value="view.graphic.fxmlController.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -61,11 +108,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.HelloApplication" />
-      </list>
-    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -75,7 +124,468 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1716720550684</updated>
+      <workItem from="1716721686986" duration="40000" />
+      <workItem from="1716721910726" duration="3000" />
+      <workItem from="1716721998496" duration="260000" />
+      <workItem from="1717490611675" duration="929000" />
+      <workItem from="1717499737187" duration="1585000" />
+      <workItem from="1717598625769" duration="2142000" />
+      <workItem from="1717652760416" duration="603000" />
+      <workItem from="1717654562720" duration="8245000" />
+      <workItem from="1717665878063" duration="12389000" />
+      <workItem from="1717687732345" duration="1089000" />
+      <workItem from="1717719106543" duration="478000" />
+      <workItem from="1717741178057" duration="1102000" />
+      <workItem from="1717744842611" duration="4204000" />
+      <workItem from="1717750421618" duration="14688000" />
+      <workItem from="1717783416340" duration="318000" />
+      <workItem from="1717783742117" duration="14956000" />
+      <workItem from="1717821701572" duration="114000" />
+      <workItem from="1717825173281" duration="284000" />
+      <workItem from="1717826032750" duration="2615000" />
+      <workItem from="1717837599800" duration="1345000" />
+      <workItem from="1717852450818" duration="2948000" />
     </task>
+    <task id="LOCAL-00001" summary="&#10;main">
+      <option name="closed" value="true" />
+      <created>1716721109479</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716721109479</updated>
+    </task>
+    <task id="LOCAL-00002" summary="&#10;main">
+      <option name="closed" value="true" />
+      <created>1716721223606</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716721223606</updated>
+    </task>
+    <task id="LOCAL-00003" summary="&#10;CommunicationHandlerSender">
+      <option name="closed" value="true" />
+      <created>1717483452874</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717483452874</updated>
+    </task>
+    <task id="LOCAL-00004" summary="&#10;sender wait error">
+      <option name="closed" value="true" />
+      <created>1717488025786</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717488025786</updated>
+    </task>
+    <task id="LOCAL-00005" summary="login debug">
+      <option name="closed" value="true" />
+      <created>1717593692954</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717593692954</updated>
+    </task>
+    <task id="LOCAL-00006" summary="g-signup page added">
+      <option name="closed" value="true" />
+      <created>1717664457227</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717664457227</updated>
+    </task>
+    <task id="LOCAL-00007" summary="FinishController added">
+      <option name="closed" value="true" />
+      <created>1717670217168</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717670217168</updated>
+    </task>
+    <task id="LOCAL-00008" summary="g-login page added">
+      <option name="closed" value="true" />
+      <created>1717676817150</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717676817150</updated>
+    </task>
+    <task id="LOCAL-00009" summary="g-login page added">
+      <option name="closed" value="true" />
+      <created>1717678986835</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717678986835</updated>
+    </task>
+    <task id="LOCAL-00010" summary="g-login page added">
+      <option name="closed" value="true" />
+      <created>1717679131954</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717679131954</updated>
+    </task>
+    <task id="LOCAL-00011" summary="g-animation added">
+      <option name="closed" value="true" />
+      <created>1717681763006</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1717681763006</updated>
+    </task>
+    <task id="LOCAL-00012" summary="g-animation added">
+      <option name="closed" value="true" />
+      <created>1717681764108</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1717681764108</updated>
+    </task>
+    <task id="LOCAL-00013" summary="g-visible + invisible methods added">
+      <option name="closed" value="true" />
+      <created>1717715080353</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1717715080353</updated>
+    </task>
+    <task id="LOCAL-00014" summary="g-visible + invisible methods added">
+      <option name="closed" value="true" />
+      <created>1717715083555</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1717715083555</updated>
+    </task>
+    <task id="LOCAL-00015" summary="g-account fxml added">
+      <option name="closed" value="true" />
+      <created>1717718303058</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1717718303058</updated>
+    </task>
+    <task id="LOCAL-00016" summary="g-topBar + topBarController added">
+      <option name="closed" value="true" />
+      <created>1717760788746</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1717760788746</updated>
+    </task>
+    <task id="LOCAL-00017" summary="g-topBar + topBarController added">
+      <option name="closed" value="true" />
+      <created>1717760794539</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1717760794539</updated>
+    </task>
+    <task id="LOCAL-00018" summary="g-group topBar added">
+      <option name="closed" value="true" />
+      <created>1717774824396</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1717774824396</updated>
+    </task>
+    <task id="LOCAL-00019" summary="g-group topBar added">
+      <option name="closed" value="true" />
+      <created>1717774828210</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1717774828210</updated>
+    </task>
+    <task id="LOCAL-00020" summary="g-group topBar added">
+      <option name="closed" value="true" />
+      <created>1717774975457</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1717774975457</updated>
+    </task>
+    <task id="LOCAL-00021" summary="g-group topBar added">
+      <option name="closed" value="true" />
+      <created>1717775167338</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1717775167338</updated>
+    </task>
+    <task id="LOCAL-00022" summary="g-GroupMembers added">
+      <option name="closed" value="true" />
+      <created>1717791081290</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1717791081290</updated>
+    </task>
+    <task id="LOCAL-00023" summary="g-GroupMembers added">
+      <option name="closed" value="true" />
+      <created>1717791105881</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1717791105881</updated>
+    </task>
+    <task id="LOCAL-00024" summary="g-members animation + scrollpane added">
+      <option name="closed" value="true" />
+      <created>1717796805890</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1717796805890</updated>
+    </task>
+    <task id="LOCAL-00025" summary="g-members animation + scrollpane added">
+      <option name="closed" value="true" />
+      <created>1717796812072</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1717796812072</updated>
+    </task>
+    <task id="LOCAL-00026" summary="g-message bar added">
+      <option name="closed" value="true" />
+      <created>1717800524218</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1717800524218</updated>
+    </task>
+    <task id="LOCAL-00027" summary="g-message bar added">
+      <option name="closed" value="true" />
+      <created>1717800526376</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1717800526376</updated>
+    </task>
+    <task id="LOCAL-00028" summary="g-event handeling">
+      <option name="closed" value="true" />
+      <created>1717801606280</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1717801606280</updated>
+    </task>
+    <task id="LOCAL-00029" summary="g- group completed">
+      <option name="closed" value="true" />
+      <created>1717801628596</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1717801628596</updated>
+    </task>
+    <task id="LOCAL-00030" summary="g- group completed">
+      <option name="closed" value="true" />
+      <created>1717821714134</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1717821714134</updated>
+    </task>
+    <task id="LOCAL-00031" summary="g- group completed">
+      <option name="closed" value="true" />
+      <created>1717825276230</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1717825276230</updated>
+    </task>
+    <task id="LOCAL-00032" summary="g- group completed">
+      <option name="closed" value="true" />
+      <created>1717825328533</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1717825328533</updated>
+    </task>
+    <task id="LOCAL-00033" summary="g- group completed">
+      <option name="closed" value="true" />
+      <created>1717825345700</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1717825345700</updated>
+    </task>
+    <task id="LOCAL-00034" summary="g-message added">
+      <option name="closed" value="true" />
+      <created>1717828260410</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1717828260410</updated>
+    </task>
+    <task id="LOCAL-00035" summary="g-search result added">
+      <option name="closed" value="true" />
+      <created>1717828269803</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1717828269803</updated>
+    </task>
+    <task id="LOCAL-00036" summary="g-search result added">
+      <option name="closed" value="true" />
+      <created>1717828278896</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1717828278896</updated>
+    </task>
+    <task id="LOCAL-00037" summary="g-search result added">
+      <option name="closed" value="true" />
+      <created>1717828297173</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1717828297173</updated>
+    </task>
+    <task id="LOCAL-00038" summary="g-message changed">
+      <option name="closed" value="true" />
+      <created>1717828625410</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1717828625410</updated>
+    </task>
+    <task id="LOCAL-00039" summary="g-message changed">
+      <option name="closed" value="true" />
+      <created>1717828631766</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1717828631766</updated>
+    </task>
+    <task id="LOCAL-00040" summary="g- pass debug + chat Sc">
+      <option name="closed" value="true" />
+      <created>1717838864715</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1717838864715</updated>
+    </task>
+    <task id="LOCAL-00041" summary="send message">
+      <option name="closed" value="true" />
+      <created>1717868830492</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1717868830492</updated>
+    </task>
+    <task id="LOCAL-00042" summary="set users and newMessages">
+      <option name="closed" value="true" />
+      <created>1717873841672</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1717873841672</updated>
+    </task>
+    <task id="LOCAL-00043" summary="set users and newMessages">
+      <option name="closed" value="true" />
+      <created>1717874598365</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1717874598365</updated>
+    </task>
+    <task id="LOCAL-00044" summary="set pv block">
+      <option name="closed" value="true" />
+      <created>1717879872882</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1717879872882</updated>
+    </task>
+    <task id="LOCAL-00045" summary="block debug">
+      <option name="closed" value="true" />
+      <created>1717880822466</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1717880822467</updated>
+    </task>
+    <task id="LOCAL-00046" summary="message debug">
+      <option name="closed" value="true" />
+      <created>1717881939428</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1717881939428</updated>
+    </task>
+    <task id="LOCAL-00047" summary="send message debug">
+      <option name="closed" value="true" />
+      <created>1717885212445</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1717885212445</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="login debug" />
+    <MESSAGE value="g-signup page added" />
+    <MESSAGE value="FinishController added" />
+    <MESSAGE value="g-login page added" />
+    <MESSAGE value="g-animation added" />
+    <MESSAGE value="fixup! g-options added" />
+    <MESSAGE value="g-visible + invisible methods added" />
+    <MESSAGE value="g-account fxml added" />
+    <MESSAGE value="g-topBar + topBarController added" />
+    <MESSAGE value="g-group topBar added" />
+    <MESSAGE value="g-GroupMembers added" />
+    <MESSAGE value="g-members animation + scrollpane added" />
+    <MESSAGE value="g-message bar added" />
+    <MESSAGE value="g-event handeling" />
+    <MESSAGE value="g- group completed" />
+    <MESSAGE value="g-message added" />
+    <MESSAGE value="g-search result added" />
+    <MESSAGE value="g-message changed" />
+    <MESSAGE value="g- pass debug + chat Sc" />
+    <MESSAGE value="send message" />
+    <MESSAGE value="set users and newMessages" />
+    <MESSAGE value="set pv block" />
+    <MESSAGE value="block debug" />
+    <MESSAGE value="message debug" />
+    <MESSAGE value="send message debug" />
+    <option name="LAST_COMMIT_MESSAGE" value="send message debug" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="5" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/client$HelloApplication.ic" NAME="HelloApplication Coverage Results" MODIFIED="1717658814219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>view.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/client$h2.ic" NAME="h2 Coverage Results" MODIFIED="1717658976285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

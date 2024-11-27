@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a159cde1-525c-4d08-9699-06706bc4629e" name="Changes" comment="block debug">
+      <change beforePath="$PROJECT_DIR$/../client/.idea/shelf/Uncommitted_changes_before_Update_at_6_9_24__3_09AM.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/shelf/Uncommitted_changes_before_Update_at_6_9_24__3_09AM.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/view/graphic/ReceiverHandlerG.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/view/graphic/ReceiverHandlerG.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/view/graphic/SenderHandlerG.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/view/graphic/SenderHandlerG.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/view/graphic/fxmlController/MessengerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/view/graphic/fxmlController/MessengerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/main/java/view/graphic/fxmlController/NewMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/main/java/view/graphic/fxmlController/NewMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/UnseenMessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/UnseenMessagesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/CommandHandler.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2hScuDiPdnSMYkwwHyeVoHjQjFM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;parinaz&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/mysql-connector-j-8.4.0.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.HelloApplication" />
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HelloApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a159cde1-525c-4d08-9699-06706bc4629e" name="Changes" comment="" />
+      <created>1717591139247</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1717591139247</updated>
+      <workItem from="1717652766887" duration="1351000" />
+      <workItem from="1717687707506" duration="5000" />
+      <workItem from="1717687737330" duration="1199000" />
+      <workItem from="1717704360756" duration="789000" />
+      <workItem from="1717705285116" duration="6036000" />
+      <workItem from="1717719099671" duration="484000" />
+      <workItem from="1717741201628" duration="1145000" />
+      <workItem from="1717744836802" duration="2755000" />
+      <workItem from="1717750410663" duration="3571000" />
+      <workItem from="1717783736504" duration="9504000" />
+      <workItem from="1717821694040" duration="123000" />
+      <workItem from="1717825168195" duration="287000" />
+      <workItem from="1717837594757" duration="664000" />
+      <workItem from="1717852445264" duration="2951000" />
+    </task>
+    <task id="LOCAL-00001" summary="block debug">
+      <option name="closed" value="true" />
+      <created>1717883946395</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1717883946395</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="block debug" />
+    <option name="LAST_COMMIT_MESSAGE" value="block debug" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ClassCastException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

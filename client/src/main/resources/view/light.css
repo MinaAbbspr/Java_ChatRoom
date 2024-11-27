@@ -1,0 +1,233 @@
+.mainAnc{
+    -fx-background-color: white;
+}
+.l_s_animation{
+    -fx-background-color: rgb(21, 1, 1);
+}
+.label
+{
+    -fx-text-fill: #280404;
+}
+.HBox{
+    -fx-border-radius: 5;
+    -fx-background-color: white;
+    -fx-border-color: #150101;
+}
+.vbox{
+    -fx-background-color: white;
+    -fx-border-radius: 10;
+    -fx-border-color: white;
+}
+.signup-btn{
+    -fx-background-color: #1e0202;
+    -fx-border-radius: 30;
+    -fx-text-fill: white;
+}
+.signup-btn:hover{
+    -fx-background-color: rgba(86, 61, 61, 0.59);
+}
+.label-animation
+{
+    -fx-text-fill: #ffffff;
+}
+.animation-btn{
+    -fx-background-color: #fffefe;
+    -fx-border-radius: 30;
+    -fx-text-fill: #1e0d0d;
+    -fx-border-color: white;
+}
+.animation-btn:hover{
+    -fx-background-color: rgba(86, 61, 61, 0.59);
+}
+.logo{
+    -fx-border-radius: 30;
+    -fx-border-color: #1e0202;
+}
+.error{
+    -fx-text-fill: #a22525;
+}
+.m-b{
+    -fx-background-color: #1a1919;
+}
+.search{
+    -fx-background-color: #150101;
+    -fx-border-radius: 30;
+    -fx-border-color:  white;
+}
+.label-m{
+    -fx-text-fill: white;
+}
+.vbox-m
+{
+    -fx-border-radius: 10;
+    -fx-border-color: linear-gradient(#150101, #dcd6d6);
+}
+.item
+{
+    -fx-border-width: 0 0 0 0;
+    -fx-border-color: white;
+}
+.label-p{
+    -fx-text-fill: black;
+}
+.scroll-pane {
+    -fx-background-color: #150101;
+}
+.scroll-pane > .viewport{
+    -fx-background-color: #150101;
+}
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color: #150101;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: #150101;
+    -fx-border-color: #150101;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: #150101;
+    -fx-border-color: #150101;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #150101;
+    -fx-background-radius: 5em;
+}
+.scroll-pane > .corner,
+.scroll-pane > .corner{
+    -fx-background-color: #150101;
+}
+.scroll-pane > .scroll-bar{
+    -fx-background-color: #150101;
+}
+.scroll-pane > .border-color {
+    -fx-background-color: #150101;
+}
+.profile-circle{
+    -fx-fill: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 50.0%, radius 50.0%, #392121 0.0%, #ffffff 100.0%);
+}
+.scroll-pane2 {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #150101;
+}
+
+.vbox-members{
+     -fx-background-color: white;
+     -fx-border-radius: 20;
+     -fx-border-color: white;
+ }
+.vbox2{
+    -fx-background-color: #150101;
+    -fx-border-radius: 10;
+    -fx-text-fill: white;
+    -fx-border-color: #150101;
+}
+.vbox2:hover {
+    -fx-background-color: rgba(86, 61, 61, 0.59);
+    -fx-background-radius: 20;
+}
+.profile-g{
+    -fx-background-color: #ffffff;
+    -fx-text-fill: black;
+}
+.profile-g:hover {
+    -fx-background-color: rgba(196, 175, 175, 0.59);
+    -fx-background-radius: 20;
+}
+.label-g{
+    -fx-text-fill: black;
+}
+.message-bar{
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 40;
+    -fx-background-radius: 40;
+    -fx-border-color: #150101;
+}
+.message{
+    -fx-background-color: white;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-text-fill:#150101 ;
+    -fx-border-color: #150101;
+}
+.message-label{
+    -fx-background-color: white;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+.messageS{
+    -fx-background-color: #150101;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-text-fill:#ffffff ;
+    -fx-border-color: white;
+}
+.messageS-label{
+    -fx-background-color: #150101;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-text-fill: white;
+}
+.scroll-pane2 > .viewport{
+    -fx-background-color: white;
+    -fx-border-color: white;
+    -fx-control-inner-background: white;
+}
+.scroll-bar:horizontal, .scroll-bar:vertical
+{
+    -fx-background-color: #ffffff;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ffffff;
+    -fx-border-radius: 20;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ffffff;
+    -fx-background-radius: 20em;
+    -fx-border-radius: 20;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #ffffff;
+}
+.scroll-pane2 > .corner,
+.scroll-pane2 > .corner{
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-background-color: #ffffff;
+}
+.scroll-pane2 > .viewport {
+    -fx-background-color: transparent;
+}
+.scroll-pane2 > .scroll-bar{
+    -fx-border-radius: 20;
+    -fx-background-color: #fff5f5;
+}
+.scroll-pane2 > .border-color {
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 20;
+}
+.scroll-pane2 {
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.scroll-pane2:focused {
+    -fx-background-insets: 0;
+}
+
+.scroll-pane2 .corner {
+    -fx-background-insets: 0;
+}
+
+

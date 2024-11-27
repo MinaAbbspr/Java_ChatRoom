@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+
+
+<HBox fx:id="messageBar" prefHeight="41.0" prefWidth="909.0" style="-fx-background-radius: 40; -fx-border-radius: 20;" styleClass="message-bar" stylesheets="@light.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.graphic.fxmlController.MessageBarController">
+   <children>
+      <TextField fx:id="type" prefHeight="39.0" prefWidth="877.0" promptText="type something ..." style="-fx-background-radius: 40; -fx-border-radius: 40;" styleClass="scroll-pane3" />
+      <ImageView fx:id="send" fitHeight="17.0" fitWidth="24.0" onMouseClicked="#send" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../Downloads/images-11.png" />
+         </image>
+         <HBox.margin>
+            <Insets top="10.0" />
+         </HBox.margin>
+      </ImageView>
+   </children>
+</HBox>

@@ -1,23 +1,36 @@
 package view;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+import controller.CommunicationHandlerReceiver;
+import controller.CommunicationHandlerSender;
+import model.DataBase;
 
 import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
 
-public class HelloApplication extends Application {
-    @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
-        stage.show();
-    }
+public class HelloApplication{
 
-    public static void main(String[] args) {
-        launch();
+    public static void main(String[] args) throws IOException {
+        ServerSocket serverSocket = new ServerSocket(6666);
+
+        while(true)
+        {
+            long start = System.nanoTime();
+
+            Socket clientSocketReceiver = serverSocket.accept();
+            CommunicationHandlerReceiver receiver = new CommunicationHandlerReceiver(clientSocketReceiver);
+
+            Socket clientSocketSender = serverSocket.accept();
+            CommunicationHandlerSender sender = new CommunicationHandlerSender(clientSocketSender);
+
+
+            DataBase.getDataBase().getThreadList().add(sender);
+            receiver.start();
+            sender.start();
+
+            long end = System.nanoTime();
+
+            sender.setMessage("ping: " + (end-start)/1000000 + "ms");
+        }
     }
 }
